@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weed Catalogue with Pictures</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="weedimage">
+<div class="wrap">
+
+<header><h1>Weed Catalogue</h1><p class="s">Pictures load live from Wikipedia/Wikimedia when you open this file online. <span id="n"></span></p></header>
+<div class="bar"><input id="q" placeholder="Search scientific or common name…"><span id="f"></span></div>
+<main id="m"></main>
+
+<script>
+const D={
+"Terrestrial weeds":`Abutilon theophrasti|Velvetleaf
+Achyranthes aspera|Devil's horsewhip
+Ageratum conyzoides|Billygoat weed
+Albizia anthelmintica|—
+Allium spp.|Wild onion / wild garlic
+Aloe spp.|Aloe
+Amaranthus spp.|Pigweed / amaranths
+Amaranthus hybridus|Smooth pigweed
+Amaranthus retroflexus|Redroot pigweed
+Amaranthus spinosus|Spiny amaranth
+Anoda cristata|Spurred anoda
+Artemisia spp.|Mugworts / wormwoods
+Asystasia spp.|Chimperi
+Avena fatua|Wild oat
+Bidens pilosa|Black jack
+Brassica spp.|Wild mustard
+Cannabis sativa|Cannabis / bang
+Chenopodium album|Lambsquarters / fat hen
+Chondrilla juncea|Skeleton weed
+Chromolaena odorata|Siam weed
+Chloris gayana|Rhodes grass
+Commelina benghalensis|Benghal dayflower
+Convolvulus arvensis|Field bindweed
+Cuscuta spp.|Dodder
+Cynodon dactylon|Bermuda grass / star grass
+Cyperus esculentus|Yellow nutsedge
+Cyperus rotundus|Purple nutsedge
+Cyperus spp.|Sedges
+Datura stramonium|Jimsonweed / thorn apple
+Digitaria spp.|Crabgrass
+Digitaria scalarum|Couch grass (verify)
+Daucus carota|Wild carrot
+Echinochloa crus-galli|Barnyard grass
+Eleusine indica|Goosegrass
+Euphorbia esula|Leafy spurge
+Euphorbia heterophylla|Wild poinsettia
+Euphorbia spp.|Spurges
+Galinsoga parviflora|Gallant soldier
+Helianthus annuus|Sunflower
+Ipomoea spp.|Morning glory
+Ipomoea aquatica|Water spinach
+Ipomoea carnea|Pink morning glory
+Juglans nigra|Black walnut
+Lactuca serriola|Prickly lettuce
+Lantana camara|Lantana
+Melilotus spp.|Sweet clover
+Mimosa invisa|Giant sensitive plant (verify)
+Mimosa pigra|Giant sensitive tree
+Morrenia odorata|Milkweed vine
+Oxalis spp.|Wood sorrel
+Oxalis latifolia|Broadleaf woodsorrel
+Orobanche spp.|Broomrape
+Panicum maximum|Guinea grass
+Pennisetum clandestinum|Kikuyu grass
+Plantago spp.|Plantains
+Polygonum aviculare|Common knotgrass
+Polygonum spp.|Smartweeds
+Portulaca oleracea|Common purslane
+Prosopis spp.|Mesquite
+Pastinaca sativa|Wild parsnip
+Prunus spp.|Cherries / plums
+Rumex crispus|Curly dock
+Salvia spp.|Sages
+Salsola iberica|Russian thistle
+Saccharum spontaneum|Wild cane
+Setaria verticillata|Bristly foxtail
+Setaria viridis|Green foxtail
+Sida acuta|Common wireweed
+Solanum incanum|Sodom apple
+Solanum nigrum|Black nightshade
+Solanum spp.|Nightshades
+Sonchus arvensis|Perennial sow-thistle
+Sorghum halepense|Johnson grass
+Striga spp.|Witchweed
+Tagetes minuta|Mexican marigold
+Tagetes patula|French marigold
+Taraxacum officinale|Dandelion
+Xanthium spp.|Cocklebur
+Xanthium pensylvanicum|Common cocklebur
+Oryza longistaminata|Perennial wild rice
+Ricinus communis|Castor bean
+Physalis peruviana|Cape gooseberry
+Opuntia stricta|Prickly pear`,
+"Additional terrestrial plants (some allelopathic, not always weeds)":`Aeschynomene virginica|Northern jointvetch
+Acer spp.|Maples
+Arceuthobium spp.|Dwarf mistletoes
+Chrysanthemum spp.|Chrysanthemums
+Cucurbitaceae|Gourd family
+Ecballium elaterium|Squirting cucumber
+Eucalyptus camaldulensis|River red gum
+Mistletoe|Mistletoes (species needed)
+Pinus densiflora|Japanese red pine
+Pinus spp.|Pines
+Populus spp.|Poplars / cottonwoods
+Apiaceae|Carrot family`,
+"Aquatic weeds":`Azolla spp.|Water fern
+Azolla africana|Water velvet (verify)
+Ceratophyllum spp.|Hornwort
+Eichhornia crassipes|Water hyacinth
+Echinochloa stagnina|Aquatic grass
+Elodea spp.|Waterweed
+Hydrilla spp.|Hydrilla
+Lemna spp.|Duckweed
+Najas spp.|Water nymph
+Nymphaea spp.|Water lilies
+Phragmites australis|Common reed
+Pistia stratiotes|Water lettuce
+Potamogeton spp.|Pondweeds
+Salvinia auriculata|Eared watermoss
+Salvinia molesta|Giant salvinia
+Salvinia spp.|Water ferns
+Sagittaria spp.|Arrowheads
+Spirodela spp.|Greater duckweed
+Typha spp.|Cattails / bulrushes
+Typha domingensis|Southern cattail
+Algae|Aquatic weed group
+Alternanthera philoxeroides|Alligator weed
+Alamos spp.|Unresolved identification`};
+const m=document.getElementById('m'),cards=[];
+const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){ob.unobserve(e.target);load(e.target)}}),{rootMargin:'300px'});
+async function load(el){
+ const sci=el.dataset.s,com=el.dataset.c,box=el.querySelector('.im');
+ const base=sci.replace(/ spp\.?$/,'').replace(/ /g,'_');
+ const show=u=>{box.innerHTML='';const i=new Image();i.loading='lazy';i.alt=sci;i.src=u;i.onerror=()=>box.textContent='No picture';box.appendChild(i)};
+ try{const r=await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(base));
+  if(r.ok){const j=await r.json();if(j.thumbnail){return show(j.thumbnail.source)}}}catch(e){}
+ for(const q of [sci.replace(/ spp\.?$/,''),com.split('/')[0].replace(/\(.*\)/,'').trim()]){
+  if(!q||q==='—')continue;
+  try{const r=await fetch('https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrlimit=3&prop=pageimages&pithumbsize=400&gsrsearch='+encodeURIComponent(q+' plant'));
+   const j=await r.json();const p=Object.values(j.query?.pages||{}).sort((a,b)=>a.index-b.index).find(x=>x.thumbnail);
+   if(p)return show(p.thumbnail.source)}catch(e){}}
+ box.textContent='No picture found';
+}
+for(const [sec,txt] of Object.entries(D)){
+ const h=document.createElement('h2');h.textContent=sec;const g=document.createElement('div');g.className='g';
+ m.append(h,g);const list=[];
+ txt.split('\n').forEach(l=>{const [s,c]=l.split('|');
+  const d=document.createElement('div');d.className='c';d.dataset.s=s;d.dataset.c=c;
+  d.innerHTML=`<div class="im">Loading…</div><div class="t"><i>${s}</i><span>${c}</span><br><a target="_blank" rel="noopener" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(s+' weed')}">More images ↗</a></div>`;
+  g.appendChild(d);cards.push(d);list.push(d);ob.observe(d)});
+ h.dataset.n=list.length;
+}
+document.getElementById('n').textContent=cards.length+' entries.';
+document.getElementById('q').addEventListener('input',e=>{
+ const v=e.target.value.toLowerCase();
+ cards.forEach(c=>c.style.display=(c.dataset.s+' '+c.dataset.c).toLowerCase().includes(v)?'':'none');
+ document.querySelectorAll('.g').forEach(g=>{const any=[...g.children].some(c=>c.style.display!=='none');g.style.display=any?'':'none';g.previousSibling.style.display=any?'':'none'});
+});
+</script>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

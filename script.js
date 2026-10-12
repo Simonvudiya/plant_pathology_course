@@ -6,6 +6,8 @@ const topics = [
   { title: "Mycology", file: "mycology.html" },
   { title: "Molecular Techniques", file: "molecular.html" },
   { title: "Sanitary and Phytosanitary", file: "sanitary.html" },
+  { title: "Weeds", file: "weeds.html" },
+  { title: "Weed Image Gallery", file: "weedimage.html" },
   { title: "Data Analysis", file: "datanalysis.html" }
 ];
 

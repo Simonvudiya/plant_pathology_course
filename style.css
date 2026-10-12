@@ -3193,3 +3193,241 @@ body.datanalysis footer strong { color: var(--primary); }
   body.datanalysis table.anova-table td { padding: 6px 5px; }
   body.datanalysis .formula-box { font-size: 0.8em; }
 }
+
+/* ============================================================
+   WEEDS PAGE
+   ============================================================ */
+body.weeds {
+  --primary: #1b5e20;
+  --secondary: #2e7d32;
+  --accent: #f9a825;
+  --ink: #222;
+  --ink-soft: #555;
+  --muted: #555;
+  --line: #cfd8dc;
+  --bg: #f5f7f5;
+  --card: #ffffff;
+}
+body.weeds .wrap { max-width: 1200px; }
+body.weeds header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+body.weeds header h1 { margin: 0 0 .3rem; font-size: 2.1rem; letter-spacing: .5px; }
+body.weeds header p { margin: 0; opacity: .9; font-size: 1rem; }
+
+body.weeds nav.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  margin-bottom: 1.5rem;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+@media (max-width: 900px) {
+  body.weeds nav.toc { position: static; }
+}
+body.weeds nav.toc h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary);
+  margin: .2rem 0 .8rem;
+  border-bottom: 2px solid #e8f5e9;
+  padding-bottom: .4rem;
+}
+body.weeds nav.toc ol { list-style: none; margin: 0; padding: 0; }
+body.weeds nav.toc li { margin: .25rem 0; }
+body.weeds nav.toc a {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .88rem;
+  padding: .3rem .5rem;
+  border-radius: 6px;
+  border-left: 3px solid transparent;
+  transition: .15s;
+}
+body.weeds nav.toc a:hover {
+  background: #e8f5e9;
+  border-left-color: var(--secondary);
+  color: var(--primary);
+}
+
+body.weeds section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+body.weeds p { margin: .5rem 0; }
+body.weeds ul, body.weeds ol { margin: .4rem 0 .8rem 1.2rem; padding: 0; }
+body.weeds li { margin: .25rem 0; }
+
+body.weeds section h2 {
+  color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: .4rem;
+  margin-top: 0;
+  font-size: 1.45rem;
+}
+body.weeds section h3 { color: var(--secondary); margin-top: 1.4rem; font-size: 1.15rem; }
+body.weeds section h4 { color: #37474f; margin-top: 1rem; font-size: 1rem; margin-bottom: .4rem; }
+
+body.weeds .definition {
+  background: #e8f5e9;
+  border-left: 5px solid var(--secondary);
+  padding: .8rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: .8rem 0;
+}
+body.weeds .definition strong { color: var(--primary); }
+body.weeds .note {
+  background: #fff8e1;
+  border-left: 5px solid var(--accent);
+  padding: .7rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: .8rem 0;
+  font-size: .95rem;
+}
+body.weeds .scientific { font-style: italic; }
+body.weeds .tag {
+  display: inline-block;
+  background: #e8f5e9;
+  color: var(--primary);
+  border-radius: 20px;
+  padding: .1rem .6rem;
+  font-size: .78rem;
+  font-weight: 600;
+  margin: .1rem .2rem .1rem 0;
+}
+
+body.weeds table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+body.weeds th, body.weeds td {
+  border: 1px solid var(--line);
+  padding: .5rem .6rem;
+  text-align: left;
+  vertical-align: top;
+}
+body.weeds th {
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 600;
+}
+body.weeds tr:nth-child(even) td { background: #f7faf7; }
+
+body.weeds blockquote {
+  background: #e6f4ee;
+  border-left: 4px solid var(--primary);
+  padding: .8rem 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+body.weeds footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--ink-soft);
+  font-size: .85rem;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+
+/* ============================================================
+   WEEDIMAGE PAGE
+   ============================================================ */
+body.weedimage {
+  --bg: #f6f8f3;
+  --card: #fff;
+  --ink: #1d2a1d;
+  --muted: #667;
+  --accent: #2f7d32;
+  --line: #dde5d8;
+}
+body.weedimage .wrap { max-width: 1200px; }
+body.weedimage header { padding: 20px 16px 8px; }
+body.weedimage h1 { margin: 0 0 4px; font-size: 1.6rem; }
+body.weedimage p.s { margin: 0; color: var(--muted); font-size: .9rem; }
+body.weedimage .bar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 10px 16px;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body.weedimage input {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 1rem;
+}
+body.weedimage button {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+body.weedimage button.on {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+body.weedimage main { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; }
+body.weedimage h2 { margin: 24px 0 10px; font-size: 1.2rem; color: var(--accent); }
+body.weedimage .g {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+}
+body.weedimage .c {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body.weedimage .im {
+  aspect-ratio: 4/3;
+  background: var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: .8rem;
+  text-align: center;
+  padding: 6px;
+}
+body.weedimage .im img { width: 100%; height: 100%; object-fit: cover; }
+body.weedimage .t { padding: 8px 10px; }
+body.weedimage .t i { font-weight: 600; display: block; font-size: .92rem; }
+body.weedimage .t span { font-size: .82rem; color: var(--muted); }
+body.weedimage .t a { font-size: .75rem; color: var(--accent); }
+@media (max-width: 900px) {
+  body.weedimage .bar { flex-direction: column; }
+}
