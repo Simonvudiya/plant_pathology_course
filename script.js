@@ -134,3 +134,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+(function() {
+  var carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  var imgs = carousel.querySelectorAll('img');
+  if (imgs.length <= 1) return;
+  var idx = 0;
+  var total = imgs.length;
+  var update = function() {
+    carousel.scrollTo({
+      left: imgs[idx].offsetLeft,
+      behavior: 'smooth'
+    });
+    idx = (idx + 1) % total;
+  };
+  update();
+  setInterval(update, 5000);
+})();

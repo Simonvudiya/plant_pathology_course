@@ -5,8 +5,8 @@
   --ink:          #14261f;
   --ink-soft:     #2f463c;
   --muted:        #5b6f66;
-  --accent:       #0f7b5c;
-  --accent-dark:  #0a5a43;
+  --accent:       #2d6a4f;
+  --accent-dark:  #1b4332;
   --accent-soft:  #e6f4ee;
   --accent-line:  #b9ddd0;
   --line:         #d9e3de;
@@ -503,25 +503,85 @@ footer.doc-footer {
 }
 
 /* ============================================================
+   CAROUSEL
+   ============================================================ */
+.carousel-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.carousel img {
+  min-width: 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ============================================================
+   NAVIGATION BUTTONS (INDEX PAGE)
+   ============================================================ */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+.nav-btn {
+  display: block;
+  text-align: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+}
+
+/* ============================================================
    BACTERIOLOGY PAGE
    ============================================================ */
 body.bacteriology {
-  --primary: #1a3a5c;
-  --secondary: #4a90c4;
-  --accent: #eef4fa;
-  --text: #2a2a2a;
-  --border: #d0dde8;
+  --primary: #1b4332;
+  --secondary: #2d6a4f;
+  --accent: #e6f4ee;
+  --text: #1e1e1e;
+  --border: #cfe3d7;
   --card-bg: #ffffff;
-  --highlight: #2c6e9e;
-  --danger: #c0392b;
-  --success: #27803a;
-  --ink: #2a2a2a;
+  --highlight: #2d6a4f;
+  --danger: #a02020;
+  --success: #1e7a3c;
+  --ink: #1e1e1e;
   --ink-soft: #3a4a4a;
   --muted: #5a6a7a;
-  --line: #d0dde8;
-  --bg: #f5f9fd;
+  --line: #cfe3d7;
+  --bg: #f0faf5;
   --card: #ffffff;
-  background: linear-gradient(180deg, #f5f9fd 0%, #eaf2f9 100%);
+  background: linear-gradient(180deg, #f0faf5 0%, #e6f2ec 100%);
 }
 
 body.bacteriology .container,
@@ -860,18 +920,18 @@ body.bacteriology footer strong { color: var(--primary); }
    VIROLOGY PAGE
    ============================================================ */
 body.virology {
-  --ink:          #14202e;
-  --ink-soft:     #2c3d4f;
-  --muted:        #5d6f80;
-  --accent:       #1d4e89;
-  --accent-dark:  #123a6b;
-  --accent-soft:  #e9f1fa;
-  --accent-line:  #b9d2ea;
-  --violet:       #5b3d8a;
-  --violet-soft:  #f0ebf9;
-  --violet-line:  #d6c9ec;
-  --line:         #dde5ec;
-  --bg:           #f5f8fb;
+  --ink:          #14261f;
+  --ink-soft:     #2c4a3a;
+  --muted:        #5a6e62;
+  --accent:       #2d6a4f;
+  --accent-dark:  #1b4332;
+  --accent-soft:  #e6f4ee;
+  --accent-line:  #b9ddd0;
+  --violet:       #3a5a4d;
+  --violet-soft:  #e8f0ec;
+  --violet-line:  #c8d8cc;
+  --line:         #d9e3de;
+  --bg:           #f6f9f7;
   --card:         #ffffff;
   --warn-bg:      #fff8e6;
   --warn-line:    #f0d79a;
@@ -1261,20 +1321,20 @@ body.virology footer.doc-footer {
    ENTOMOLOGY PAGE
    ============================================================ */
 body.entomology {
-  --primary: #4a2c1a;
-  --secondary: #c08552;
-  --accent: #f5ede1;
-  --text: #2a2a2a;
-  --border: #e0d5c5;
+  --primary: #3a5a3f;
+  --secondary: #2d6a4f;
+  --accent: #e6f4ee;
+  --text: #1e1e1e;
+  --border: #cfe3d7;
   --card-bg: #ffffff;
-  --highlight: #8b5a2b;
+  --highlight: #2d6a4f;
   --ink: #2a2a2a;
-  --ink-soft: #2a2a2a;
-  --muted: #7a6b58;
-  --line: #e0d5c5;
-  --bg: #faf6f0;
+  --ink-soft: #3a4a4a;
+  --muted: #5a6e62;
+  --line: #cfe3d7;
+  --bg: #f0faf5;
   --card: #ffffff;
-  background: linear-gradient(180deg, #faf6f0 0%, #f0e8dc 100%);
+  background: linear-gradient(180deg, #f0faf5 0%, #e6f2ec 100%);
 }
 
 body.entomology .wrap {
@@ -1588,21 +1648,21 @@ body.entomology @media (max-width: 700px) {
    MYCOLOGY PAGE
    ============================================================ */
 body.mycology {
-  --ink:          #1e1a14;
-  --ink-soft:     #3b332a;
-  --muted:        #7a6b58;
-  --accent:       #6b4d1f;
-  --accent-dark:  #4a3413;
-  --accent-soft:  #f5efe3;
-  --accent-line:  #d9c9a8;
-  --moss:         #4a6b3d;
-  --moss-soft:    #eef3ea;
-  --moss-line:    #c6d6bd;
-  --bark:         #7a4a2e;
-  --bark-soft:    #f7ede6;
-  --bark-line:    #e0c4b3;
-  --line:         #e3dccf;
-  --bg:           #faf7f1;
+  --ink:          #1e2a1f;
+  --ink-soft:     #3a4a42;
+  --muted:        #5a6e62;
+  --accent:       #2d6a4f;
+  --accent-dark:  #1b4332;
+  --accent-soft:  #e6f4ee;
+  --accent-line:  #b9ddd0;
+  --moss:         #2d6a4f;
+  --moss-soft:    #e6f4ee;
+  --moss-line:    #b9ddd0;
+  --bark:         #5a734e;
+  --bark-soft:    #e8f0ec;
+  --bark-line:    #c8d8cc;
+  --line:         #d9e3de;
+  --bg:           #f6f9f7;
   --card:         #ffffff;
   background-image:
     radial-gradient(circle at 8% 0%, rgba(107,77,31,.07), transparent 42%),
@@ -1983,16 +2043,16 @@ body.mycology footer.doc-footer {
    MOLECULAR PAGE
    ============================================================ */
 body.molecular {
-  --primary: #2c5f2d;
-  --secondary: #97bc62;
-  --accent: #f5f5f5;
-  --text: #1a1a1a;
-  --border: #d0d0d0;
+  --primary: #1b4332;
+  --secondary: #2d6a4f;
+  --accent: #e6f4ee;
+  --text: #1e1e1e;
+  --border: #cfe3d7;
   --ink: #1a1a1a;
-  --ink-soft: #1a1a1a;
-  --muted: #666;
-  --line: #d0d0d0;
-  --bg: #fafafa;
+  --ink-soft: #3a4a4a;
+  --muted: #5a6e62;
+  --line: #cfe3d7;
+  --bg: #f0faf5;
   --card: #ffffff;
 }
 
@@ -2150,16 +2210,16 @@ body.molecular footer {
    NEMATOLOGY PAGE
    ============================================================ */
 body.nematology {
-  --nematode: #1e4e79;
-  --nematode-soft: #e8f0f7;
-  --nematode-line: #bcd8ed;
+  --nematode: #2d6a4f;
+  --nematode-soft: #e6f4ee;
+  --nematode-line: #b9ddd0;
   --ink: #1e3a5f;
   --ink-soft: #374e6e;
-  --muted: #5a7088;
-  --accent: #1e4e79;
-  --accent-dark: #173e61;
-  --accent-soft: #e8f0f7;
-  --accent-line: #bcd8ed;
+  --muted: #5a6e62;
+  --accent: #2d6a4f;
+  --accent-dark: #1b4332;
+  --accent-soft: #e6f4ee;
+  --accent-line: #b9ddd0;
   --line: #d0e0ec;
   --bg: #f4f7fa;
   --card: #ffffff;
@@ -2420,43 +2480,43 @@ body.nematology ul.clean strong { color: var(--ink); font-weight: 600; }
 body.sanitary {
   --primary: #1b4332;
   --secondary: #2d6a4f;
-  --gold: #b7950b;
-  --accent: #edf6f0;
+  --gold: #9daa5e;
+  --accent: #e6f4ee;
   --text: #1e1e1e;
   --border: #cfe3d7;
   --card-bg: #ffffff;
   --success: #1e7a3c;
   --danger: #a02020;
-  --blue: #1a4d7a;
+  --blue: #2d6a4f;
   --ink: #1e1e1e;
   --ink-soft: #3a4a42;
   --muted: #5a6e62;
   --line: #cfe3d7;
-  --bg: #f4faf6;
+  --bg: #f0faf5;
   --card: #ffffff;
-  background: linear-gradient(180deg, #f4faf6 0%, #e8f2ec 100%);
+  background: linear-gradient(180deg, #f0faf5 0%, #e6f2ec 100%);
 }
 
 /* ============================================================
    DATA ANALYSIS PAGE
    ============================================================ */
 body.datanalysis {
-  --primary: #1a2b4a;
-  --secondary: #4a7ba7;
-  --gold: #c8a24a;
-  --accent: #edf2f8;
+  --primary: #1b4332;
+  --secondary: #2d6a4f;
+  --gold: #9daa5e;
+  --accent: #e6f4ee;
   --text: #1e1e1e;
-  --border: #d5dde8;
+  --border: #cfe3d7;
   --card-bg: #ffffff;
   --success: #1e7a3c;
   --danger: #a02020;
   --ink: #1e1e1e;
   --ink-soft: #2a3a4a;
   --muted: #5a6e7a;
-  --line: #d5dde8;
-  --bg: #f5f8fc;
+  --line: #cfe3d7;
+  --bg: #f0faf5;
   --card: #ffffff;
-  background: linear-gradient(180deg, #f5f8fc 0%, #e9eff7 100%);
+  background: linear-gradient(180deg, #f0faf5 0%, #e6f2ec 100%);
 }
 
 /* ============================================================
