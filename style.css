@@ -516,21 +516,11 @@ body.bacteriology {
   --danger: #c0392b;
   --success: #27803a;
   --ink: #2a2a2a;
-  --ink-soft: #2a2a2a;
+  --ink-soft: #3a4a4a;
   --muted: #5a6a7a;
-  --accent: #0f7b5c;
-  --accent-dark: #0a5a43;
-  --accent-soft: #eef4fa;
-  --accent-line: #b9ddd0;
   --line: #d0dde8;
   --bg: #f5f9fd;
   --card: #ffffff;
-  --warn-bg: #fff8e6;
-  --warn-line: #f0d79a;
-  --warn-ink: #7a5a10;
-  --danger-bg: #fdecec;
-  --danger-line: #f3c2c2;
-  --danger-ink: #9b2226;
   background: linear-gradient(180deg, #f5f9fd 0%, #eaf2f9 100%);
 }
 
