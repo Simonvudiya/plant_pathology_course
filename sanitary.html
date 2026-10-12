@@ -1,16 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanitary and Phytosanitary</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phytosanitary Standards & International Trade Framework</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="sanitary">
-  <div class="wrap">
-    <h1>Sanitary and Phytosanitary</h1>
-    <p>Sanitary and phytosanitary measures protect human, animal, and plant health.</p>
-  </div>
-  <script src="script.js"></script>
+<div class="wrap">
+
+<header>
+    <h1>Phytosanitary Standards & International Trade Framework</h1>
+    <p>ISPMs, Pest Risk Analysis, Pest Free Areas, and the GATT–WTO Legal Architecture Governing Plant Health in World Trade</p>
+    <div class="stats">
+        <div class="stat-badge"><strong>47</strong>Adopted ISPMs</div>
+        <div class="stat-badge"><strong>3 Stages</strong>Pest Risk Analysis</div>
+        <div class="stat-badge"><strong>1995</strong>WTO SPS Agreement</div>
+    </div>
+</header>
+
+<nav class="toc">
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#ispm">1. International Standards (ISPMs)</a></li>
+        <li><a href="#pra">2. Pest Risk Analysis (PRA)</a></li>
+        <li><a href="#pfa">3. Pest Free Area (PFA)</a></li>
+        <li><a href="#gatt-wto">4. GATT &amp; WTO</a></li>
+        <li><a href="#integration">5. Integrated Framework</a></li>
+    </ul>
+</nav>
+
+<!-- ============================================================ -->
+<!-- 1. ISPMs -->
+<!-- ============================================================ -->
+<div class="card" id="ispm">
+    <div class="card-header" onclick="toggle(this)">
+        <span class="card-num">1</span>
+        <h2>International Standards for Phytosanitary Measures (ISPMs)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+
+        <div class="section-label">📜 What Are ISPMs?</div>
+        <p style="font-size:0.94em; margin-top:6px;">
+            ISPMs are standards adopted by the <strong>Commission on Phytosanitary Measures (CPM)</strong>, the governing body of the
+            <strong>International Plant Protection Convention (IPPC)</strong>. They provide harmonized guidance for protecting plant
+            health while facilitating safe international trade. As of March 2026, there are <strong>47 adopted ISPMs</strong> (ISPM 30
+            revoked), along with <strong>36 Diagnostic Protocols</strong> and <strong>46 Phytosanitary Treatments</strong>.
+        </p>
+
+        <div class="section-label">📋 Key ISPMs by Category</div>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">A. Foundational Principles &amp; Frameworks</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 1</td><td>Phytosanitary principles for the protection of plants and the application of phytosanitary measures in international trade</td></tr>
+                <tr><td class="ispm-code">ISPM 2</td><td>Framework for pest risk analysis</td></tr>
+                <tr><td class="ispm-code">ISPM 5</td><td>Glossary of phytosanitary terms (updated annually)</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">B. Pest Risk Analysis (PRA)</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 2</td><td>Framework for pest risk analysis</td></tr>
+                <tr><td class="ispm-code">ISPM 11</td><td>Pest risk analysis for quarantine pests</td></tr>
+                <tr><td class="ispm-code">ISPM 21</td><td>Pest risk analysis for regulated non-quarantine pests</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">C. Pest Management, Eradication &amp; Area Freedom</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 4</td><td>Requirements for the establishment of pest free areas</td></tr>
+                <tr><td class="ispm-code">ISPM 8</td><td>Determination of pest status in an area</td></tr>
+                <tr><td class="ispm-code">ISPM 9</td><td>Guidelines for pest eradication programmes</td></tr>
+                <tr><td class="ispm-code">ISPM 10</td><td>Requirements for the establishment of pest free places of production and pest free production sites</td></tr>
+                <tr><td class="ispm-code">ISPM 22</td><td>Requirements for the establishment of areas of low pest prevalence</td></tr>
+                <tr><td class="ispm-code">ISPM 26</td><td>Establishment of pest free areas for fruit flies (Tephritidae)</td></tr>
+                <tr><td class="ispm-code">ISPM 29</td><td>Recognition of pest free areas and areas of low pest prevalence</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">D. Trade, Certification &amp; Inspection</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 7</td><td>Phytosanitary certification system</td></tr>
+                <tr><td class="ispm-code">ISPM 12</td><td>Phytosanitary certificates (and electronic phytosanitary certificates, ePhyto)</td></tr>
+                <tr><td class="ispm-code">ISPM 15</td><td>Regulation of wood packaging material in international trade</td></tr>
+                <tr><td class="ispm-code">ISPM 23</td><td>Guidelines for inspection</td></tr>
+                <tr><td class="ispm-code">ISPM 31</td><td>Methodologies for sampling of consignments</td></tr>
+                <tr><td class="ispm-code">ISPM 32</td><td>Categorization of commodities according to their pest risk</td></tr>
+                <tr><td class="ispm-code">ISPM 45</td><td>Requirements for national plant protection organizations if authorizing entities to perform phytosanitary actions</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">E. Surveillance, Reporting &amp; Compliance</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 6</td><td>Surveillance (general and specific surveys)</td></tr>
+                <tr><td class="ispm-code">ISPM 13</td><td>Guidelines for the notification of non-compliance and emergency action</td></tr>
+                <tr><td class="ispm-code">ISPM 14</td><td>The use of integrated measures in a systems approach for pest risk management</td></tr>
+                <tr><td class="ispm-code">ISPM 17</td><td>Pest reporting</td></tr>
+                <tr><td class="ispm-code">ISPM 19</td><td>Guidelines on lists of regulated pests</td></tr>
+                <tr><td class="ispm-code">ISPM 20</td><td>Guidelines for a phytosanitary import regulatory system</td></tr>
+            </tbody>
+        </table>
+
+        <p style="font-size:0.9em; margin: 14px 0 6px; font-weight:700; color: var(--blue);">F. Specific Measures &amp; Treatments</p>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:100px;">ISPM</th><th>Title / Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="ispm-code">ISPM 3</td><td>Guidelines for the export, shipment, import and release of biological control agents and other beneficial organisms</td></tr>
+                <tr><td class="ispm-code">ISPM 18</td><td>Guidelines for the use of irradiation as a phytosanitary measure</td></tr>
+                <tr><td class="ispm-code">ISPM 24</td><td>Guidelines for the determination and recognition of equivalence of phytosanitary measures</td></tr>
+                <tr><td class="ispm-code">ISPM 27</td><td>Diagnostic protocols for regulated pests</td></tr>
+                <tr><td class="ispm-code">ISPM 28</td><td>Phytosanitary treatments for regulated pests</td></tr>
+                <tr><td class="ispm-code">ISPM 33</td><td>Pest free potato micropropagative material and minitubers for international trade</td></tr>
+                <tr><td class="ispm-code">ISPM 38</td><td>International movement of seeds</td></tr>
+                <tr><td class="ispm-code">ISPM 39</td><td>International movement of wood</td></tr>
+                <tr><td class="ispm-code">ISPM 40</td><td>International movement of growing media in association with plants for planting</td></tr>
+                <tr><td class="ispm-code">ISPM 41</td><td>International movement of used vehicles, machinery and equipment</td></tr>
+                <tr><td class="ispm-code">ISPM 42</td><td>Requirements for the use of temperature treatments as a phytosanitary measure</td></tr>
+                <tr><td class="ispm-code">ISPM 43</td><td>Requirements for the use of fumigation as a phytosanitary measure</td></tr>
+                <tr><td class="ispm-code">ISPM 44</td><td>Requirements for the use of modified atmospheres as a phytosanitary measure</td></tr>
+                <tr><td class="ispm-code">ISPM 46</td><td>Commodity-specific standards for phytosanitary measures</td></tr>
+                <tr><td class="ispm-code">ISPM 47</td><td>Phytosanitary procedures for fruit fly (Tephritidae) management</td></tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <strong>Note:</strong> ISPM 30 (Establishment of areas of low pest prevalence for fruit flies) was revoked and incorporated into
+            other standards. Diagnostic protocols adopted under ISPM 27 now cover more than 36 specific pests and are annexed as supplements.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 2. PEST RISK ANALYSIS -->
+<!-- ============================================================ -->
+<div class="card" id="pra">
+    <div class="card-header" onclick="toggle(this)">
+        <span class="card-num">2</span>
+        <h2>Pest Risk Analysis (PRA)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+
+        <div class="section-label">🔬 Definition &amp; Purpose</div>
+        <p style="font-size:0.94em; margin-top:6px;">
+            <strong>Pest Risk Analysis (PRA)</strong> is the process of evaluating scientific and economic evidence to determine whether
+            an organism is a pest, whether it should be regulated, and what phytosanitary measures, if any, should be taken against it.
+            It is governed by <strong>ISPM 2</strong> (Framework for PRA), <strong>ISPM 11</strong> (PRA for quarantine pests), and
+            <strong>ISPM 21</strong> (PRA for regulated non-quarantine pests).
+        </p>
+
+        <div class="section-label">🧭 Three Stages of PRA (ISPM 2 / ISPM 11)</div>
+        <div class="stage-grid">
+            <div class="stage-item">
+                <span class="stage-num">1</span><strong>Stage 1 — Initiation</strong>
+                Identifies the pest or pathway (a specific commodity, a new trade route, or a newly detected organism) that warrants analysis. Triggers include:
+                <ul style="margin: 6px 0 0 18px; font-size: 0.93em;">
+                    <li>A new pest discovery or outbreak</li>
+                    <li>A request to import a new commodity</li>
+                    <li>A review of existing phytosanitary policy</li>
+                    <li>A change in pest status in an area</li>
+                </ul>
+            </div>
+            <div class="stage-item">
+                <span class="stage-num">2</span><strong>Stage 2 — Pest Risk Assessment</strong>
+                The scientific core of the PRA:
+                <ul style="margin: 6px 0 0 18px; font-size: 0.93em;">
+                    <li><strong>Pest categorization</strong> — does the organism meet the criteria for a quarantine pest?</li>
+                    <li><strong>Probability of introduction</strong> — entry, establishment, and spread</li>
+                    <li><strong>Probability of spread</strong> — natural and human-assisted</li>
+                    <li><strong>Magnitude of economic consequences</strong> — direct and indirect losses, including environmental and social impacts</li>
+                </ul>
+            </div>
+            <div class="stage-item">
+                <span class="stage-num">3</span><strong>Stage 3 — Pest Risk Management</strong>
+                If risk is unacceptable:
+                <ul style="margin: 6px 0 0 18px; font-size: 0.93em;">
+                    <li>Identify possible phytosanitary measures</li>
+                    <li>Evaluate their effectiveness and feasibility</li>
+                    <li>Select measures that achieve the appropriate level of protection (ALOP)</li>
+                    <li>Ensure measures are the <strong>least restrictive</strong> necessary (proportionality)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-label">📊 Example: PRA for a New Fruit Fly Species</div>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:25%;">PRA Element</th><th>Example Assessment</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Pest</strong></td><td><em>Bactrocera dorsalis</em> (Oriental fruit fly)</td></tr>
+                <tr><td><strong>Pathway</strong></td><td>Fresh mango imports from an infested country</td></tr>
+                <tr><td><strong>Entry potential</strong></td><td>High — larvae present in fruit; survives transport</td></tr>
+                <tr><td><strong>Establishment potential</strong></td><td>High — suitable climate and host plants present</td></tr>
+                <tr><td><strong>Spread potential</strong></td><td>High — adults are strong fliers and hitchhike on vehicles</td></tr>
+                <tr><td><strong>Economic impact</strong></td><td>Severe — up to 100% loss of susceptible fruit; export market loss</td></tr>
+                <tr><td><strong>Management options</strong></td><td>Systems approach: field control + post-harvest cold treatment + inspection</td></tr>
+            </tbody>
+        </table>
+
+        <div class="interpret-box">
+            <strong>Key Principle:</strong> PRA must be based on <strong>scientific evidence</strong>, be transparent, and be documented to
+            allow review by trading partners. Where scientific evidence is insufficient, a country may adopt provisional measures based on
+            the <strong>precautionary principle</strong> (Article 5.7 of the SPS Agreement), but must seek additional information within a
+            reasonable period.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 3. PEST FREE AREA -->
+<!-- ============================================================ -->
+<div class="card" id="pfa">
+    <div class="card-header" onclick="toggle(this)">
+        <span class="card-num">3</span>
+        <h2>Pest Free Area (PFA)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+
+        <div class="section-label">🗺️ Definition (ISPM 5)</div>
+        <p style="font-size:0.94em; margin-top:6px;">
+            A <strong>Pest Free Area (PFA)</strong> is <em>"an area in which a specific pest does not occur as demonstrated by scientific
+            evidence and in which, where appropriate, this condition is being officially maintained."</em> The PFA may be an entire country,
+            part of a country, or an area within a generally infested region. Requirements are set out in <strong>ISPM 4</strong>.
+        </p>
+
+        <div class="section-label">✅ Requirements for Establishing a PFA (ISPM 4)</div>
+        <div class="stage-grid">
+            <div class="stage-item">
+                <span class="stage-num">1</span><strong>Systems to Establish Freedom</strong>
+                Systematic surveys and surveillance following <strong>ISPM 6</strong> must demonstrate the pest's absence. For fruit flies,
+                this typically requires trapping for at least 12 consecutive months. For other pests, appropriate sampling and diagnostic
+                protocols (ISPM 27) are used.
+            </div>
+            <div class="stage-item">
+                <span class="stage-num">2</span><strong>Phytosanitary Measures to Maintain Freedom</strong>
+                Once established, measures must prevent pest reintroduction:
+                <ul style="margin: 6px 0 0 18px; font-size: 0.93em;">
+                    <li>Controls on movement of regulated articles</li>
+                    <li>Public awareness and training</li>
+                    <li>Ongoing surveillance and monitoring</li>
+                    <li>Border controls and inspection</li>
+                </ul>
+            </div>
+            <div class="stage-item">
+                <span class="stage-num">3</span><strong>Documentation &amp; Review</strong>
+                All procedures and evidence must be documented. The PFA status must be regularly reviewed and updated as conditions change.
+                This documentation is essential for trading partners to recognize the PFA (<strong>ISPM 29</strong>).
+            </div>
+        </div>
+
+        <div class="section-label">📋 Types of Area Freedom</div>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:22%;">Status</th><th>ISPM</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Pest Free Area (PFA)</strong></td><td>ISPM 4</td><td>An area where a specific pest does not occur and is officially maintained as such.</td></tr>
+                <tr><td><strong>Pest Free Place of Production (PFPP)</strong></td><td>ISPM 10</td><td>A defined place of production (e.g., a farm or greenhouse) where a pest is absent and maintained as such.</td></tr>
+                <tr><td><strong>Pest Free Production Site (PFPS)</strong></td><td>ISPM 10</td><td>A subset of a place of production where the pest is absent, with greater physical separation.</td></tr>
+                <tr><td><strong>Area of Low Pest Prevalence (ALPP)</strong></td><td>ISPM 22</td><td>An area where a pest occurs at low levels and is subject to effective surveillance and control.</td></tr>
+                <tr><td><strong>Pest Free Area for Fruit Flies</strong></td><td>ISPM 26</td><td>Specific requirements for establishing PFAs for tephritid fruit flies.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <strong>Recognition by trading partners (ISPM 29):</strong> When a country claims a PFA, the importing country must verify the
+            evidence and may request additional surveys or inspections. The <strong>NPPO</strong> of the exporting country is responsible
+            for maintaining the PFA and issuing phytosanitary certificates accordingly.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 4. GATT & WTO -->
+<!-- ============================================================ -->
+<div class="card" id="gatt-wto">
+    <div class="card-header" onclick="toggle(this)">
+        <span class="card-num">4</span>
+        <h2>GATT &amp; WTO — The Legal Framework for Phytosanitary Measures</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+
+        <div class="section-label">⚖️ The GATT (1947)</div>
+        <p style="font-size:0.94em; margin-top:6px;">
+            The <strong>General Agreement on Tariffs and Trade (GATT)</strong>, established in 1947, was the first multilateral agreement to
+            set rules for international trade. It included a general exception in <strong>Article XX(b)</strong> allowing countries to adopt
+            measures "necessary to protect human, animal or plant life or health." However, this exception was vulnerable to misuse — the
+            GATT dispute settlement panels often found that such measures were applied in a discriminatory or protectionist manner.
+        </p>
+
+        <div class="section-label">🌐 The WTO (1995) and the SPS Agreement</div>
+        <p style="font-size:0.94em; margin-top:6px;">
+            The <strong>World Trade Organization (WTO)</strong>, created in 1995, replaced the GATT Secretariat and introduced the
+            <strong>Agreement on the Application of Sanitary and Phytosanitary Measures (SPS Agreement)</strong>. This agreement clarified
+            and strengthened the rules governing plant health measures in trade.
+        </p>
+
+        <div class="section-label">📋 Key Principles of the SPS Agreement</div>
+        <div class="principle-grid">
+            <div class="principle-item">
+                <strong>1. Harmonization</strong>
+                WTO members are encouraged to base their national SPS measures on international standards (ISPMs, Codex Alimentarius, OIE/WOAH).
+                Measures conforming to these standards are presumed consistent with the SPS Agreement.
+            </div>
+            <div class="principle-item">
+                <strong>2. Scientific Justification</strong>
+                A country may implement a higher standard than an international norm, but must provide scientific justification through a risk
+                assessment (PRA). If scientific evidence is insufficient, provisional measures may be adopted under Article 5.7.
+            </div>
+            <div class="principle-item">
+                <strong>3. Equivalence</strong>
+                Members must accept the SPS measures of other countries as equivalent, even if they differ, provided the exporting country
+                demonstrates that its measures achieve the importing country's appropriate level of protection (ALOP).
+            </div>
+            <div class="principle-item">
+                <strong>4. Non-Discrimination</strong>
+                SPS measures cannot constitute arbitrary or unjustifiable discrimination between countries where the same conditions prevail.
+                They must be applied consistently to domestic and imported products.
+            </div>
+            <div class="principle-item">
+                <strong>5. Transparency</strong>
+                Members must notify new or changed SPS measures, provide copies, and establish an <strong>Enquiry Point</strong> to answer
+                questions from trading partners.
+            </div>
+            <div class="principle-item">
+                <strong>6. Least Trade-Restrictive Measures</strong>
+                Where multiple measures can achieve the ALOP, members should choose the one that is least restrictive to trade (proportionality).
+            </div>
+        </div>
+
+        <div class="section-label">🏛️ Comparison: GATT vs. WTO SPS Agreement</div>
+        <table class="compare-table">
+            <thead>
+                <tr><th>Aspect</th><th>GATT (1947)</th><th>WTO SPS Agreement (1995)</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Legal Basis</td>
+                    <td>Article XX(b) — general exception for health measures</td>
+                    <td>Standalone agreement with explicit rules for food safety, animal and plant health</td>
+                </tr>
+                <tr>
+                    <td>Scientific Basis</td>
+                    <td>Not explicitly required</td>
+                    <td>Requires risk assessment and scientific justification (Articles 2.2, 5.1)</td>
+                </tr>
+                <tr>
+                    <td>International Standards</td>
+                    <td>Not referenced</td>
+                    <td>Harmonization with ISPMs, Codex, OIE/WOAH (Article 3)</td>
+                </tr>
+                <tr>
+                    <td>Equivalence</td>
+                    <td>Not addressed</td>
+                    <td>Explicitly required (Article 4)</td>
+                </tr>
+                <tr>
+                    <td>Transparency</td>
+                    <td>Limited</td>
+                    <td>Notification, Enquiry Points, publication (Annex B)</td>
+                </tr>
+                <tr>
+                    <td>Dispute Settlement</td>
+                    <td>Consensus-based; weaker enforcement</td>
+                    <td>Binding dispute settlement with timelines and appeals</td>
+                </tr>
+                <tr>
+                    <td>Precautionary Principle</td>
+                    <td>Not codified</td>
+                    <td>Article 5.7 allows provisional measures when evidence is insufficient</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-label">📅 Historical Timeline</div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="year">1947</span>
+                GATT signed — Article XX(b) allows health-protection exceptions, but no detailed rules.
+            </div>
+            <div class="timeline-item">
+                <span class="year">1951</span>
+                IPPC established under FAO — begins developing phytosanitary standards.
+            </div>
+            <div class="timeline-item">
+                <span class="year">1994</span>
+                Uruguay Round concludes — WTO created; SPS Agreement adopted.
+            </div>
+            <div class="timeline-item">
+                <span class="year">1995</span>
+                WTO and SPS Agreement enter into force (1 January 1995).
+            </div>
+            <div class="timeline-item">
+                <span class="year">2000s</span>
+                ISPM series expands — PRA, PFA, systems approaches, and treatment standards developed.
+            </div>
+            <div class="timeline-item">
+                <span class="year">2010s–2020s</span>
+                ePhyto, commodity-specific standards (ISPM 46), and climate-driven pest expansion drive new standards.
+            </div>
+        </div>
+
+        <div class="interpret-box">
+            <strong>Core Outcome:</strong> The SPS Agreement recognizes the <strong>right</strong> of countries to protect plant health, but
+            disciplines that right to ensure it is <strong>not used as a disguised trade barrier</strong>. Measures must be scientifically
+            justified, transparent, non-discriminatory, and the least restrictive necessary to achieve the desired level of protection.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 5. INTEGRATED FRAMEWORK -->
+<!-- ============================================================ -->
+<div class="card" id="integration">
+    <div class="card-header" onclick="toggle(this)">
+        <span class="card-num">5</span>
+        <h2>Integrated Framework — How It All Fits Together</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="card-body">
+
+        <div class="section-label">🔗 The Phytosanitary Chain</div>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:22%;">Step</th><th>Standard / Instrument</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>1. Identify risk</strong></td><td>ISPM 2, ISPM 11, ISPM 21</td><td>Conduct a Pest Risk Analysis to determine if a pest should be regulated.</td></tr>
+                <tr><td><strong>2. Categorize commodity</strong></td><td>ISPM 32</td><td>Classify commodities by pest risk to determine inspection intensity.</td></tr>
+                <tr><td><strong>3. Establish area freedom</strong></td><td>ISPM 4, ISPM 10, ISPM 22, ISPM 26, ISPM 29</td><td>Establish PFAs, PFPPs, PFPSs, or ALPPs to certify pest freedom.</td></tr>
+                <tr><td><strong>4. Apply treatments</strong></td><td>ISPM 18, ISPM 28, ISPM 42, ISPM 43, ISPM 44</td><td>Use irradiation, temperature, fumigation, or modified atmospheres as phytosanitary measures.</td></tr>
+                <tr><td><strong>5. Inspect &amp; sample</strong></td><td>ISPM 23, ISPM 31</td><td>Conduct inspection and sampling of consignments based on statistical methods.</td></tr>
+                <tr><td><strong>6. Certify</strong></td><td>ISPM 7, ISPM 12</td><td>Issue phytosanitary certificates (paper or ePhyto).</td></tr>
+                <tr><td><strong>7. Regulate wood packaging</strong></td><td>ISPM 15</td><td>Ensure wood packaging is heat-treated or fumigated with the ISPM 15 stamp.</td></tr>
+                <tr><td><strong>8. Notify non-compliance</strong></td><td>ISPM 13, ISPM 17</td><td>Report non-compliance and take emergency action if needed.</td></tr>
+                <tr><td><strong>9. Trade legally</strong></td><td>SPS Agreement (WTO)</td><td>Ensure measures are scientifically justified, equivalent, transparent, and least restrictive.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-label">🌍 Key Institutions</div>
+        <table class="data-table">
+            <thead>
+                <tr><th style="width:28%;">Institution</th><th>Role</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>IPPC</strong> (International Plant Protection Convention)</td><td>Sets ISPMs; governed by the CPM; housed at FAO in Rome.</td></tr>
+                <tr><td><strong>CPM</strong> (Commission on Phytosanitary Measures)</td><td>Governing body of the IPPC; adopts ISPMs annually.</td></tr>
+                <tr><td><strong>NPPO</strong> (National Plant Protection Organization)</td><td>Implements ISPMs at the national level; issues certificates; conducts surveillance and inspection.</td></tr>
+                <tr><td><strong>WTO</strong> (World Trade Organization)</td><td>Administers the SPS Agreement; provides dispute settlement.</td></tr>
+                <tr><td><strong>FAO</strong> (Food and Agriculture Organization)</td><td>Hosts the IPPC Secretariat; supports capacity building.</td></tr>
+                <tr><td><strong>Regional Plant Protection Organizations (RPPOs)</strong></td><td>e.g., EPPO, APPPC, IAPSC, NAPPO — coordinate regional standards and information sharing.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <strong>Remember:</strong> The IPPC creates the <strong>technical standards</strong> (ISPMs), while the WTO SPS Agreement provides
+            the <strong>legal framework</strong> that makes these standards enforceable in international trade. A country's phytosanitary
+            measures must be consistent with both to avoid trade disputes.
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Phytosanitary Standards &amp; International Trade Framework</strong> — Compiled from IPPC, ISPM, and WTO SPS Agreement documentation.</p>
+    <p style="margin-top:8px;">Always refer to the latest adopted ISPMs and WTO SPS notifications for regulatory decisions and trade compliance.</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+

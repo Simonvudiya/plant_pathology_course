@@ -1,16 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Analysis</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experimental Design Data Analysis Reference</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="datanalysis">
-  <div class="wrap">
-    <h1>Data Analysis</h1>
-    <p>Data analysis is the process of inspecting, cleaning, transforming, and modeling data.</p>
-  </div>
-  <script src="script.js"></script>
+<div class="wrap">
+
+<header>
+    <h1>Experimental Design — Data Analysis Reference</h1>
+    <p>Four complete worked examples with step-by-step manual computation, ANOVA construction, interpretation, and guidance on when to use each design</p>
+    <div class="stats">
+        <div class="stat-badge"><strong>CRD</strong>Completely Randomized</div>
+        <div class="stat-badge"><strong>RCBD</strong>Randomized Complete Block</div>
+        <div class="stat-badge"><strong>2×3</strong>Factorial</div>
+        <div class="stat-badge"><strong>Split-Plot</strong>Two Error Terms</div>
+    </div>
+</header>
+
+<nav class="toc">
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#comparison">Design Selection Guide</a></li>
+        <li><a href="#crd">1. CRD — Worked Example</a></li>
+        <li><a href="#rcbd">2. RCBD — Worked Example</a></li>
+        <li><a href="#factorial">3. Factorial — Worked Example</a></li>
+        <li><a href="#splitplot">4. Split-Plot — Worked Example</a></li>
+        <li><a href="#cheatsheet">Formula Cheat Sheet</a></li>
+    </ul>
+</nav>
+
+<!-- ============================================================ -->
+<!-- DESIGN COMPARISON -->
+<!-- ============================================================ -->
+<div class="design-card" id="comparison">
+    <div class="design-header" onclick="toggle(this)">
+        <span class="design-num">?</span>
+        <h2>Design Selection Guide — When Is Each Design Used?</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="design-body">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th style="width:15%">Design</th>
+                    <th style="width:30%">When to Use</th>
+                    <th style="width:25%">Key Features</th>
+                    <th style="width:30%">Typical Applications</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>CRD</strong><br>Completely Randomized</td>
+                    <td>Experimental units are <strong>homogeneous</strong>; no known source of variability to block; environment is uniform.</td>
+                    <td>Treatments assigned <strong>completely at random</strong> to units. One error term. Simplest design; maximum error df.</td>
+                    <td>Laboratory assays, petri-dish experiments, greenhouse pots, tissue culture, any controlled uniform environment.</td>
+                </tr>
+                <tr>
+                    <td><strong>RCBD</strong><br>Randomized Complete Block</td>
+                    <td>A <strong>known source of variability</strong> exists (fertility gradient, bench position, time, field edge). Blocking can remove it from error.</td>
+                    <td>Each block contains <strong>all treatments once</strong>. Two-way ANOVA without interaction (block × treatment). More precise than CRD when blocks are effective.</td>
+                    <td>Field trials with soil gradients, greenhouse benches, animal experiments, multi-location trials, repeated measurements.</td>
+                </tr>
+                <tr>
+                    <td><strong>Factorial</strong><br>(2×3, 2×2, etc.)</td>
+                    <td>Two or more factors are studied <strong>simultaneously</strong>; interaction between factors is of interest.</td>
+                    <td>All combinations of factor levels are tested. Can be laid out in CRD, RCBD, or split-plot. Tests main effects <strong>and interaction</strong>.</td>
+                    <td>Agronomy (irrigation × nitrogen), plant breeding (genotype × environment), pest management (insecticide × variety).</td>
+                </tr>
+                <tr>
+                    <td><strong>Split-Plot</strong></td>
+                    <td>One factor requires <strong>large plots</strong> (irrigation, tillage, mowing) and another factor can be applied to small sub-units. Randomization is restricted.</td>
+                    <td>Main plot factor randomized to large plots; sub-plot factor randomized within main plots. <strong>Two error terms</strong> (main-plot error and sub-plot error).</td>
+                    <td>Irrigation × variety, tillage × fertilizer, mowing × species, any design where one factor is hard to change.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note-box" style="margin-top:18px;">
+            <strong>Rule of Thumb:</strong> If the environment is uniform → <strong>CRD</strong>. If you can identify a gradient or grouping → <strong>RCBD</strong>. If you care about two factors and their interaction → <strong>Factorial</strong>. If one factor needs big plots and another can be applied to smaller units → <strong>Split-Plot</strong>.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 1. CRD -->
+<!-- ============================================================ -->
+<div class="design-card" id="crd">
+    <div class="design-header" onclick="toggle(this)">
+        <span class="design-num">1</span>
+        <h2>Completely Randomized Design (CRD) — One-Way ANOVA</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="design-body">
+
+        <div class="when-box">
+            <h4>When to Use CRD</h4>
+            <ul>
+                <li>Experimental units (plots, pots, petri dishes) are <strong>homogeneous</strong> — no gradient, no grouping.</li>
+                <li>The environment is <strong>uniform</strong> (lab bench, growth chamber, greenhouse).</li>
+                <li>Treatments are assigned to units <strong>completely at random</strong>.</li>
+                <li>Number of treatments is small and replicates are equal (or unequal).</li>
+            </ul>
+        </div>
+
+        <div class="section-label">📋 Experimental Setup</div>
+        <ul class="info-list">
+            <li><strong>Treatments:</strong> 4 fertilizer formulations (T1, T2, T3, T4)</li>
+            <li><strong>Response variable:</strong> Plant height at 6 weeks (cm)</li>
+            <li><strong>Replicates:</strong> 5 per treatment → N = 20 experimental units</li>
+            <li><strong>Design:</strong> CRD with 4 treatments, 5 replicates</li>
+        </ul>
+
+        <div class="section-label">📊 Raw Data</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Treatment</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th>
+                    <th>Total (T<sub>i</sub>)</th><th>Mean (ȳ<sub>i</sub>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="label">T1</td><td>22</td><td>25</td><td>24</td><td>23</td><td>26</td><td><strong>120</strong></td><td><strong>24.0</strong></td></tr>
+                <tr><td class="label">T2</td><td>28</td><td>30</td><td>29</td><td>31</td><td>27</td><td><strong>145</strong></td><td><strong>29.0</strong></td></tr>
+                <tr><td class="label">T3</td><td>20</td><td>22</td><td>19</td><td>21</td><td>23</td><td><strong>105</strong></td><td><strong>21.0</strong></td></tr>
+                <tr><td class="label">T4</td><td>26</td><td>24</td><td>27</td><td>25</td><td>28</td><td><strong>130</strong></td><td><strong>26.0</strong></td></tr>
+                <tr class="total-row"><td class="label">Grand Total</td><td colspan="5"></td><td><strong>500</strong></td><td><strong>25.0</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-label">🧮 Step-by-Step Manual Computation</div>
+
+        <div class="step">
+            <div class="step-title">Step 1 — Compute the Correction Factor (CF)</div>
+            <div class="formula-box">CF = G² / N = (500)² / 20 = 250,000 / 20 = <span class="result">12,500</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 2 — Compute Total Sum of Squares (Total SS)</div>
+            <div class="formula-box">Total SS = Σx² − CF
+
+Σx² = 22²+25²+24²+23²+26² + 28²+30²+29²+31²+27²
+     + 20²+22²+19²+21²+23² + 26²+24²+27²+25²+28²
+    = 2,890 + 4,215 + 2,215 + 3,390
+    = 12,710
+
+Total SS = 12,710 − 12,500 = <span class="result">210</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 3 — Compute Treatment Sum of Squares (Treatment SS)</div>
+            <div class="formula-box">Treatment SS = Σ(Tᵢ² / n) − CF    where n = 5
+
+Σ(Tᵢ²/n) = 120²/5 + 145²/5 + 105²/5 + 130²/5
+         = 2,880 + 4,205 + 2,205 + 3,380
+         = 12,670
+
+Treatment SS = 12,670 − 12,500 = <span class="result">170</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 4 — Compute Error Sum of Squares</div>
+            <div class="formula-box">Error SS = Total SS − Treatment SS
+         = 210 − 170 = <span class="result">40</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 5 — Degrees of Freedom</div>
+            <div class="formula-box">Treatment df = t − 1 = 4 − 1 = 3
+Error df     = N − t = 20 − 4 = 16
+Total df     = N − 1 = 20 − 1 = 19</div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 6 — Mean Squares and F-Ratio</div>
+            <div class="formula-box">Treatment MS = 170 / 3 = 56.667
+Error MS     = 40 / 16 = 2.500
+
+F = Treatment MS / Error MS = 56.667 / 2.500 = <span class="result">22.67</span></div>
+        </div>
+
+        <div class="section-label">📋 ANOVA Table</div>
+        <table class="anova-table">
+            <thead>
+                <tr><th>Source</th><th>df</th><th>SS</th><th>MS</th><th>F</th><th>F<sub>0.05</sub></th><th>F<sub>0.01</sub></th></tr>
+            </thead>
+            <tbody>
+                <tr class="highlight-row"><td class="src">Treatment</td><td>3</td><td>170.00</td><td>56.667</td><td>22.67**</td><td>3.24</td><td>5.29</td></tr>
+                <tr><td class="src">Error</td><td>16</td><td>40.00</td><td>2.500</td><td>—</td><td>—</td><td>—</td></tr>
+                <tr><td class="src">Total</td><td>19</td><td>210.00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+        </table>
+
+        <div class="step">
+            <div class="step-title">Step 7 — Coefficient of Variation</div>
+            <div class="formula-box">CV = (√Error MS / Grand Mean) × 100
+   = (√2.500 / 25.0) × 100
+   = (1.5811 / 25.0) × 100 = <span class="result">6.32%</span>
+
+<span class="comment">CV &lt; 10% → excellent precision; 10–20% → good; &gt; 20% → questionable</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 8 — Least Significant Difference (LSD)</div>
+            <div class="formula-box">SE(d) = √(2 × Error MS / n) = √(2 × 2.5 / 5) = √1.0 = 1.000
+LSD₀.₀₅ = t₀.₀₂₅,₁₆ × SE(d) = 2.120 × 1.000 = <span class="result">2.12</span></div>
+        </div>
+
+        <div class="section-label">📌 Interpretation</div>
+        <div class="interpret-box">
+            <strong>F = 22.67 > F₀.₀₁(3,16) = 5.29</strong> → Reject H₀. There is a <strong>highly significant difference</strong> among the four fertilizer treatments (p &lt; 0.01).<br><br>
+            <strong>CV = 6.32%</strong> → Experimental precision is excellent.
+        </div>
+
+        <div class="section-label">🔢 Mean Separation (LSD)</div>
+        <table class="data-table">
+            <thead><tr><th>Treatment</th><th>Mean (cm)</th><th>Rank</th><th>Letter Group</th></tr></thead>
+            <tbody>
+                <tr><td class="label">T2</td><td>29.0</td><td>1</td><td><span class="letter-group">a</span></td></tr>
+                <tr><td class="label">T4</td><td>26.0</td><td>2</td><td><span class="letter-group">b</span></td></tr>
+                <tr><td class="label">T1</td><td>24.0</td><td>3</td><td><span class="letter-group">b</span></td></tr>
+                <tr><td class="label">T3</td><td>21.0</td><td>4</td><td><span class="letter-group">c</span></td></tr>
+            </tbody>
+        </table>
+
+        <div class="note-box">
+            <strong>Pairwise comparisons (LSD = 2.12):</strong><br>
+            T2 − T4 = 3.0 &gt; 2.12 ✓ significant<br>
+            T2 − T1 = 5.0 &gt; 2.12 ✓ significant<br>
+            T2 − T3 = 8.0 &gt; 2.12 ✓ significant<br>
+            T4 − T1 = 2.0 &lt; 2.12 ✗ <strong>not significant</strong> (same letter b)<br>
+            T4 − T3 = 5.0 &gt; 2.12 ✓ significant<br>
+            T1 − T3 = 3.0 &gt; 2.12 ✓ significant<br><br>
+            <strong>Conclusion:</strong> T2 is the best treatment. T4 and T1 are statistically similar. T3 is the poorest.
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 2. RCBD -->
+<!-- ============================================================ -->
+<div class="design-card" id="rcbd">
+    <div class="design-header" onclick="toggle(this)">
+        <span class="design-num">2</span>
+        <h2>Randomized Complete Block Design (RCBD) — Two-Way ANOVA</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="design-body">
+
+        <div class="when-box">
+            <h4>When to Use RCBD</h4>
+            <ul>
+                <li>A <strong>known source of variability</strong> exists (soil fertility gradient, bench position, time of day, location).</li>
+                <li>That variability can be <strong>grouped into blocks</strong> that are internally more uniform.</li>
+                <li>The number of treatments is moderate (usually ≤ 15).</li>
+                <li>Each block contains <strong>all treatments once</strong> (complete blocks).</li>
+                <li>Block × treatment interaction is assumed <strong>negligible</strong> (no replication within blocks).</li>
+            </ul>
+        </div>
+
+        <div class="section-label">📋 Experimental Setup</div>
+        <ul class="info-list">
+            <li><strong>Treatments:</strong> 5 tomato varieties (V1, V2, V3, V4, V5)</li>
+            <li><strong>Response variable:</strong> Fruit yield (kg/plot)</li>
+            <li><strong>Blocks:</strong> 4 blocks (based on soil fertility gradient)</li>
+            <li><strong>Replicates:</strong> 1 per treatment per block → N = 20 plots</li>
+        </ul>
+
+        <div class="section-label">📊 Raw Data</div>
+        <table class="data-table">
+            <thead>
+                <tr><th>Variety</th><th>Block 1</th><th>Block 2</th><th>Block 3</th><th>Block 4</th><th>Total (V<sub>i</sub>)</th><th>Mean</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="label">V1</td><td>20</td><td>22</td><td>19</td><td>21</td><td><strong>82</strong></td><td><strong>20.50</strong></td></tr>
+                <tr><td class="label">V2</td><td>25</td><td>27</td><td>24</td><td>26</td><td><strong>102</strong></td><td><strong>25.50</strong></td></tr>
+                <tr><td class="label">V3</td><td>18</td><td>21</td><td>16</td><td>19</td><td><strong>74</strong></td><td><strong>18.50</strong></td></tr>
+                <tr><td class="label">V4</td><td>23</td><td>26</td><td>22</td><td>24</td><td><strong>95</strong></td><td><strong>23.75</strong></td></tr>
+                <tr><td class="label">V5</td><td>20</td><td>22</td><td>21</td><td>22</td><td><strong>85</strong></td><td><strong>21.25</strong></td></tr>
+                <tr class="total-row"><td class="label">Block Total</td><td><strong>106</strong></td><td><strong>118</strong></td><td><strong>102</strong></td><td><strong>112</strong></td><td><strong>438</strong></td><td><strong>21.90</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-label">🧮 Step-by-Step Manual Computation</div>
+
+        <div class="step">
+            <div class="step-title">Step 1 — Correction Factor</div>
+            <div class="formula-box">CF = G² / N = (438)² / 20 = 191,844 / 20 = <span class="result">9,592.2</span></div>
+        </div>
+
+        <div class="step">
+            <div class="step-title">Step 2 — Total Sum of Squares</div>
+        <div class="formula-box">Total SS = Σx² − CF
+
+Σx² = (20²+22²+19²+21²</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+

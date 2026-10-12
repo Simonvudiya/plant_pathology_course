@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Open all collapsible cards by default
-  document.querySelectorAll('.pathogen-header, .pest-header').forEach(header => {
+  document.querySelectorAll('.pathogen-header, .pest-header, .card-header, .design-header').forEach(header => {
     header.classList.remove('collapsed');
     const body = header.nextElementSibling;
     if (body) {
