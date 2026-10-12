@@ -3,12 +3,376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nematology</title>
+  <title>Nematode Diagnostics — Classification, Extraction & Identification</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Nematology</h1>
-  <p>Nematology is the study of nematodes.</p>
+  <div class="wrap">
+
+    <!-- ================= MASTHEAD ================= -->
+    <header class="masthead">
+      <span class="eyebrow">Diagnostic Reference</span>
+      <h1>Nematodes of Quarantine & Regulatory Concern</h1>
+      <p>
+        Classification, extraction and identification notes for nematode species and groups
+        detected in samples submitted to the station for testing.
+      </p>
+    </header>
+
+    <!-- ================= 1. CLASSIFICATION ================= -->
+    <section id="classification">
+      <h2><span class="num">1</span> Classification & Taxonomy</h2>
+      <p class="lede">
+        The nematodes identified in the samples belong to the phylum <strong>Nematoda</strong>,
+        primarily within the order <strong>Tylenchida</strong> (plant-parasitic nematodes).
+        The table below summarises their taxonomic positions.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <caption>Taxonomic position of nematodes recorded in submitted samples</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nematode species / group</th>
+              <th scope="col">Order</th>
+              <th scope="col">Family</th>
+              <th scope="col">Common name / note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sci">Ditylenchus angustus</span></td>
+              <td>Tylenchida</td>
+              <td>Anguinidae</td>
+              <td>Rice stem nematode; causes “ufra” disease in rice</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Ditylenchus dipsaci</span></td>
+              <td>Tylenchida</td>
+              <td>Anguinidae</td>
+              <td>Stem and bulb nematode; attacks bulbs, garlic and ornamentals</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Ditylenchus destructor</span></td>
+              <td>Tylenchida</td>
+              <td>Anguinidae</td>
+              <td>Potato rot nematode; attacks subterranean plant parts</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Globodera pallida</span></td>
+              <td>Tylenchida</td>
+              <td>Heteroderidae</td>
+              <td>Pale cyst nematode (PCN); major potato pest</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Globodera rostochiensis</span></td>
+              <td>Tylenchida</td>
+              <td>Heteroderidae</td>
+              <td>Golden nematode (PCN); major potato pest</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Meloidogyne chitwoodi</span></td>
+              <td>Tylenchida</td>
+              <td>Meloidogynidae</td>
+              <td>Columbia root-knot nematode</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Meloidogyne fallax</span></td>
+              <td>Tylenchida</td>
+              <td>Meloidogynidae</td>
+              <td>False Columbia root-knot nematode <span class="tag tag--quarantine">EPPO A2</span></td>
+            </tr>
+            <tr>
+              <td><span class="sci">Punctodera punctata</span></td>
+              <td>Tylenchida</td>
+              <td>Heteroderidae</td>
+              <td>Cyst nematode (specific to grasses; limited data available)</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Xiphinema</span> Cobb</td>
+              <td>Dorylaimida</td>
+              <td>Longidoridae</td>
+              <td>Dagger nematode; also a vector of plant viruses</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Aphelenchoides ritzemabosi</span></td>
+              <td>Aphelenchida</td>
+              <td>Aphelenchoididae</td>
+              <td>Chrysanthemum foliar nematode</td>
+            </tr>
+            <tr>
+              <td>"Nematodes" (generic)</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="tag tag--generic">Generic</span> Likely mixed plant-parasitic or saprophytic species</td>
+            </tr>
+            <tr>
+              <td>"PCN"</td>
+              <td>Tylenchida</td>
+              <td>Heteroderidae</td>
+              <td>Potato cyst nematode; primarily <span class="sci">Globodera</span> spp.</td>
+            </tr>
+            <tr>
+              <td>"Root knot nematodes"</td>
+              <td>Tylenchida</td>
+              <td>Meloidogynidae</td>
+              <td>Root-knot nematodes; primarily <span class="sci">Meloidogyne</span> spp.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= 2. EXTRACTION ================= -->
+    <section id="extraction">
+      <h2><span class="num">2</span> Extraction Methods</h2>
+      <p class="lede">
+        Extraction method selection depends on the sample matrix (soil vs. plant tissue) and the
+        nematode's biology — endoparasitic vs. ectoparasitic, cyst-forming vs. free-living.
+      </p>
+
+      <h3>From plant tissue</h3>
+      <ul class="clean">
+        <li>
+          <strong>Baermann funnel / mist chamber</strong> — suitable for extracting
+          <span class="sci">Ditylenchus angustus</span> from rice tillers and
+          <span class="sci">Aphelenchoides ritzemabosi</span> from leaf tissues. Plant pieces are
+          placed in water and nematodes migrate out over 24 hours.
+        </li>
+        <li>
+          <strong>Direct dissection</strong> — for <span class="sci">Meloidogyne</span> spp.,
+          root galls are dissected under a microscope to reveal adult females and egg masses.
+        </li>
+        <li>
+          <strong>Water soaking</strong> — <span class="sci">Ditylenchus destructor</span> and
+          <span class="sci">D. dipsaci</span> can be detected by placing infested plant tissue
+          (tubers, bulbs) in water.
+        </li>
+      </ul>
+
+      <h3>From soil</h3>
+      <ul class="clean">
+        <li>
+          <strong>Baermann pan / funnel</strong> — validated for extracting
+          <span class="sci">D. dipsaci</span> from various soil types (sand, loam, silty clay, muck);
+          also used for motile stages of <span class="sci">Meloidogyne</span> and
+          <span class="sci">Xiphinema</span>.
+        </li>
+        <li>
+          <strong>Fenwick can / flotation</strong> — the standard method for recovering potato cyst
+          nematodes (<span class="sci">Globodera</span> spp.) from soil. The Fenwick can is
+          recommended for routine analysis as it recovers the highest number of cysts.
+        </li>
+        <li>
+          <strong>Sugar centrifugal flotation</strong> — used for extracting
+          <span class="sci">Aphelenchoides</span> from soil and for separating
+          <span class="sci">Meloidogyne</span> juveniles from soil samples.
+        </li>
+        <li>
+          <strong>USDA cyst extractor / elutriation</strong> — alternative acceptable methods for
+          cyst extraction.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= 3. IDENTIFICATION ================= -->
+    <section id="identification">
+      <h2><span class="num">3</span> Identification Methods</h2>
+      <p class="lede">
+        Identification follows a morphological → molecular workflow, with molecular confirmation
+        essential for species-level discrimination, especially for quarantine pests.
+      </p>
+
+      <div class="workflow" aria-label="Identification workflow">
+        <span class="step">Sample receipt</span>
+        <span class="arrow">→</span>
+        <span class="step">Extraction</span>
+        <span class="arrow">→</span>
+        <span class="step">Morphology</span>
+        <span class="arrow">→</span>
+        <span class="step">Molecular confirmation</span>
+        <span class="arrow">→</span>
+        <span class="step">Reporting</span>
+      </div>
+
+      <h3>3.1 Morphological identification</h3>
+      <ul class="clean">
+        <li>
+          <strong><span class="sci">Ditylenchus angustus</span></strong> — distinguished by tail
+          shape and size, relative stylet length, post-vulval sac, and number of cuticular lateral
+          lines. Adult females are 800–1,200&nbsp;µm long.
+        </li>
+        <li>
+          <strong><span class="sci">Ditylenchus destructor</span> vs.
+          <span class="sci">D. dipsaci</span></strong> — morphologically very similar (same genus,
+          similar size); identification relies on morphological methods first, often followed by
+          molecular confirmation.
+        </li>
+        <li>
+          <strong><span class="sci">Globodera pallida</span> /
+          <span class="sci">G. rostochiensis</span></strong> — cyst morphology and morphometrics of
+          second-stage juveniles (J2), especially stylet length and shape of basal knobs, are used.
+          However, morphological overlap requires molecular confirmation.
+        </li>
+        <li>
+          <strong><span class="sci">Meloidogyne chitwoodi</span> /
+          <span class="sci">M. fallax</span></strong> — identification based on female perineal
+          patterns and J2 morphometrics. These species are morphologically very close and often
+          require molecular tools for reliable separation.
+        </li>
+        <li>
+          <strong><span class="sci">Aphelenchoides ritzemabosi</span></strong> — morphological
+          identification alone is difficult; species-level discrimination requires molecular methods.
+        </li>
+      </ul>
+
+      <h3>3.2 Molecular identification (key methods)</h3>
+      <ul class="clean">
+        <li>
+          <strong>PCR-RFLP (ITS region)</strong> — used for distinguishing
+          <span class="sci">Ditylenchus</span> species, <span class="sci">Globodera</span> species
+          and <span class="sci">Meloidogyne</span> species.
+        </li>
+        <li>
+          <strong>Multiplex PCR</strong> — recommended for routine identification of
+          <span class="sci">G. pallida</span> and <span class="sci">G. rostochiensis</span> using ITS
+          primers (e.g. ITS5 / PITSp4 + PITSr3).
+        </li>
+        <li>
+          <strong>Real-time PCR</strong> — high-throughput diagnosis of PCN in soil samples; also
+          validated for <span class="sci">Globodera</span> and <span class="sci">Meloidogyne</span>.
+        </li>
+        <li>
+          <strong>LAMP (loop-mediated isothermal amplification)</strong> — successfully used to
+          differentiate <span class="sci">M. chitwoodi</span> from <span class="sci">M. hapla</span>
+          and tropical root-knot nematodes.
+        </li>
+        <li>
+          <strong>SCAR markers</strong> — used for specific detection of
+          <span class="sci">D. dipsaci</span> and <span class="sci">M. incognita</span>.
+        </li>
+      </ul>
+
+      <div class="callout callout--note">
+        <strong>Note on generic records:</strong> samples logged only as "Nematodes",
+        "PCN" or "Root knot nematodes" require follow-up to genus or species level before a
+        phytosanitary decision can be made.
+      </div>
+    </section>
+
+    <!-- ================= 4. SUMMARY ================= -->
+    <section id="summary">
+      <h2><span class="num">4</span> Summary — Extraction & Identification by Nematode Group</h2>
+
+      <div class="table-scroll">
+        <table>
+          <caption>Primary methods by nematode group</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nematode</th>
+              <th scope="col">Primary extraction method(s)</th>
+              <th scope="col">Primary identification method(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sci">Ditylenchus angustus</span></td>
+              <td>Baermann funnel / mist chamber from plant tissue</td>
+              <td>Morphology (tail, stylet, lateral lines); PCR-RFLP; PCR of rDNA fragment</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Ditylenchus dipsaci</span> / <span class="sci">D. destructor</span></td>
+              <td>Baermann pan/funnel from soil; water soaking of plant tissue</td>
+              <td>Morphology (initial); PCR-RFLP of ITS; SCAR-PCR; species-specific PCR</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Globodera pallida</span> / <span class="sci">G. rostochiensis</span></td>
+              <td>Fenwick can; sugar centrifugation; USDA cyst extractor</td>
+              <td>Cyst & J2 morphometrics; multiplex PCR (ITS); real-time PCR; PCR-RFLP</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Meloidogyne chitwoodi</span> / <span class="sci">M. fallax</span></td>
+              <td>Baermann funnel; sugar centrifugal flotation; root dissection</td>
+              <td>Perineal patterns; J2 morphometrics; ITS PCR-RFLP; LAMP; SCAR markers</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Aphelenchoides ritzemabosi</span></td>
+              <td>Modified Baermann funnel (leaf tissue); sugar flotation (soil)</td>
+              <td>Morphology (limited); molecular methods required for species confirmation</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Xiphinema</span> (dagger nematodes)</td>
+              <td>Baermann funnel from soil</td>
+              <td>Morphology of adults (stylet, tail); molecular methods for species-level ID</td>
+            </tr>
+            <tr>
+              <td><span class="sci">Punctodera punctata</span></td>
+              <td>Cyst extraction from soil (flotation / elutriation)</td>
+              <td>Cyst morphology; molecular methods (limited literature available)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= 5. RECOMMENDATIONS ================= -->
+    <section id="recommendations">
+      <h2><span class="num">5</span> Practical Recommendations for These Samples</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h4>Soil samples labelled "PCN"</h4>
+          <p>
+            Extract cysts using a Fenwick can or sugar flotation, then apply multiplex PCR to
+            differentiate <span class="sci">G. pallida</span> from
+            <span class="sci">G. rostochiensis</span>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Rice samples with <span class="sci">D. angustus</span></h4>
+          <p>
+            Extract from tillers using a Baermann funnel; confirm with morphology
+            (stylet, tail) and PCR-RFLP where required.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Irish potato with multiple species</h4>
+          <p>
+            Use separate strategies — cyst extraction for <span class="sci">Globodera</span> and
+            <span class="sci">Punctodera</span>, Baermann for
+            <span class="sci">Ditylenchus</span>, root dissection for
+            <span class="sci">Meloidogyne</span>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Generic "Nematodes" samples</h4>
+          <p>
+            Likely mixed populations; target the dominant life stage (motile vs. cyst) during
+            extraction and confirm key genera molecularly.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Cocopeat and ornamentals</h4>
+          <p>
+            <span class="sci">Xiphinema</span> and <span class="sci">Aphelenchoides</span> are best
+            recovered by Baermann funnel from soil/medium and plant tissue respectively;
+            molecular confirmation is advised for species-level ID.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="doc-footer">
+      <span>Nematode Diagnostic Notes — Station Sample Reference</span>
+      <span>Companion to sample submission register</span>
+    </footer>
+
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
