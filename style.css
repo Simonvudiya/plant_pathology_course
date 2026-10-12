@@ -1,0 +1,92 @@
+body {
+  font-family: Georgia, serif;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.6;
+  color: #222;
+  background: #fdfdfa;
+}
+
+h1 {
+  color: #1b5e20;
+  border-bottom: 3px solid #a5d6a7;
+  padding-bottom: 0.4rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.8rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Aside navigation */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #1b5e20;
+  color: #fff;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+aside h2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 0.5rem;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  margin: 0.5rem 0;
+}
+
+aside a {
+  color: #e8f5e9;
+  font-size: 1rem;
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+aside a:hover {
+  background: #2e7d32;
+  text-decoration: none;
+}
+
+aside a.active {
+  background: #a5d6a7;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+/* Adjust main content to make room for aside */
+body {
+  margin-left: 260px;
+}
