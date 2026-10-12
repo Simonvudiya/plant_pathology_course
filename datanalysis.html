@@ -36,7 +36,7 @@
 <!-- DESIGN COMPARISON -->
 <!-- ============================================================ -->
 <div class="design-card" id="comparison">
-    <div class="design-header" onclick="toggle(this)">
+    <div class="design-header">
         <span class="design-num">?</span>
         <h2>Design Selection Guide — When Is Each Design Used?</h2>
         <span class="toggle-icon">▼</span>
@@ -45,10 +45,10 @@
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th style="width:15%">Design</th>
-                    <th style="width:30%">When to Use</th>
-                    <th style="width:25%">Key Features</th>
-                    <th style="width:30%">Typical Applications</th>
+                    <th class="col-15">Design</th>
+                    <th class="col-30">When to Use</th>
+                    <th class="col-25">Key Features</th>
+                    <th class="col-30">Typical Applications</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,7 +79,7 @@
             </tbody>
         </table>
 
-        <div class="note-box" style="margin-top:18px;">
+        <div class="note-box spaced">
             <strong>Rule of Thumb:</strong> If the environment is uniform → <strong>CRD</strong>. If you can identify a gradient or grouping → <strong>RCBD</strong>. If you care about two factors and their interaction → <strong>Factorial</strong>. If one factor needs big plots and another can be applied to smaller units → <strong>Split-Plot</strong>.
         </div>
     </div>
@@ -89,7 +89,7 @@
 <!-- 1. CRD -->
 <!-- ============================================================ -->
 <div class="design-card" id="crd">
-    <div class="design-header" onclick="toggle(this)">
+    <div class="design-header">
         <span class="design-num">1</span>
         <h2>Completely Randomized Design (CRD) — One-Way ANOVA</h2>
         <span class="toggle-icon">▼</span>
@@ -243,7 +243,7 @@ LSD₀.₀₅ = t₀.₀₂₅,₁₆ × SE(d) = 2.120 × 1.000 = <span class="r
 <!-- 2. RCBD -->
 <!-- ============================================================ -->
 <div class="design-card" id="rcbd">
-    <div class="design-header" onclick="toggle(this)">
+    <div class="design-header">
         <span class="design-num">2</span>
         <h2>Randomized Complete Block Design (RCBD) — Two-Way ANOVA</h2>
         <span class="toggle-icon">▼</span>

@@ -895,6 +895,9 @@ body.bacteriology .summary-section h2 {
 }
 body.bacteriology .summary-section p { font-size: 0.94em; color: #555; margin-top: 12px; }
 
+body.bacteriology .note-box.spaced { margin-top: 20px; }
+body.bacteriology footer p:not(:first-child) { margin-top: 8px; }
+
 body.bacteriology footer {
   text-align: center;
   padding: 36px 20px;
@@ -1138,6 +1141,11 @@ body.virology .tag--violet {
   border-color: var(--violet-line);
 }
 body.virology .tag--quarantine {
+  background: #e74c3c;
+  color: #fff;
+}
+body.virology .abbr.abbr-bg { background: var(--muted); }
+body.virology .tag.tag-muted { background: #eef1f4; color: var(--muted); border-color: var(--line); }
   background: var(--danger-bg);
   color: var(--danger-ink);
   border-color: var(--danger-line);
@@ -1623,6 +1631,14 @@ body.entomology .generic-section h3 {
   margin-bottom: 12px;
   font-size: 1.15em;
 }
+
+body.entomology .note-box.spaced { margin-top: 16px; }
+body.entomology footer p:not(:first-child) { margin-top: 8px; }
+body.entomology .info-text-92 { font-size: 0.92em; margin-top: 10px; }
+body.entomology .info-text-9 { font-size: 0.9em; margin-top: 10px; }
+body.entomology .info-text-95 { font-size: 0.95em; margin-bottom: 14px; }
+body.entomology .disc-list { margin: 6px 0 0 20px; list-style: disc; font-size: 0.96em; }
+body.entomology .steps-list { margin-left: 22px; font-size: 0.94em; line-height: 1.9; }
 
 body.entomology footer {
   text-align: center;
@@ -2163,6 +2179,7 @@ body.molecular .info-grid {
 }
 body.molecular .info-grid dt { font-weight: 600; color: #555; }
 body.molecular .info-grid dd { margin: 0; }
+body.molecular .info-list { margin-left: 18px; font-size: 0.93em; }
 body.molecular .protocol-box {
   background: #f8f9fa;
   border-left: 4px solid var(--secondary);
@@ -2811,6 +2828,25 @@ body.sanitary .compare-table tbody tr:nth-child(even) { background: #f8fbf9; }
 body.sanitary .compare-table tbody tr:hover { background: var(--accent); }
 body.sanitary .compare-table td:first-child { font-weight: 700; color: var(--primary); width: 24%; }
 
+/* Inline styles extracted from HTML */
+body.sanitary .info-text { font-size: 0.94em; margin-top: 6px; }
+body.sanitary .info-text + .info-text { margin-top: 0; }
+body.sanitary .sub-heading {
+  font-size: 0.9em;
+  margin: 14px 0 6px;
+  font-weight: 700;
+  color: var(--blue);
+}
+body.sanitary table.data-table th.ispm-col { width: 100px; }
+body.sanitary .compact-list {
+  margin: 6px 0 0 18px;
+  font-size: 0.93em;
+}
+body.sanitary .col-25 { width: 25%; }
+body.sanitary .col-22 { width: 22%; }
+body.sanitary .col-28 { width: 28%; }
+body.sanitary footer p:not(:first-child) { margin-top: 8px; }
+
 body.sanitary footer {
   text-align: center;
   padding: 36px 20px;
@@ -3107,6 +3143,11 @@ body.datanalysis .comparison-table thead th {
   text-align: left;
   font-weight: 600;
 }
+/* Column widths for comparison table */
+body.datanalysis .col-15 { width: 15%; }
+body.datanalysis .col-30 { width: 30%; }
+body.datanalysis .col-25 { width: 25%; }
+body.datanalysis .note-box.spaced { margin-top: 18px; }
 body.datanalysis .comparison-table tbody td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border);

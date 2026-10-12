@@ -133,6 +133,14 @@ document.addEventListener("DOMContentLoaded", () => {
       body.classList.remove('hidden');
     }
   });
+
+  // Delegated click listener for collapsible headers
+  document.addEventListener('click', function(e) {
+    const header = e.target.closest('.pathogen-header, .pest-header, .card-header, .design-header');
+    if (header) {
+      toggle(header);
+    }
+  });
 });
 
 (function() {
