@@ -9,6 +9,12 @@ const topics = [
   { title: "Data Analysis", file: "datanalysis.html" }
 ];
 
+function toggle(header) {
+  const body = header.nextElementSibling;
+  header.classList.toggle('collapsed');
+  body.classList.toggle('hidden');
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Get current page filename
   const currentFile = window.location.pathname.split("/").pop() || "index.html";
@@ -117,5 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
         bottomNav.classList.remove("hidden");
       }
     });
+  });
+
+  // Open all collapsible cards by default
+  document.querySelectorAll('.pathogen-header, .pest-header').forEach(header => {
+    header.classList.remove('collapsed');
+    const body = header.nextElementSibling;
+    if (body) {
+      body.classList.remove('hidden');
+    }
   });
 });

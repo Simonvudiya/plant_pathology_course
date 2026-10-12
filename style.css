@@ -15,6 +15,9 @@
   --warn-bg:      #fff8e6;
   --warn-line:    #f0d79a;
   --warn-ink:     #7a5a10;
+  --danger-bg:    #fdecec;
+  --danger-line:  #efc3c0;
+  --danger-ink:   #8f2b25;
   --radius:       10px;
   --radius-sm:    6px;
   --shadow:       0 1px 2px rgba(20,38,31,.05), 0 6px 18px rgba(20,38,31,.06);
@@ -34,10 +37,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background-color: var(--bg);
-  background-image:
-    radial-gradient(circle at 12% 0%, rgba(15,123,92,.07), transparent 42%),
-    radial-gradient(circle at 92% 8%, rgba(15,123,92,.05), transparent 38%);
-  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -60,11 +59,8 @@ aside {
   transform: translateX(0);
 }
 
-/* Hide aside by default on mobile */
 @media (max-width: 767px) {
-  aside {
-    transform: translateX(-100%);
-  }
+  aside { transform: translateX(-100%); }
 }
 
 aside h2 {
@@ -75,15 +71,8 @@ aside h2 {
   padding-bottom: 0.5rem;
 }
 
-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-aside li {
-  margin: 0.5rem 0;
-}
+aside ul { list-style: none; padding: 0; margin: 0; }
+aside li { margin: 0.5rem 0; }
 
 aside a {
   color: #e8f5e9;
@@ -94,16 +83,8 @@ aside a {
   transition: background 0.2s;
 }
 
-aside a:hover {
-  background: #2e7d32;
-  text-decoration: none;
-}
-
-aside a.active {
-  background: #a5d6a7;
-  color: #1b5e20;
-  font-weight: bold;
-}
+aside a:hover { background: #2e7d32; text-decoration: none; }
+aside a.active { background: #a5d6a7; color: #1b5e20; font-weight: bold; }
 
 /* ============================================================
    MAIN CONTENT WRAPPER
@@ -114,11 +95,8 @@ aside a.active {
   padding: 0 1rem 4rem;
 }
 
-/* Adjust main content to make room for aside on desktop */
 @media (min-width: 768px) {
-  .wrap {
-    margin-left: 260px;
-  }
+  .wrap { margin-left: 260px; }
 }
 
 /* ============================================================
@@ -168,10 +146,11 @@ section {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 1.6rem 1.75rem 1.75rem;
+  padding: 1.6rem 1.75rem 1.9rem;
   margin-bottom: 1.75rem;
 }
 
+h1 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--accent-dark); }
 h2 {
   display: flex;
   align-items: center;
@@ -181,7 +160,6 @@ h2 {
   letter-spacing: -.01em;
   color: var(--accent-dark);
 }
-
 h2 .num {
   flex: 0 0 auto;
   display: grid;
@@ -194,7 +172,6 @@ h2 .num {
   background: var(--accent);
   border-radius: 50%;
 }
-
 h3 {
   margin: 1.6rem 0 .7rem;
   font-size: 1.02rem;
@@ -203,9 +180,7 @@ h3 {
   padding-bottom: .35rem;
   border-bottom: 2px solid var(--accent-soft);
 }
-
 h3:first-of-type { margin-top: 1.1rem; }
-
 h4 {
   margin: 1.1rem 0 .4rem;
   font-size: .93rem;
@@ -265,7 +240,6 @@ thead th {
   white-space: nowrap;
   border-right: 1px solid rgba(255,255,255,.16);
 }
-
 thead th:last-child { border-right: none; }
 
 tbody td {
@@ -274,43 +248,11 @@ tbody td {
   vertical-align: top;
   color: var(--ink-soft);
 }
-
 tbody tr:nth-child(even) { background: #fafcfb; }
 tbody tr:hover { background: var(--accent-soft); }
-
 tbody td:first-child { color: var(--ink); }
 
-.sci {
-  font-style: italic;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.tag {
-  display: inline-block;
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  padding: .16rem .5rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent-dark);
-  border: 1px solid var(--accent-line);
-  white-space: nowrap;
-}
-
-.tag--quarantine {
-  background: #fdecec;
-  color: #9b2226;
-  border-color: #f3c2c2;
-}
-
-.tag--generic {
-  background: #eef1f0;
-  color: var(--muted);
-  border-color: var(--line);
-}
+.sci { font-style: italic; font-weight: 600; color: var(--ink); }
 
 /* ============================================================
    LISTS
@@ -320,16 +262,13 @@ ul.clean {
   margin: 0 0 1rem;
   padding: 0;
 }
-
 ul.clean > li {
   position: relative;
   padding: .6rem 0 .6rem 1.35rem;
   border-bottom: 1px dashed var(--line);
   font-size: .93rem;
 }
-
 ul.clean > li:last-child { border-bottom: none; }
-
 ul.clean > li::before {
   content: "";
   position: absolute;
@@ -341,11 +280,7 @@ ul.clean > li::before {
   background: var(--accent);
   opacity: .55;
 }
-
-ul.clean strong {
-  color: var(--ink);
-  font-weight: 600;
-}
+ul.clean strong { color: var(--ink); font-weight: 600; }
 
 /* ============================================================
    CALLOUTS
@@ -359,14 +294,18 @@ ul.clean strong {
   font-size: .9rem;
   color: var(--ink-soft);
 }
-
 .callout--note {
   border-left-color: var(--warn-line);
   background: var(--warn-bg);
   color: var(--warn-ink);
 }
-
+.callout--danger {
+  border-left-color: var(--danger-line);
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+}
 .callout strong { color: inherit; }
+.callout p:last-child { margin-bottom: 0; }
 
 /* ============================================================
    WORKFLOW STRIP
@@ -383,7 +322,6 @@ ul.clean strong {
   border-radius: var(--radius-sm);
   font-size: .85rem;
 }
-
 .workflow .step {
   font-weight: 600;
   color: var(--accent-dark);
@@ -393,11 +331,10 @@ ul.clean strong {
   border-radius: 999px;
   white-space: nowrap;
 }
-
 .workflow .arrow { color: var(--muted); font-weight: 700; }
 
 /* ============================================================
-   GRID OF CARDS (recommendations)
+   GRID OF CARDS
    ============================================================ */
 .grid {
   display: grid;
@@ -405,7 +342,6 @@ ul.clean strong {
   gap: .9rem;
   margin-top: 1rem;
 }
-
 .card {
   border: 1px solid var(--line);
   border-top: 3px solid var(--accent);
@@ -413,13 +349,11 @@ ul.clean strong {
   padding: .9rem 1rem;
   background: #fdfefe;
 }
-
 .card h4 {
   margin: 0 0 .4rem;
   font-size: .88rem;
   color: var(--accent-dark);
 }
-
 .card p {
   margin: 0;
   font-size: .87rem;
@@ -460,46 +394,28 @@ footer.doc-footer {
   z-index: 1001;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
-/* Overlay for mobile */
 .overlay {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+.overlay.show { display: block; }
 
-.overlay.show {
-  display: block;
-}
-
-/* Mobile bottom nav */
 .bottom-nav {
   display: none;
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0; left: 0;
   width: 100%;
   background: #1b5e20;
   color: #fff;
   z-index: 1000;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.bottom-nav ul {
-  display: flex;
-  overflow-x: auto;
-}
-
-.bottom-nav li {
-  margin: 0;
-  flex: 0 0 auto;
-}
-
+.bottom-nav ul { display: flex; overflow-x: auto; }
+.bottom-nav li { margin: 0; flex: 0 0 auto; }
 .bottom-nav a {
   color: #e8f5e9;
   font-size: 0.85rem;
@@ -508,12 +424,7 @@ footer.doc-footer {
   white-space: nowrap;
   text-align: center;
 }
-
-.bottom-nav a:hover {
-  background: #2e7d32;
-  text-decoration: none;
-}
-
+.bottom-nav a:hover { background: #2e7d32; text-decoration: none; }
 .bottom-nav a.active {
   background: #a5d6a7;
   color: #1b5e20;
@@ -524,28 +435,11 @@ footer.doc-footer {
    MOBILE STYLES
    ============================================================ */
 @media (max-width: 767px) {
-  .hamburger {
-    display: block;
-  }
-
-  /* When menu is open on mobile */
-  aside.open {
-    transform: translateX(0);
-  }
-
-  .bottom-nav {
-    display: block;
-  }
-
-  body {
-    padding-bottom: 60px;
-  }
-
-  header.masthead {
-    margin-top: 1.2rem;
-    padding: 1.4rem 1.1rem;
-  }
-  
+  .hamburger { display: block; }
+  aside.open { transform: translateX(0); }
+  .bottom-nav { display: block; }
+  body { padding-bottom: 60px; }
+  header.masthead { margin-top: 1.2rem; padding: 1.4rem 1.1rem; }
   section { padding: 1.15rem 1rem 1.25rem; }
   h2 { font-size: 1.12rem; }
   table { font-size: .84rem; min-width: 480px; }
@@ -565,7 +459,6 @@ footer.doc-footer {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
-
 .logo-img {
   max-width: 140px;
   max-height: 90px;
@@ -573,33 +466,20 @@ footer.doc-footer {
   opacity: 0.85;
   transition: opacity 0.2s, transform 0.2s;
 }
-
-.logo-img:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
+.logo-img:hover { opacity: 1; transform: scale(1.05); }
 
 /* ============================================================
    PRINT
    ============================================================ */
 @media print {
-  body {
-    background: #fff;
-    padding: 0;
-    font-size: 11pt;
-    color: #000;
-  }
+  body { background: #fff; padding: 0; font-size: 11pt; color: #000; }
   header.masthead {
     background: #fff !important;
     color: #000;
     border: 2px solid #000;
     box-shadow: none;
   }
-  header.masthead .eyebrow {
-    background: #fff;
-    border-color: #000;
-    color: #000;
-  }
+  header.masthead .eyebrow { background: #fff; border-color: #000; color: #000; }
   header.masthead p { color: #333; }
   section {
     box-shadow: none;
@@ -620,4 +500,1964 @@ footer.doc-footer {
   footer.doc-footer { border-top: 1px solid #999; }
   aside, .hamburger, .overlay, .bottom-nav { display: none !important; }
   .wrap { margin-left: 0 !important; }
+}
+
+/* ============================================================
+   BACTERIOLOGY PAGE
+   ============================================================ */
+body.bacteriology {
+  --primary: #1a3a5c;
+  --secondary: #4a90c4;
+  --accent: #eef4fa;
+  --text: #2a2a2a;
+  --border: #d0dde8;
+  --card-bg: #ffffff;
+  --highlight: #2c6e9e;
+  --danger: #c0392b;
+  --success: #27803a;
+  --ink: #2a2a2a;
+  --ink-soft: #2a2a2a;
+  --muted: #5a6a7a;
+  --accent: #0f7b5c;
+  --accent-dark: #0a5a43;
+  --accent-soft: #eef4fa;
+  --accent-line: #b9ddd0;
+  --line: #d0dde8;
+  --bg: #f5f9fd;
+  --card: #ffffff;
+  --warn-bg: #fff8e6;
+  --warn-line: #f0d79a;
+  --warn-ink: #7a5a10;
+  --danger-bg: #fdecec;
+  --danger-line: #f3c2c2;
+  --danger-ink: #9b2226;
+  background: linear-gradient(180deg, #f5f9fd 0%, #eaf2f9 100%);
+}
+
+body.bacteriology .container,
+body.bacteriology .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  body.bacteriology .wrap { margin-left: 260px; }
+}
+
+body.bacteriology header {
+  background: linear-gradient(135deg, var(--primary), #0f2640);
+  color: #fff;
+  padding: 45px 35px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 24px rgba(26, 58, 92, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+body.bacteriology header::before {
+  content: "🧫";
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  font-size: 6.5em;
+  opacity: 0.07;
+}
+body.bacteriology header h1 { font-size: 2.1em; margin-bottom: 10px; }
+body.bacteriology header p { opacity: 0.9; font-size: 1.02em; max-width: 750px; }
+
+body.bacteriology .stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+body.bacteriology .stat-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+body.bacteriology .stat-badge strong { font-size: 1.4em; display: block; color: #7ec8e3; }
+
+body.bacteriology nav.toc {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 12px rgba(26, 58, 92, 0.08);
+  border-left: 5px solid var(--secondary);
+}
+body.bacteriology nav.toc h2 { margin-bottom: 14px; color: var(--primary); font-size: 1.25em; }
+body.bacteriology nav.toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+body.bacteriology nav.toc a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 5px 14px;
+  border-radius: 16px;
+  background: var(--accent);
+  transition: all 0.2s;
+  display: inline-block;
+}
+body.bacteriology nav.toc a:hover { background: var(--secondary); color: #fff; }
+
+body.bacteriology .pathogen-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 14px rgba(26, 58, 92, 0.08);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+body.bacteriology .pathogen-card:hover { box-shadow: 0 6px 22px rgba(26, 58, 92, 0.14); }
+
+body.bacteriology .pathogen-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 26px;
+  background: linear-gradient(135deg, var(--primary), #254a6e);
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s;
+}
+body.bacteriology .pathogen-header:hover { background: linear-gradient(135deg, #132d47, #1f4060); }
+body.bacteriology .pathogen-header h2 { font-size: 1.15em; flex: 1; line-height: 1.35; }
+body.bacteriology .pathogen-header .toggle-icon {
+  font-size: 1.3em;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+body.bacteriology .pathogen-header.collapsed .toggle-icon { transform: rotate(-90deg); }
+body.bacteriology .pathogen-number {
+  background: var(--secondary);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95em;
+  flex-shrink: 0;
+}
+body.bacteriology .pathogen-body { padding: 0 26px 24px; display: block; }
+body.bacteriology .pathogen-body.hidden { display: none; }
+
+body.bacteriology .section-label {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.86em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 24px 0 10px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body.bacteriology .section-label:first-child { margin-top: 20px; }
+body.bacteriology .section-label .icon { font-size: 1.15em; }
+
+body.bacteriology .info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.91em;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+body.bacteriology .info-table th {
+  background: var(--accent);
+  color: var(--primary);
+  text-align: left;
+  padding: 9px 14px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  width: 32%;
+}
+body.bacteriology .info-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+body.bacteriology .info-table tr:last-child th,
+body.bacteriology .info-table tr:last-child td { border-bottom: none; }
+
+body.bacteriology .info-list { list-style: none; font-size: 0.92em; }
+body.bacteriology .info-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px dashed var(--border);
+}
+body.bacteriology .info-list li:last-child { border-bottom: none; }
+body.bacteriology .info-list li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  color: var(--secondary);
+  font-weight: 700;
+}
+body.bacteriology .info-list li strong { color: var(--primary); }
+
+body.bacteriology .protocol-box {
+  background: #f4f8fc;
+  border-left: 4px solid var(--secondary);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 0.89em;
+}
+body.bacteriology .protocol-box ol { margin-left: 20px; margin-top: 8px; }
+body.bacteriology .protocol-box ol li { margin-bottom: 8px; padding-left: 4px; }
+body.bacteriology .protocol-box ol li strong { color: var(--primary); }
+
+body.bacteriology .note-box {
+  background: #fff8e6;
+  border-left: 4px solid #e6a817;
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 0.9em;
+}
+body.bacteriology .note-box strong { color: #b8860b; }
+
+body.bacteriology .alert-box {
+  background: #fdecea;
+  border-left: 4px solid var(--danger);
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 0.9em;
+}
+body.bacteriology .alert-box strong { color: var(--danger); }
+
+body.bacteriology .signs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+body.bacteriology .sign-item {
+  background: var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.89em;
+  border-left: 3px solid var(--highlight);
+}
+body.bacteriology .sign-item strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+body.bacteriology .colony-morph {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+body.bacteriology .colony-item {
+  background: #f0f6fb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.87em;
+  border: 1px solid var(--border);
+}
+body.bacteriology .colony-item strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 3px;
+}
+body.bacteriology .colony-item .medium {
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+body.bacteriology .host-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 8px;
+}
+body.bacteriology .host-tag {
+  background: #e3f0e8;
+  color: #1f5c2e;
+  padding: 4px 14px;
+  border-radius: 16px;
+  font-size: 0.82em;
+  border: 1px solid #b8d8c4;
+  font-weight: 500;
+}
+
+body.bacteriology .summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86em;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(26, 58, 92, 0.08);
+  margin-top: 20px;
+}
+body.bacteriology .summary-table thead th {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.94em;
+}
+body.bacteriology .summary-table tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+body.bacteriology .summary-table tbody tr:nth-child(even) { background: #f7fafd; }
+body.bacteriology .summary-table tbody tr:hover { background: var(--accent); }
+
+body.bacteriology .summary-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 14px rgba(26, 58, 92, 0.08);
+  border: 1px solid var(--border);
+}
+body.bacteriology .summary-section h2 {
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-size: 1.35em;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+body.bacteriology .summary-section p { font-size: 0.94em; color: #555; margin-top: 12px; }
+
+body.bacteriology footer {
+  text-align: center;
+  padding: 36px 20px;
+  color: #6a7a8a;
+  font-size: 0.88em;
+  border-top: 2px solid var(--border);
+  margin-top: 20px;
+}
+body.bacteriology footer strong { color: var(--primary); }
+
+@media (max-width: 700px) {
+  body.bacteriology { padding: 12px; }
+  body.bacteriology header { padding: 30px 20px; }
+  body.bacteriology header h1 { font-size: 1.5em; }
+  body.bacteriology .pathogen-header { padding: 16px 18px; }
+  body.bacteriology .pathogen-header h2 { font-size: 1.0em; }
+  body.bacteriology .pathogen-body { padding: 0 18px 18px; }
+  body.bacteriology .info-table th { width: 40%; font-size: 0.84em; }
+  body.bacteriology .summary-table { font-size: 0.76em; }
+  body.bacteriology .summary-table thead th,
+  body.bacteriology .summary-table tbody td { padding: 7px 9px; }
+  body.bacteriology .signs-grid { grid-template-columns: 1fr; }
+  body.bacteriology .colony-morph { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   VIROLOGY PAGE
+   ============================================================ */
+body.virology {
+  --ink:          #14202e;
+  --ink-soft:     #2c3d4f;
+  --muted:        #5d6f80;
+  --accent:       #1d4e89;
+  --accent-dark:  #123a6b;
+  --accent-soft:  #e9f1fa;
+  --accent-line:  #b9d2ea;
+  --violet:       #5b3d8a;
+  --violet-soft:  #f0ebf9;
+  --violet-line:  #d6c9ec;
+  --line:         #dde5ec;
+  --bg:           #f5f8fb;
+  --card:         #ffffff;
+  --warn-bg:      #fff8e6;
+  --warn-line:    #f0d79a;
+  --warn-ink:     #7a5a10;
+  --danger-bg:    #fdecec;
+  --danger-line:  #f3c2c2;
+  --danger-ink:   #9b2226;
+  background: linear-gradient(180deg, #f5f8fb 0%, #eaf2f9 100%);
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(29,78,137,.07), transparent 42%),
+    radial-gradient(circle at 94% 6%, rgba(91,61,138,.05), transparent 40%);
+}
+
+body.virology .wrap { padding: 0 1rem 4rem; margin-left: 260px; }
+@media (max-width: 767px) {
+  body.virology .wrap { margin-left: 0; }
+}
+
+body.virology header.masthead {
+  margin: 2.5rem 0 1.5rem;
+  padding: 2rem 1.75rem 1.75rem;
+  background: linear-gradient(135deg, #0d2b50, var(--accent) 60%, #2f6fb0);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+body.virology header.masthead .eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.28);
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+}
+body.virology header.masthead h1 {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.5rem, 3.6vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+body.virology header.masthead p {
+  margin: 0;
+  max-width: 70ch;
+  font-size: .98rem;
+  color: rgba(255,255,255,.9);
+}
+
+body.virology nav.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.35rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+body.virology nav.toc h2 {
+  margin: 0 0 .7rem;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+body.virology nav.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .35rem 1.25rem;
+  counter-reset: toc;
+}
+body.virology nav.toc li { counter-increment: toc; }
+body.virology nav.toc a {
+  display: block;
+  padding: .3rem 0 .3rem 1.9rem;
+  position: relative;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: .92rem;
+  border-bottom: 1px dashed transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+body.virology nav.toc a::before {
+  content: counter(toc);
+  position: absolute;
+  left: 0;
+  top: .3rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: 50%;
+}
+body.virology nav.toc a:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
+
+body.virology section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem 1.75rem 1.9rem;
+  margin-bottom: 1.75rem;
+}
+body.virology h2 {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 0 0 .35rem;
+  font-size: 1.28rem;
+  letter-spacing: -.01em;
+  color: var(--accent-dark);
+}
+body.virology h2 .num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+}
+body.virology .lede {
+  color: var(--muted);
+  font-size: .95rem;
+  max-width: 80ch;
+  margin: 0 0 1.3rem;
+}
+
+body.virology .virus {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: #fdfefe;
+  padding: 1rem 1.15rem 1.05rem;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+body.virology .virus:last-child { margin-bottom: 0; }
+body.virology .virus--violet { border-left-color: var(--violet); }
+body.virology .virus--muted  { border-left-color: var(--muted); }
+
+body.virology .virus__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .5rem .75rem;
+  margin-bottom: .6rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--line);
+}
+body.virology .virus__head h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -.005em;
+}
+body.virology .abbr {
+  display: inline-block;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #fff;
+  background: var(--accent);
+  padding: .14rem .5rem;
+  border-radius: 4px;
+  vertical-align: 2px;
+  margin-left: .35rem;
+}
+body.virology .virus--violet .abbr { background: var(--violet); }
+body.virology .tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .16rem .55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-line);
+  white-space: nowrap;
+}
+body.virology .tag--violet {
+  background: var(--violet-soft);
+  color: var(--violet);
+  border-color: var(--violet-line);
+}
+body.virology .tag--quarantine {
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+  border-color: var(--danger-line);
+}
+body.virology .block { margin-top: .7rem; }
+body.virology .block__label {
+  display: block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .2rem;
+}
+body.virology .virus--violet .block__label { color: var(--violet); }
+body.virology .block p {
+  margin: 0 0 .4rem;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
+body.virology .block p:last-child { margin-bottom: 0; }
+body.virology .block ul {
+  margin: 0 0 .4rem;
+  padding-left: 1.15rem;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
+body.virology .block ul:last-child { margin-bottom: 0; }
+body.virology .block ul li { margin-bottom: .25rem; }
+body.virology .block ul li:last-child { margin-bottom: 0; }
+body.virology .block ul ul { margin-top: .25rem; font-size: .9rem; }
+body.virology em.sci { font-style: italic; }
+
+body.virology .callout {
+  margin: 1rem 0 0;
+  padding: .8rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+body.virology .callout--warn {
+  border-left-color: var(--warn-line);
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+}
+body.virology .callout--danger {
+  border-left-color: var(--danger-line);
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+}
+body.virology .callout strong { color: inherit; }
+body.virology .callout p:last-child { margin-bottom: 0; }
+
+body.virology .table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  margin-top: 1rem;
+}
+body.virology table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+body.virology table.wide { min-width: 820px; }
+body.virology table.narrow { min-width: 520px; }
+body.virology caption {
+  caption-side: top;
+  text-align: left;
+  padding: .7rem .9rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #fafcfe;
+  border-bottom: 1px solid var(--line);
+}
+body.virology thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--accent);
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+  font-size: .76rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .7rem .85rem;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+body.virology thead th:last-child { border-right: none; }
+body.virology tbody td {
+  padding: .62rem .85rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+body.virology tbody tr:nth-child(even) { background: #fafcfe; }
+body.virology tbody tr:hover { background: var(--accent-soft); }
+body.virology tbody td:first-child { color: var(--ink); font-weight: 600; }
+body.virology .cell-abbr { font-weight: 700; color: var(--accent-dark); }
+body.virology .cell-genus { font-style: italic; }
+body.virology .group-row td {
+  background: var(--accent-soft) !important;
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: .76rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  border-top: 2px solid var(--accent-line);
+}
+
+body.virology footer.doc-footer {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-size: .82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  body.virology { padding: 0 .6rem 3rem; font-size: 15px; }
+  body.virology header.masthead { margin-top: 1.2rem; padding: 1.4rem 1.1rem; }
+  body.virology section { padding: 1.15rem 1rem 1.35rem; }
+  body.virology h2 { font-size: 1.12rem; }
+  body.virology .virus { padding: .85rem .9rem; }
+  body.virology nav.toc ol { grid-template-columns: 1fr; }
+  body.virology table { font-size: .82rem; }
+  body.virology table.wide { min-width: 700px; }
+  body.virology table.narrow { min-width: 440px; }
+}
+
+@media print {
+  body.virology {
+    background: #fff;
+    padding: 0;
+    font-size: 10.5pt;
+    color: #000;
+  }
+  body.virology header.masthead {
+    background: #fff !important;
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: none;
+  }
+  body.virology header.masthead .eyebrow {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+  }
+  body.virology header.masthead p { color: #333; }
+  body.virology nav.toc { display: none; }
+  body.virology section {
+    box-shadow: none;
+    border: 1px solid #999;
+    padding: 0 0 .8rem;
+    margin-bottom: 1rem;
+  }
+  body.virology .virus,
+  body.virology .callout,
+  body.virology .table-scroll { break-inside: avoid; }
+  body.virology .virus { border: 1px solid #bbb; border-left: 3px solid #333; }
+  body.virology thead th {
+    background: #e9e9e9 !important;
+    color: #000 !important;
+    border: 1px solid #999;
+  }
+  body.virology tbody td { border-top: 1px solid #ccc; }
+  body.virology tbody tr:nth-child(even) { background: #f7f7f7; }
+  body.virology .table-scroll { overflow: visible; border: none; }
+  body.virology table.wide,
+  body.virology table.narrow { min-width: 0; }
+  body.virology thead th { position: static; }
+  body.virology footer.doc-footer { border-top: 1px solid #999; }
+  body.virology a { color: #000; text-decoration: none; }
+}
+
+/* ============================================================
+   ENTOMOLOGY PAGE
+   ============================================================ */
+body.entomology {
+  --primary: #4a2c1a;
+  --secondary: #c08552;
+  --accent: #f5ede1;
+  --text: #2a2a2a;
+  --border: #e0d5c5;
+  --card-bg: #ffffff;
+  --highlight: #8b5a2b;
+  --ink: #2a2a2a;
+  --ink-soft: #2a2a2a;
+  --muted: #7a6b58;
+  --line: #e0d5c5;
+  --bg: #faf6f0;
+  --card: #ffffff;
+  background: linear-gradient(180deg, #faf6f0 0%, #f0e8dc 100%);
+}
+
+body.entomology .wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-left: 260px;
+}
+@media (max-width: 767px) {
+  body.entomology .wrap { margin-left: 0; }
+}
+
+body.entomology header {
+  background: linear-gradient(135deg, var(--primary), #2a1810);
+  color: #fff;
+  padding: 45px 35px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 24px rgba(74, 44, 26, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+body.entomology header::before {
+  content: "🐛";
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 6em;
+  opacity: 0.08;
+}
+body.entomology header h1 { font-size: 2.2em; margin-bottom: 10px; }
+body.entomology header p { opacity: 0.9; font-size: 1.05em; max-width: 700px; }
+body.entomology .stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+body.entomology .stat-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+body.entomology .stat-badge strong { font-size: 1.4em; display: block; color: var(--secondary); }
+
+body.entomology nav.toc {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 12px rgba(74, 44, 26, 0.08);
+  border-left: 5px solid var(--secondary);
+}
+body.entomology nav.toc h2 { margin-bottom: 14px; color: var(--primary); font-size: 1.25em; }
+body.entomology nav.toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+body.entomology nav.toc a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.92em;
+  padding: 4px 12px;
+  border-radius: 16px;
+  background: var(--accent);
+  transition: all 0.2s;
+  display: inline-block;
+}
+body.entomology nav.toc a:hover { background: var(--secondary); color: #fff; }
+
+body.entomology .pest-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 14px rgba(74, 44, 26, 0.08);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+body.entomology .pest-card:hover { box-shadow: 0 6px 20px rgba(74, 44, 26, 0.14); }
+body.entomology .pest-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 26px;
+  background: linear-gradient(135deg, var(--primary), #5c3920);
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s;
+}
+body.entomology .pest-header:hover { background: linear-gradient(135deg, #3a2214, #4a2c1a); }
+body.entomology .pest-header h2 { font-size: 1.2em; flex: 1; line-height: 1.35; }
+body.entomology .pest-header .toggle-icon {
+  font-size: 1.3em;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+body.entomology .pest-header.collapsed .toggle-icon { transform: rotate(-90deg); }
+body.entomology .pest-number {
+  background: var(--secondary);
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95em;
+  flex-shrink: 0;
+}
+body.entomology .pest-body { padding: 0 26px 24px; display: block; }
+body.entomology .pest-body.hidden { display: none; }
+
+body.entomology .section-label {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.88em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 24px 0 10px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body.entomology .section-label:first-child { margin-top: 20px; }
+body.entomology .section-label .icon { font-size: 1.1em; }
+
+body.entomology .info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+body.entomology .info-table th {
+  background: var(--accent);
+  color: var(--primary);
+  text-align: left;
+  padding: 10px 14px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  width: 30%;
+}
+body.entomology .info-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+body.entomology .info-table tr:last-child th,
+body.entomology .info-table tr:last-child td { border-bottom: none; }
+
+body.entomology .info-list { list-style: none; font-size: 0.93em; }
+body.entomology .info-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px dashed var(--border);
+}
+body.entomology .info-list li:last-child { border-bottom: none; }
+body.entomology .info-list li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  color: var(--secondary);
+  font-weight: 700;
+}
+body.entomology .info-list li strong { color: var(--primary); }
+
+body.entomology .protocol-box {
+  background: #f8f5f0;
+  border-left: 4px solid var(--secondary);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 0.9em;
+}
+body.entomology .protocol-box ol { margin-left: 20px; margin-top: 8px; }
+body.entomology .protocol-box ol li { margin-bottom: 8px; padding-left: 4px; }
+body.entomology .protocol-box ol li strong { color: var(--primary); }
+
+body.entomology .note-box {
+  background: #fff8e6;
+  border-left: 4px solid #e6a817;
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 0.9em;
+}
+body.entomology .note-box strong { color: #b8860b; }
+
+body.entomology .signs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+body.entomology .sign-item {
+  background: var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.9em;
+  border-left: 3px solid var(--highlight);
+}
+body.entomology .sign-item strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+body.entomology .host-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 8px;
+}
+body.entomology .host-tag {
+  background: #e8f0e0;
+  color: #3a5a20;
+  padding: 4px 14px;
+  border-radius: 16px;
+  font-size: 0.82em;
+  border: 1px solid #c8d8b8;
+  font-weight: 500;
+}
+
+body.entomology .summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(74, 44, 26, 0.08);
+  margin-top: 20px;
+}
+body.entomology .summary-table thead th {
+  background: var(--primary);
+  color: #fff;
+  padding: 13px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+body.entomology .summary-table tbody td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+}
+body.entomology .summary-table tbody tr:nth-child(even) { background: #faf7f2; }
+body.entomology .summary-table tbody tr:hover { background: var(--accent); }
+
+body.entomology .summary-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 14px rgba(74, 44, 26, 0.08);
+  border: 1px solid var(--border);
+}
+body.entomology .summary-section h2 {
+  color: var(--primary);
+  margin-bottom: 8px;
+  font-size: 1.4em;
+  border-bottom: 3px solid var(--secondary);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+body.entomology .summary-section p { font-size: 0.95em; color: #555; margin-top: 12px; }
+
+body.entomology .generic-section {
+  background: #fffaf2;
+  border: 2px dashed var(--secondary);
+  border-radius: 12px;
+  padding: 26px;
+  margin-bottom: 24px;
+}
+body.entomology .generic-section h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1.15em;
+}
+
+body.entomology footer {
+  text-align: center;
+  padding: 36px 20px;
+  color: #8a7a6a;
+  font-size: 0.88em;
+  border-top: 2px solid var(--border);
+  margin-top: 20px;
+}
+body.entomology footer strong { color: var(--primary); }
+
+body.entomology @media (max-width: 700px) {
+  body.entomology { padding: 12px; }
+  body.entomology header { padding: 30px 20px; }
+  body.entomology header h1 { font-size: 1.5em; }
+  body.entomology .pest-header { padding: 16px 18px; }
+  body.entomology .pest-header h2 { font-size: 1.02em; }
+  body.entomology .pest-body { padding: 0 18px 18px; }
+  body.entomology .info-table th { width: 40%; font-size: 0.85em; }
+  body.entomology .summary-table { font-size: 0.78em; }
+  body.entomology .summary-table thead th,
+  body.entomology .summary-table tbody td { padding: 8px 10px; }
+  body.entomology .signs-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   MYCOLOGY PAGE
+   ============================================================ */
+body.mycology {
+  --ink:          #1e1a14;
+  --ink-soft:     #3b332a;
+  --muted:        #7a6b58;
+  --accent:       #6b4d1f;
+  --accent-dark:  #4a3413;
+  --accent-soft:  #f5efe3;
+  --accent-line:  #d9c9a8;
+  --moss:         #4a6b3d;
+  --moss-soft:    #eef3ea;
+  --moss-line:    #c6d6bd;
+  --bark:         #7a4a2e;
+  --bark-soft:    #f7ede6;
+  --bark-line:    #e0c4b3;
+  --line:         #e3dccf;
+  --bg:           #faf7f1;
+  --card:         #ffffff;
+  background-image:
+    radial-gradient(circle at 8% 0%, rgba(107,77,31,.07), transparent 42%),
+    radial-gradient(circle at 94% 6%, rgba(74,107,61,.05), transparent 40%);
+}
+
+body.mycology .wrap { padding: 0 1rem 4rem; margin-left: 260px; }
+@media (max-width: 767px) {
+  body.mycology .wrap { margin-left: 0; }
+}
+
+body.mycology header.masthead {
+  margin: 2.5rem 0 1.5rem;
+  padding: 2rem 1.75rem 1.75rem;
+  background: linear-gradient(135deg, #2f2210, var(--accent) 60%, #8a6a35);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+body.mycology header.masthead .eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.28);
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+}
+body.mycology header.masthead h1 {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.5rem, 3.6vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+body.mycology header.masthead p {
+  margin: 0;
+  max-width: 70ch;
+  font-size: .98rem;
+  color: rgba(255,255,255,.9);
+}
+
+body.mycology nav.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.35rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+body.mycology nav.toc h2 {
+  margin: 0 0 .7rem;
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+body.mycology nav.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: .35rem 1.25rem;
+  counter-reset: toc;
+}
+body.mycology nav.toc li { counter-increment: toc; }
+body.mycology nav.toc a {
+  display: block;
+  padding: .3rem 0 .3rem 1.9rem;
+  position: relative;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: .92rem;
+  border-bottom: 1px dashed transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+body.mycology nav.toc a::before {
+  content: counter(toc);
+  position: absolute;
+  left: 0;
+  top: .3rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  display: grid;
+  place-items: center;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: 50%;
+}
+body.mycology nav.toc a:hover { color: var(--accent); border-bottom-color: var(--accent-line); }
+
+body.mycology section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem 1.75rem 1.9rem;
+  margin-bottom: 1.75rem;
+}
+body.mycology h2 {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 0 0 .35rem;
+  font-size: 1.28rem;
+  letter-spacing: -.01em;
+  color: var(--accent-dark);
+}
+body.mycology h2 .num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+}
+body.mycology .lede {
+  color: var(--muted);
+  font-size: .95rem;
+  max-width: 80ch;
+  margin: 0 0 1.3rem;
+}
+
+body.mycology .pathogen {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: #fffdf9;
+  padding: 1rem 1.15rem 1.05rem;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+body.mycology .pathogen:last-child { margin-bottom: 0; }
+body.mycology .pathogen--moss   { border-left-color: var(--moss); }
+body.mycology .pathogen--bark   { border-left-color: var(--bark); }
+body.mycology .pathogen--muted  { border-left-color: var(--muted); }
+
+body.mycology .pathogen__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .5rem .75rem;
+  margin-bottom: .6rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--line);
+}
+body.mycology .pathogen__head h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -.005em;
+}
+body.mycology .sci { font-style: italic; font-weight: 600; }
+body.mycology .tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .16rem .55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-line);
+  white-space: nowrap;
+}
+body.mycology .tag--moss {
+  background: var(--moss-soft);
+  color: var(--moss);
+  border-color: var(--moss-line);
+}
+body.mycology .tag--bark {
+  background: var(--bark-soft);
+  color: var(--bark);
+  border-color: var(--bark-line);
+}
+body.mycology .tag--quarantine {
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+  border-color: var(--danger-line);
+}
+body.mycology .block { margin-top: .7rem; }
+body.mycology .block__label {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .2rem;
+}
+body.mycology .pathogen--moss .block__label { color: var(--moss); }
+body.mycology .pathogen--bark .block__label { color: var(--bark); }
+body.mycology .block p {
+  margin: 0 0 .4rem;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
+body.mycology .block p:last-child { margin-bottom: 0; }
+body.mycology .block ul {
+  margin: 0 0 .4rem;
+  padding-left: 1.15rem;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
+body.mycology .block ul:last-child { margin-bottom: 0; }
+body.mycology .block ul li { margin-bottom: .25rem; }
+body.mycology .block ul li:last-child { margin-bottom: 0; }
+
+body.mycology .callout {
+  margin: .9rem 0 0;
+  padding: .8rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: .89rem;
+  color: var(--ink-soft);
+}
+body.mycology .callout--warn {
+  border-left-color: var(--warn-line);
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+}
+body.mycology .callout--danger {
+  border-left-color: var(--danger-line);
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+}
+body.mycology .callout--moss {
+  border-left-color: var(--moss-line);
+  background: var(--moss-soft);
+  color: var(--moss);
+}
+body.mycology .callout strong { color: inherit; }
+body.mycology .callout p:last-child { margin-bottom: 0; }
+body.mycology .callout em { font-style: italic; }
+
+body.mycology .table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  margin-top: 1rem;
+}
+body.mycology table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+body.mycology table.wide   { min-width: 880px; }
+body.mycology table.narrow { min-width: 560px; }
+body.mycology caption {
+  caption-side: top;
+  text-align: left;
+  padding: .7rem .9rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #fbf8f2;
+  border-bottom: 1px solid var(--line);
+}
+body.mycology thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--accent);
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+  font-size: .74rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .7rem .85rem;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+body.mycology thead th:last-child { border-right: none; }
+body.mycology tbody td {
+  padding: .62rem .85rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+body.mycology tbody tr:nth-child(even) { background: #fbf8f2; }
+body.mycology tbody tr:hover { background: var(--accent-soft); }
+body.mycology tbody td:first-child { color: var(--ink); }
+body.mycology .cell-genus { font-style: italic; }
+body.mycology .group-row td {
+  background: var(--accent-soft) !important;
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: .74rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  border-top: 2px solid var(--accent-line);
+}
+
+body.mycology footer.doc-footer {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-size: .82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  body.mycology { padding: 0 .6rem 3rem; font-size: 15px; }
+  body.mycology header.masthead { margin-top: 1.2rem; padding: 1.4rem 1.1rem; }
+  body.mycology section { padding: 1.15rem 1rem 1.35rem; }
+  body.mycology h2 { font-size: 1.12rem; }
+  body.mycology .pathogen { padding: .85rem .9rem; }
+  body.mycology nav.toc ol { grid-template-columns: 1fr; }
+  body.mycology table { font-size: .8rem; }
+  body.mycology table.wide { min-width: 720px; }
+  body.mycology table.narrow { min-width: 480px; }
+}
+
+@media print {
+  body.mycology {
+    background: #fff;
+    padding: 0;
+    font-size: 10.5pt;
+    color: #000;
+  }
+  body.mycology header.masthead {
+    background: #fff !important;
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: none;
+  }
+  body.mycology header.masthead .eyebrow {
+    background: #fff;
+    border-color: #000;
+    color: #000;
+  }
+  body.mycology header.masthead p { color: #333; }
+  body.mycology nav.toc { display: none; }
+  body.mycology section {
+    box-shadow: none;
+    border: 1px solid #999;
+    padding: 0 0 .8rem;
+    margin-bottom: 1rem;
+  }
+  body.mycology .pathogen,
+  body.mycology .callout,
+  body.mycology .table-scroll { break-inside: avoid; }
+  body.mycology .pathogen { border: 1px solid #bbb; border-left: 3px solid #333; }
+  body.mycology thead th {
+    background: #e9e9e9 !important;
+    color: #000 !important;
+    border: 1px solid #999;
+  }
+  body.mycology tbody td { border-top: 1px solid #ccc; }
+  body.mycology tbody tr:nth-child(even) { background: #f7f7f7; }
+  body.mycology .table-scroll { overflow: visible; border: none; }
+  body.mycology table.wide,
+  body.mycology table.narrow { min-width: 0; }
+  body.mycology thead th { position: static; }
+  body.mycology footer.doc-footer { border-top: 1px solid #999; }
+  body.mycology a { color: #000; text-decoration: none; }
+}
+
+/* ============================================================
+   MOLECULAR PAGE
+   ============================================================ */
+body.molecular {
+  --primary: #2c5f2d;
+  --secondary: #97bc62;
+  --accent: #f5f5f5;
+  --text: #1a1a1a;
+  --border: #d0d0d0;
+  --ink: #1a1a1a;
+  --ink-soft: #1a1a1a;
+  --muted: #666;
+  --line: #d0d0d0;
+  --bg: #fafafa;
+  --card: #ffffff;
+}
+
+body.molecular .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-left: 260px;
+}
+@media (max-width: 767px) {
+  body.molecular .wrap { margin-left: 0; }
+}
+
+body.molecular header {
+  background: linear-gradient(135deg, var(--primary), #1e3d1f);
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+body.molecular header h1 { font-size: 2.2em; margin-bottom: 8px; }
+body.molecular header p { opacity: 0.9; font-size: 1.05em; }
+body.molecular .stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+body.molecular .stat-badge {
+  background: rgba(255,255,255,0.15);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+body.molecular .stat-badge strong { font-size: 1.3em; display: block; }
+
+body.molecular nav.toc {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--primary);
+}
+body.molecular nav.toc h2 { margin-bottom: 12px; color: var(--primary); font-size: 1.3em; }
+body.molecular nav.toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+body.molecular nav.toc a { color: var(--text); text-decoration: none; font-size: 0.92em; }
+body.molecular nav.toc a:hover { color: var(--primary); text-decoration: underline; }
+
+body.molecular .pathogen-card {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+body.molecular .pathogen-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+body.molecular .pathogen-header:hover { background: #245026; }
+body.molecular .pathogen-header h2 { font-size: 1.25em; flex: 1; }
+body.molecular .pathogen-header .toggle-icon { font-size: 1.4em; transition: transform 0.3s; }
+body.molecular .pathogen-header.collapsed .toggle-icon { transform: rotate(-90deg); }
+body.molecular .type-tag {
+  font-size: 0.72em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+body.molecular .tag-virus { background: #e74c3c; color: #fff; }
+body.molecular .tag-viroid { background: #8e44ad; color: #fff; }
+body.molecular .tag-bacteria { background: #2980b9; color: #fff; }
+body.molecular .tag-phytoplasma { background: #e67e22; color: #fff; }
+
+body.molecular .pathogen-body { padding: 0 24px 20px; display: block; }
+body.molecular .pathogen-body.hidden { display: none; }
+body.molecular .section-label {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 18px 0 6px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 4px;
+}
+body.molecular .section-label:first-child { margin-top: 16px; }
+body.molecular .info-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 6px 16px;
+  font-size: 0.93em;
+}
+body.molecular .info-grid dt { font-weight: 600; color: #555; }
+body.molecular .info-grid dd { margin: 0; }
+body.molecular .protocol-box {
+  background: #f8f9fa;
+  border-left: 4px solid var(--secondary);
+  padding: 12px 16px;
+  border-radius: 0 6px 6px 0;
+  margin: 8px 0;
+  font-size: 0.9em;
+  font-family: var(--mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+body.molecular .note-box {
+  background: #fff8e1;
+  border-left: 4px solid #f9a825;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+body.molecular .host-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+body.molecular .host-tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.82em;
+  border: 1px solid #c8e6c9;
+}
+
+body.molecular footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 0.88em;
+}
+
+@media (max-width: 700px) {
+  body.molecular .info-grid { grid-template-columns: 1fr; gap: 2px; }
+  body.molecular .info-grid dt { margin-top: 8px; }
+  body.molecular header h1 { font-size: 1.6em; }
+}
+
+/* ============================================================
+   NEMATOLOGY PAGE
+   ============================================================ */
+body.nematology {
+  --nematode: #1e4e79;
+  --nematode-soft: #e8f0f7;
+  --nematode-line: #bcd8ed;
+  --ink: #1e3a5f;
+  --ink-soft: #374e6e;
+  --muted: #5a7088;
+  --accent: #1e4e79;
+  --accent-dark: #173e61;
+  --accent-soft: #e8f0f7;
+  --accent-line: #bcd8ed;
+  --line: #d0e0ec;
+  --bg: #f4f7fa;
+  --card: #ffffff;
+}
+
+body.nematology .wrap { padding: 0 1rem 4rem; margin-left: 260px; }
+@media (max-width: 767px) {
+  body.nematology .wrap { margin-left: 0; }
+}
+
+body.nematology header.masthead {
+  margin: 2.5rem 0 1.5rem;
+  padding: 2rem 1.75rem 1.75rem;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent) 65%, #2a75b8);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+body.nematology header.masthead .eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.28);
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+}
+body.nematology header.masthead h1 {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.5rem, 3.6vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+body.nematology header.masthead p {
+  margin: 0;
+  max-width: 68ch;
+  font-size: .98rem;
+  color: rgba(255,255,255,.9);
+}
+
+body.nematology section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem 1.75rem 1.9rem;
+  margin-bottom: 1.75rem;
+}
+body.nematology h2 {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 0 0 .35rem;
+  font-size: 1.28rem;
+  letter-spacing: -.01em;
+  color: var(--accent-dark);
+}
+body.nematology h2 .num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+}
+body.nematology h3 {
+  margin: 1.6rem 0 .7rem;
+  font-size: 1.02rem;
+  letter-spacing: .01em;
+  color: var(--ink-soft);
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--accent-soft);
+}
+body.nematology h3:first-of-type { margin-top: 1.1rem; }
+body.nematology .lede {
+  color: var(--muted);
+  font-size: .95rem;
+  max-width: 78ch;
+  margin: 0 0 1.3rem;
+}
+
+body.nematology .table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  margin-top: 1rem;
+}
+body.nematology table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  min-width: 560px;
+}
+body.nematology caption {
+  caption-side: top;
+  text-align: left;
+  padding: .65rem .85rem;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #f7fafc;
+  border-bottom: 1px solid var(--line);
+}
+body.nematology thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--accent);
+  color: #fff;
+  text-align: left;
+  font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .7rem .85rem;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.16);
+}
+body.nematology thead th:last-child { border-right: none; }
+body.nematology tbody td {
+  padding: .65rem .85rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+body.nematology tbody tr:nth-child(even) { background: #fafcfd; }
+body.nematology tbody tr:hover { background: var(--accent-soft); }
+body.nematology tbody td:first-child { color: var(--ink); }
+body.nematology .sci { font-style: italic; font-weight: 600; color: var(--ink); }
+
+body.nematology .callout {
+  margin: 1rem 0;
+  padding: .85rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+body.nematology .callout--note {
+  border-left-color: var(--warn-line);
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+}
+body.nematology .callout--danger {
+  border-left-color: var(--danger-line);
+  background: var(--danger-bg);
+  color: var(--danger-ink);
+}
+body.nematology .callout strong { color: inherit; }
+body.nematology .callout p:last-child { margin-bottom: 0; }
+
+body.nematology .workflow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  margin: 1rem 0 1.4rem;
+  padding: .9rem 1rem;
+  background: #fbfdfc;
+  border: 1px dashed var(--accent-line);
+  border-radius: var(--radius-sm);
+  font-size: .85rem;
+}
+body.nematology .workflow .step {
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  padding: .25rem .65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+body.nematology .workflow .arrow { color: var(--muted); font-weight: 700; }
+
+body.nematology .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: .9rem;
+  margin-top: 1rem;
+}
+body.nematology .card {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: .9rem 1rem;
+  background: #fdfefe;
+}
+body.nematology .card h4 {
+  margin: 0 0 .4rem;
+  font-size: .88rem;
+  color: var(--accent-dark);
+}
+body.nematology .card p {
+  margin: 0;
+  font-size: .87rem;
+  color: var(--muted);
+}
+
+body.nematology footer.doc-footer {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-size: .82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  justify-content: space-between;
+}
+
+body.nematology ul.clean {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+body.nematology ul.clean > li {
+  position: relative;
+  padding: .6rem 0 .6rem 1.35rem;
+  border-bottom: 1px dashed var(--line);
+  font-size: .93rem;
+}
+body.nematology ul.clean > li:last-child { border-bottom: none; }
+body.nematology ul.clean > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: .48rem;
+  height: .48rem;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .55;
+}
+body.nematology ul.clean strong { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 767px) {
+  body.nematology { padding-bottom: 60px; }
+  body.nematology header.masthead { margin-top: 1.2rem; padding: 1.4rem 1.1rem; }
+  body.nematology section { padding: 1.15rem 1rem 1.25rem; }
+  body.nematology h2 { font-size: 1.12rem; }
+  body.nematology table { font-size: .84rem; min-width: 480px; }
+}
+
+/* ============================================================
+   SANITARY & PHYTO-sanitary PAGE
+   ============================================================ */
+body.sanitary {
+  --primary: #0c4a6e;
+  --secondary: #0ea5e9;
+  --accent: #0c4a6e;
+  --accent-dark: #073452;
+  --accent-soft: #e0f2ff;
+  --accent-line: #a5d4f0;
+  --ink: #0f2240;
+  --ink-soft: #2c4a6e;
+  --muted: #5a7088;
+  --line: #bed3e7;
+  --bg: #f0f6ff;
+  --card: #ffffff;
+  background: linear-gradient(180deg, #f0f6ff 0%, #e6f0ff 100%);
+}
+
+/* ============================================================
+   DATA ANALYSIS PAGE
+   ============================================================ */
+body.datanalysis {
+  --primary: #4a148c;
+  --secondary: #ab49bc;
+  --accent: #4a148c;
+  --accent-dark: #3a0d6e;
+  --accent-soft: #f3e5f5;
+  --accent-line: #d3bcc9;
+  --ink: #2e104f;
+  --ink-soft: #4a3a5e;
+  --muted: #7a5a8a;
+  --line: #d9c2e6;
+  --bg: #faf4ff;
+  --card: #ffffff;
+  background: linear-gradient(180deg, #faf4ff 0%, #f3e8ff 100%);
 }

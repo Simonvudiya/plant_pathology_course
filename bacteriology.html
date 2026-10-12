@@ -1,38 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bacteriology</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacterial Pathogen Diagnostic Notes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>Bacteriology</h1>
+<body class="bacteriology">
+<div class="wrap">
 
-  <p>
-    Bacteriology is the branch of microbiology that studies the morphology,
-    ecology, genetics, and biochemistry of bacteria. It also examines the
-    ways bacteria cause disease and how they can be used in industry,
-    medicine, and agriculture.
-  </p>
+<header>
+    <h1>Bacterial Pathogen Diagnostic Notes</h1>
+    <p>Classification, Colony Morphology on Culture Media, Isolation Protocols, Identification Methods, and Disease Signs on Affected Crops</p>
+    <div class="stats">
+        <div class="stat-badge"><strong>9</strong>Major Bacterial Pathogens</div>
+        <div class="stat-badge"><strong>Isolation + Molecular</strong>Diagnostic Workflows</div>
+        <div class="stat-badge"><strong>20+</strong>Crop–Pathogen Associations</div>
+    </div>
+</header>
 
-  <h2>Key Areas of Study</h2>
-  <ul>
-    <li>Bacterial cell structure and function</li>
-    <li>Growth, reproduction, and metabolism</li>
-    <li>Classification and identification</li>
-    <li>Pathogenesis and the immune response</li>
-    <li>Antibiotics and antimicrobial resistance</li>
-  </ul>
+<nav class="toc">
+    <h2>Quick Navigation</h2>
+    <ul>
+        <li><a href="#dickeya">1. Dickeya spp.</a></li>
+        <li><a href="#ralstonia">2. Ralstonia solanacearum</a></li>
+        <li><a href="#xanthomonas">3. Xanthomonas oryzae</a></li>
+        <li><a href="#agrobacterium">4. Agrobacterium tumefaciens</a></li>
+        <li><a href="#pectobacterium">5. Pectobacterium spp.</a></li>
+        <li><a href="#curtobacterium">6. Curtobacterium flaccumfaciens</a></li>
+        <li><a href="#pantoea">7. Pantoea stewartii</a></li>
+        <li><a href="#rhodococcus">8. Rhodococcus fascians</a></li>
+        <li><a href="#pseudomonas">9. Pseudomonas syringae</a></li>
+        <li><a href="#summary">10. Summary Table</a></li>
+    </ul>
+</nav>
 
-  <h2>Milestones</h2>
-  <ul>
-    <li><strong>1676</strong> — Antonie van Leeuwenhoek observes bacteria under a microscope</li>
-    <li><strong>1876</strong> — Robert Koch links a specific bacterium to anthrax</li>
-    <li><strong>1928</strong> — Alexander Fleming discovers penicillin</li>
-  </ul>
+<!-- ============================================================ -->
+<!-- 1. DICKEYA SPP. -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="dickeya">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">1</span>
+        <h2><em>Dickeya</em> spp. (Bacterial Soft Rot / Blackleg)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Gammaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Enterobacterales</td></tr>
+            <tr><th>Family</th><td>Pectobacteriaceae</td></tr>
+            <tr><th>Genus</th><td><em>Dickeya</em></td></tr>
+            <tr><th>Key Species</th><td><em>D. solani</em>, <em>D. dadantii</em>, <em>D. dianthicola</em>, <em>D. chrysanthemi</em></td></tr>
+        </table>
 
-  <p><em>“Bacteria are the most abundant form of life on Earth.”</em></p>
-  <script src="script.js"></script>
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA) / NAG</strong>
+                <span class="medium">Colonies appear as characteristic "fried egg" morphology — raised, cream-colored to pale yellow centres with irregular spreading margins[reference:0][reference:1]</span>
+            </div>
+            <div class="colony-item">
+                <strong>MacConkey Agar</strong>
+                <span class="medium">Growth with lactose fermentation; colonies are pink-red[reference:2]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Crystal Violet Pectate (CVP)</strong>
+                <span class="medium">Forms pits (craters) in the medium due to pectinase activity; pink-red-orange cavities[reference:3]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped, motile; oxidase and indole negative; facultative anaerobic[reference:4]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect diseased stem or tuber tissue showing soft rot or blackleg symptoms. Surface-disinfect with 70% ethanol, then rinse with sterile distilled water.</li>
+                <li><strong>Maceration:</strong> Cut small fragments of affected tissue and macerate in sterile 0.85% NaCl solution[reference:5].</li>
+                <li><strong>Serial dilution:</strong> Prepare serial dilutions (10⁻¹ to 10⁻⁶) of the bacterial suspension.</li>
+                <li><strong>Plating:</strong> Streak onto Nutrient Agar (NA) or Nutrient Agar Glucose (NAG) plates. Alternatively, use CVP medium for selective isolation of pectinolytic species[reference:6].</li>
+                <li><strong>Incubation:</strong> Incubate at 25–28°C for 24–48 hours.</li>
+                <li><strong>Purification:</strong> Select single colonies showing "fried egg" morphology and restreak onto fresh NA plates for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use <em>pelADE</em> and <em>gapA</em> gene primers to differentiate <em>Dickeya</em> from <em>Pectobacterium</em>. Expected amplicons: <em>pelADE</em> ~550 bp, <em>gapA</em> ~800 bp[reference:7].</li>
+            <li><strong>Sequencing:</strong> Sequence the <em>pelADE</em> and <em>gapA</em> amplicons and compare with reference sequences (99%+ identity confirms species)[reference:8].</li>
+            <li><strong>Biochemical tests:</strong> Oxidase negative, indole negative, catalase positive, able to use lactose as carbon source[reference:9].</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate healthy potato stems with a 10⁸ CFU/ml bacterial suspension by stabbing; observe water-soaked lesions and necrosis after 3–5 days at 28°C[reference:10].</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Blackleg (Potato)</strong>Stem necrosis starting at the base, black discoloration, wilting, and chlorotic leaves; stems may collapse.</div>
+            <div class="sign-item"><strong>Soft Rot (Tubers/Bulbs)</strong>Water-soaked, mushy rot of tuber tissue with a foul odor; tissue maceration and cavity formation.</div>
+            <div class="sign-item"><strong>Stem Rot (Maize)</strong>Soft rot of stem tissue, wilting, and lodging.</div>
+            <div class="sign-item"><strong>Hyacinth Bulbs</strong>Soft rot of imported bulbs with characteristic "fried egg" colonies isolated on NAG medium[reference:11].</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Zea mays (Maize)</span>
+            <span class="host-tag">Irish potato</span>
+            <span class="host-tag">Saintpaulia</span>
+            <span class="host-tag">Hyacinthus</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 2. RALSTONIA SOLANACEARUM -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="ralstonia">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">2</span>
+        <h2><em>Ralstonia solanacearum</em> (Bacterial Wilt)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Betaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Burkholderiales</td></tr>
+            <tr><th>Family</th><td>Burkholderiaceae</td></tr>
+            <tr><th>Genus</th><td><em>Ralstonia</em></td></tr>
+            <tr><th>Species Complex</th><td><em>R. solanacearum</em> sensu lato (includes <em>R. pseudosolanacearum</em>, <em>R. syzygii</em>)</td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Modified SMSA Medium</strong>
+                <span class="medium">Virulent colonies: small, mucoid, irregular, whitish with a pink centre after 48–60 hours; blood-red whorls develop in the centre after further incubation[reference:12]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Tetrazolium Chloride (TZC) Medium</strong>
+                <span class="medium">Virulent colonies: creamy white, flat, irregular, fluidal with blood-red coloured whorls in the centre[reference:13][reference:14]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Nonvirulent Colonies</strong>
+                <span class="medium">Uniformly round, smaller, butyrous (dry), entirely red — distinguishable from virulent types on rich media[reference:15]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped; slow-growing (colonies visible in less than 36 h at 28°C are not <em>R. solanacearum</em>)[reference:16]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect diseased stem sections, vascular tissue, soil suspensions, or water samples[reference:17].</li>
+                <li><strong>Sample preparation:</strong> Surface-disinfect tissue, cut into small pieces, and macerate in sterile distilled water or 0.85% NaCl.</li>
+                <li><strong>Plating:</strong> Streak onto modified SMSA medium (semi-selective, contains antibiotics and fungicides to inhibit saprophytes) or TZC medium[reference:18].</li>
+                <li><strong>Incubation:</strong> Incubate at 28°C for 3–5 days. Examine plates at 48–60 hours for presumptive colonies.</li>
+                <li><strong>Purification:</strong> Select characteristic mucoid colonies with pink centres and restreak onto fresh medium for purity.</li>
+                <li><strong>Twitching motility test:</strong> Observe colonies at 18–24 h on solidified rich media for twitching motility — a distinctive colony morphology that helps distinguish <em>R. solanacearum</em> from other mucoid bacteria[reference:19].</li>
+            </ol>
+        </div>
+        <div class="note-box">
+            <strong>Note:</strong> Other fast-growing bacterial species may form similar mucoid colonies; most appear red throughout. Do not rely solely on semi-selective medium for detection — complementary tests such as twitching motility or molecular methods are essential[reference:20].
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>DAS-ELISA:</strong> Double antibody sandwich ELISA for high-throughput screening of soil and plant samples (used extensively in your dataset).</li>
+            <li><strong>NCM ELISA:</strong> Nitrocellulose membrane ELISA for sensitive detection in potato tubers and soil.</li>
+            <li><strong>Conventional PCR:</strong> Species-specific primer pairs (e.g., 759/760) targeting the 16S rRNA gene or <em>hrpB</em> gene; expected amplicon ~280 bp.</li>
+            <li><strong>Phylotype-specific multiplex PCR:</strong> Differentiates phylotypes I, II, III, IV based on specific primer sets for epidemiological tracking.</li>
+            <li><strong>Biovar identification:</strong> Biochemical tests based on carbon source utilization (e.g., disaccharides, hexose alcohols).</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible host plants and observe wilting symptoms; reisolate to fulfil Koch's postulates.</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Bacterial Wilt (Potato/Tomato)</strong>Sudden wilting of plants, vascular browning, and bacterial ooze streaming from cut stems placed in water.</div>
+            <div class="sign-item"><strong>Brown Rot (Potato Tubers)</strong>Vascular ring discoloration, brownish rot, and ooze from the stolon end of tubers.</div>
+            <div class="sign-item"><strong>Moko Disease (Banana)</strong>Wilting of leaves, vascular discoloration, and bacterial ooze from cut pseudostems.</div>
+            <div class="sign-item"><strong>Southern Wilt (Various)</strong>Stunting, yellowing, and wilting; vascular tissue shows brown discoloration.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Irish potato</span>
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Banana</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Soil / Water</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 3. XANTHOMONAS ORYZAE -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="xanthomonas">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">3</span>
+        <h2><em>Xanthomonas oryzae</em> pv. <em>oryzae</em> (Bacterial Blight of Rice)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Gammaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Lysobacterales (Xanthomonadales)</td></tr>
+            <tr><th>Family</th><td>Lysobacteraceae (Xanthomonadaceae)</td></tr>
+            <tr><th>Genus</th><td><em>Xanthomonas</em></td></tr>
+            <tr><th>Species / Pathovar</th><td><em>X. oryzae</em> pv. <em>oryzae</em> (Xoo)</td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA)</strong>
+                <span class="medium">Raised, creamy yellow, smooth, entire, buttery colonies[reference:21]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Peptone Sucrose Agar (PSA)</strong>
+                <span class="medium">Colonies range from 0.08–1.1 mm, light yellow to yellow, with circular margins; majority are raised and slimy[reference:22]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Modified Wakimoto Medium</strong>
+                <span class="medium">Entire margins, smooth waxy texture; slow-growing characteristic colonies[reference:23]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped, encapsulated, non-spore-forming[reference:24]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample selection:</strong> Collect leaf tissue from the advancing margin of fresh bacterial blight lesions to maximise recovery of viable bacteria[reference:25].</li>
+                <li><strong>Surface sterilisation:</strong> Wash leaves, cut small segments from the lesion margin, and surface-disinfect briefly.</li>
+                <li><strong>Maceration:</strong> Macerate tissue in sterile distilled water or saline solution.</li>
+                <li><strong>Plating:</strong> Streak onto NA, PSA, or modified Wakimoto medium. Use semi-selective media to reduce saprophytic growth[reference:26].</li>
+                <li><strong>Incubation:</strong> Incubate at 25–28°C for 2–4 days (Xoo is slow-growing; colonies may take 3 days to reach 1–2 mm)[reference:27].</li>
+                <li><strong>Purification:</strong> Select single yellow colonies and restreak onto fresh medium for purity[reference:28].</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use Xoo-specific primers targeting the 16S–23S rRNA ITS region or <em>hrp</em> gene clusters. Expected amplicons: ~470 bp (ITS), ~650 bp (hrp).</li>
+            <li><strong>Real-time PCR (qPCR):</strong> TaqMan assays for sensitive detection and quantification in seed and leaf tissue.</li>
+            <li><strong>Bio-PCR:</strong> Enrichment of viable cells on semi-selective medium followed by PCR for increased sensitivity.</li>
+            <li><strong>ELISA:</strong> Serological detection using Xoo-specific antibodies for high-throughput screening[reference:29].</li>
+            <li><strong>Biochemical tests:</strong> Oxidase negative, catalase positive, starch hydrolysis positive, nitrate reduction negative[reference:30].</li>
+            <li><strong>Pathogenicity test:</strong> Clip-inoculate susceptible rice varieties and observe water-soaked lesions developing into yellow to white stripes[reference:31].</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Leaf Blight (Rice)</strong>Water-soaked lesions on leaf margins that turn yellow, then straw-white; lesions may coalesce to cover the entire leaf.</div>
+            <div class="sign-item"><strong>Kresek (Seedling Wilt)</strong>Wilting and death of young seedlings; leaves roll up and turn grey-green.</div>
+            <div class="sign-item"><strong>Bacterial Ooze</strong>Yellowish bacterial ooze droplets visible on lesion surfaces under humid conditions, especially in the morning.</div>
+            <div class="sign-item"><strong>Yield Loss</strong>Reduced tillering, grain filling, and up to 50–70% yield loss in severe infections.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Rice (Philippines)</span>
+            <span class="host-tag">Rice (Burundi)</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 4. AGROBACTERIUM TUMEFACIENS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="agrobacterium">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">4</span>
+        <h2><em>Agrobacterium tumefaciens</em> (Crown Gall)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Alphaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Hyphomicrobiales (Rhizobiales)</td></tr>
+            <tr><th>Family</th><td>Rhizobiaceae</td></tr>
+            <tr><th>Genus</th><td><em>Agrobacterium</em> (syn. <em>Rhizobium</em>)</td></tr>
+            <tr><th>Species</th><td><em>tumefaciens</em> (Smith &amp; Townsend, 1907)</td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Yeast Mannitol Agar (YMA)</strong>
+                <span class="medium">White to cream-coloured, smooth, convex, glistening, circular with entire edges, mucoid colonies after 48–72 h[reference:32]</span>
+            </div>
+            <div class="colony-item">
+                <strong>LB Medium</strong>
+                <span class="medium">Round, cream-coloured with pink tint, smooth edge, convex elevation[reference:33][reference:34]</span>
+            </div>
+            <div class="colony-item">
+                <strong>AB Selection Medium</strong>
+                <span class="medium">Specific medium for <em>A. tumefaciens</em> selection; colonies show similar morphology (round, cream with pink tint)[reference:35]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped, motile (peritrichous flagella), aerobic</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect gall tissue from the crown, roots, or stems of affected plants (e.g., rose, grapevine).</li>
+                <li><strong>Surface sterilisation:</strong> Wash galls thoroughly; surface-disinfect with 70% ethanol for 1 min followed by 10% bleach solution[reference:36].</li>
+                <li><strong>Tissue excision:</strong> Aseptically cut internal gall tissue into small fragments.</li>
+                <li><strong>Plating:</strong> Streak onto yeast mannitol agar (YMA), LB medium, or AB selection medium[reference:37].</li>
+                <li><strong>Incubation:</strong> Incubate at 25–28°C for 48–72 hours.</li>
+                <li><strong>Purification:</strong> Select single mucoid colonies and restreak for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use <em>virD2</em>, <em>virC</em>, or <em>ipt</em> gene primers for Ti-plasmid detection; expected amplicons: ~224 bp (<em>virD2</em>), ~400 bp (<em>ipt</em>).</li>
+            <li><strong>Koch's Postulate (Carrot Disc Test):</strong> Inoculate carrot slices with the isolate and observe crown gall tumour formation after 3 weeks[reference:38].</li>
+            <li><strong>Biochemical tests:</strong> Growth on AB medium, 3-ketolactose production, oxidase positive, catalase positive.</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible host plants (e.g., tomato, sunflower) and observe gall development.</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Crown Gall (Rose, Grape)</strong>Rough, irregular, tumour-like galls at the crown (soil line), roots, or stems; galls may become woody and dark.</div>
+            <div class="sign-item"><strong>Stunted Growth</strong>Reduced vigour, yellowing, and wilting due to vascular disruption by galls.</div>
+            <div class="sign-item"><strong>Secondary Infections</strong>Galls provide entry points for secondary pathogens, leading to decay.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Rose (Netherlands, France, Ecuador)</span>
+            <span class="host-tag">Grapevine</span>
+            <span class="host-tag">Various dicotyledonous plants</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 5. PECTOBACTERIUM SPP. -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="pectobacterium">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">5</span>
+        <h2><em>Pectobacterium</em> spp. (Soft Rot / Blackleg)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Gammaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Enterobacterales</td></tr>
+            <tr><th>Family</th><td>Pectobacteriaceae</td></tr>
+            <tr><th>Genus</th><td><em>Pectobacterium</em></td></tr>
+            <tr><th>Key Species</th><td><em>P. carotovorum</em>, <em>P. atrosepticum</em>, <em>P. parmentieri</em>, <em>P. brasiliense</em></td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Crystal Violet Pectate (CVP)</strong>
+                <span class="medium">Pectinolytic colonies produce characteristic pits (craters) in the medium within 48 h at 28°C[reference:39][reference:40]</span>
+            </div>
+            <div class="colony-item">
+                <strong>LB Medium</strong>
+                <span class="medium">Colonies form within 24 h at 28°C; light brown to milky white, ~16–18 mm diameter after 4 days[reference:41][reference:42]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA)</strong>
+                <span class="medium">Shiny, grayish-white, round colonies; non-fluorescent[reference:43]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Logan's Medium</strong>
+                <span class="medium">Light red, 1.5-mm-diameter colonies; do not produce blue pigmented indigoidine[reference:44]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped, motile (peritrichous flagella), facultative anaerobic[reference:45]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect decayed stem, tuber, or bulb tissue showing soft rot symptoms.</li>
+                <li><strong>Surface sterilisation:</strong> Disinfect tissue with 2% NaClO (sodium hypochlorite), then rinse with sterile water[reference:46].</li>
+                <li><strong>Maceration:</strong> Macerate tissue in sterile water or saline solution.</li>
+                <li><strong>Plating:</strong> Streak onto Crystal Violet Pectate (CVP) medium for selective isolation of pectinolytic species. Alternatively, use LB or NA medium[reference:47].</li>
+                <li><strong>Incubation:</strong> Incubate at 25–28°C for 24–48 hours.</li>
+                <li><strong>Purification:</strong> Select colonies producing pits on CVP medium and restreak onto nutrient agar for purity[reference:48].</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use genus-specific primers (e.g., Y1/Y2) targeting the 16S rRNA gene; expected amplicon ~430 bp. Species-specific primers for <em>P. atrosepticum</em> (ECA1f/ECA2r, ~690 bp) and <em>P. carotovorum</em> (EXPCCF/EXPCCR, ~550 bp).</li>
+            <li><strong>Sequencing:</strong> Sequence the <em>gapA</em>, <em>recA</em>, or <em>mdh</em> genes for species-level identification.</li>
+            <li><strong>Biochemical tests:</strong> Pectate degradation positive, phosphatase positive, growth at 37°C (varies by species), indigoidine production negative.</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate potato tuber slices or stems and observe maceration within 48 h[reference:49].</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Soft Rot (Potato, Vegetables)</strong>Water-soaked, mushy decay of tuber or stem tissue; tissue maceration with a foul odor.</div>
+            <div class="sign-item"><strong>Blackleg (Potato)</strong>Black discoloration and necrosis of stem base; wilting and yellowing of foliage.</div>
+            <div class="sign-item"><strong>Echeveria / Ornamentals</strong>Soft rot of stems and leaves; collapse of succulent tissue.</div>
+            <div class="sign-item"><strong>Broccoli / Allium</strong>Soft rot of heads and bulbs with grayish-white bacterial growth[reference:50].</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Irish potato</span>
+            <span class="host-tag">Echeveria</span>
+            <span class="host-tag">Banana</span>
+            <span class="host-tag">Vegetables</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 6. CURTOBACTERIUM FLACCUMFACIENS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="curtobacterium">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">6</span>
+        <h2><em>Curtobacterium flaccumfaciens</em> (Bacterial Wilt of Beans)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Actinomycetota (Actinobacteria)</td></tr>
+            <tr><th>Class</th><td>Actinomycetes</td></tr>
+            <tr><th>Order</th><td>Micrococcales</td></tr>
+            <tr><th>Family</th><td>Microbacteriaceae</td></tr>
+            <tr><th>Genus</th><td><em>Curtobacterium</em></td></tr>
+            <tr><th>Species</th><td><em>flaccumfaciens</em></td></tr>
+            <tr><th>Pathovars</th><td>pv. <em>flaccumfaciens</em>, pv. <em>poinsettiae</em>, pv. <em>oortii</em>, pv. <em>betae</em></td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Modified Burkholder's Agar (MBA)</strong>
+                <span class="medium">Convex, glistening, smooth-edged colonies with blue pigment diffusing into the medium (purple variant); yellow colonies producing extracellular blue pigment at 20 ± 2°C[reference:51]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Pseudomonas Agar F (PAF) + Sucrose</strong>
+                <span class="medium">Yellowish, circular with entire margins, flat to slightly convex, opaque, slightly fluidal[reference:52]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA)</strong>
+                <span class="medium">Yellow colonies after 7 days; circular, flat, entire, dull with filliform growth[reference:53][reference:54]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-positive, rod-shaped (~3 µm length), motile, aerobic[reference:55]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect diseased bean seeds, stems, or leaves showing wilt or tan spot symptoms.</li>
+                <li><strong>Surface sterilisation:</strong> Surface-disinfect plant tissue or seeds with 70% ethanol followed by sterile water rinses.</li>
+                <li><strong>Maceration:</strong> Macerate tissue in sterile saline solution.</li>
+                <li><strong>Plating:</strong> Streak onto modified Burkholder's agar (MBA), Pseudomonas Agar F (PAF) with sucrose, or nutrient agar[reference:56].</li>
+                <li><strong>Incubation:</strong> Incubate at 20–25°C for 7–10 days (slow-growing).</li>
+                <li><strong>Purification:</strong> Select yellow colonies and restreak onto fresh medium for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use Cff-specific primer set targeting the 16S rRNA gene or <em>gyrB</em> gene; expected amplicon ~300–500 bp[reference:57].</li>
+            <li><strong>Biochemical tests:</strong> Gram-positive, aerobic, catalase positive, oxidase negative; yellow pigment production; blue pigment on MBA (purple variant)[reference:58].</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible bean varieties and observe wilt symptoms; reisolate to fulfil Koch's postulates.</li>
+            <li><strong>Host range test:</strong> Differentiate pathovars based on host specificity (bean, poinsettia, tulip, beet).</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Bacterial Wilt (Bean)</strong>Wilting of leaves and stems, vascular discoloration, and stunting; plants may collapse.</div>
+            <div class="sign-item"><strong>Tan Spot (Soybean)</strong>Yellowish to brown lesions on leaves with dark margins; bacterial ooze under humid conditions.</div>
+            <div class="sign-item"><strong>Purple Seed Stain</strong>Purple discoloration of seed coats; seeds may be shriveled.</div>
+            <div class="sign-item"><strong>Poinsettia (pv. poinsettiae)</strong>Stem cankers and leaf spots on poinsettia.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">French beans (USA)</span>
+            <span class="host-tag">Common bean</span>
+            <span class="host-tag">Soybean</span>
+            <span class="host-tag">Poinsettia</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 7. PANTOEA STEWARTII -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="pantoea">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">7</span>
+        <h2><em>Pantoea stewartii</em> (Stewart's Wilt of Corn)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Gammaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Enterobacterales</td></tr>
+            <tr><th>Family</th><td>Erwiniaceae</td></tr>
+            <tr><th>Genus</th><td><em>Pantoea</em></td></tr>
+            <tr><th>Species</th><td><em>stewartii</em></td></tr>
+            <tr><th>Subspecies</th><td>subsp. <em>stewartii</em>, subsp. <em>indologenes</em></td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>Nutrient Glucose Agar (NGA)</strong>
+                <span class="medium">Cream-yellow to orange-yellow colonies; round, smooth, non-flat, mucoid[reference:59]</span>
+            </div>
+            <div class="colony-item">
+                <strong>King's B Medium</strong>
+                <span class="medium">White or yellow pigment produced around colonies[reference:60]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Yeast Extract-Dextrose-CaCO₃ Agar (YDC)</strong>
+                <span class="medium">Yellow and convex colonies; colourless at first, becoming yellow[reference:61]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA)</strong>
+                <span class="medium">Small, round, slow-growing, yellow colonies; streaks vary from thin, yellow, moist to dry, orange-yellow[reference:62]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, yellow-pigmented, mucoid, non-flagellate (subsp. <em>stewartii</em> is non-motile), non-spore-forming rod, 0.4–0.8 × 0.9–2.2 µm[reference:63]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect leaves showing yellow stripes along veins, or stems with vascular discoloration[reference:64].</li>
+                <li><strong>Surface sterilisation:</strong> Wash and surface-disinfect leaf tissue.</li>
+                <li><strong>Maceration:</strong> Grind leaf tissue in sterile water or saline solution.</li>
+                <li><strong>Plating:</strong> Streak onto Nutrient Glucose Agar (NGA), King's B medium, or Yeast Extract-Dextrose-CaCO₃ agar.</li>
+                <li><strong>Incubation:</strong> Incubate at 28°C for 24–48 hours[reference:65].</li>
+                <li><strong>Purification:</strong> Select single yellow, mucoid colonies and restreak for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use <em>hrp</em> gene or 16S–23S ITS primers; expected amplicon ~500–700 bp. Subspecies-specific primers differentiate subsp. <em>stewartii</em> from subsp. <em>indologenes</em>.</li>
+            <li><strong>Real-time PCR (qPCR):</strong> TaqMan assays targeting the <em>cps</em> gene for sensitive detection in seed and leaf tissue.</li>
+            <li><strong>Biochemical tests:</strong> Indole negative (subsp. <em>stewartii</em>), esculin hydrolysis negative, no growth on citrate, mucate, or DL-4-aminobutyrate[reference:66].</li>
+            <li><strong>Motility test:</strong> subsp. <em>stewartii</em> is non-motile (lacks peritrichous flagella), distinguishing it from most other <em>Pantoea</em> species[reference:67].</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible corn seedlings and observe water-soaked lesions developing into yellow stripes.</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Stewart's Wilt (Corn)</strong>Yellow to white stripes along leaf veins; leaves may wilt and die; vascular discoloration of stems.</div>
+            <div class="sign-item"><strong>Seedling Blight</strong>Infected seeds may rot or produce stunted seedlings that wilt and die.</div>
+            <div class="sign-item"><strong>Bacterial Ooze</strong>Yellowish bacterial ooze visible on cut stems or lesion surfaces under humid conditions.</div>
+            <div class="sign-item"><strong>Jackfruit Bronzing</strong>Bronzing and discoloration of jackfruit perianth caused by subsp. <em>indologenes</em>.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Sweet corn (USA)</span>
+            <span class="host-tag">Baby corn (USA)</span>
+            <span class="host-tag">Maize</span>
+            <span class="host-tag">Jackfruit</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 8. RHODOCOCCUS FASCIANS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="rhodococcus">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">8</span>
+        <h2><em>Rhodococcus fascians</em> (Leafy Gall / Fasciation)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Actinomycetota (Actinobacteria)</td></tr>
+            <tr><th>Class</th><td>Actinomycetes</td></tr>
+            <tr><th>Order</th><td>Mycobacteriales (Corynebacteriales)</td></tr>
+            <tr><th>Family</th><td>Nocardiaceae</td></tr>
+            <tr><th>Genus</th><td><em>Rhodococcus</em></td></tr>
+            <tr><th>Species</th><td><em>fascians</em> (Tilford, 1936) Goodfellow, 1984</td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>m-CFS Medium</strong>
+                <span class="medium">Yellow to orange, circular, convex, entire smooth colonies (2–4 mm diameter) after 4–7 days at 26°C; some strains form irregular, flat, rough colonies[reference:68]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Nutrient Agar (NA)</strong>
+                <span class="medium">Pinpoint to filamentous, rough, raised, orange colonies[reference:69]</span>
+            </div>
+            <div class="colony-item">
+                <strong>D2 / NBY / GNA Media</strong>
+                <span class="medium">Typical colonies form on D2 agar, nutrient-broth yeast extract agar (NBY), and 1% glucose nutrient agar (GNA)[reference:70]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-positive, rod-shaped to coccoid, aerobic, non-motile; beige-red pigmentation on some media[reference:71]</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect symptomatic plant tissue showing leafy galls or fasciation (e.g., <em>Zantedeschia</em>, <em>Iberis</em>).</li>
+                <li><strong>Surface sterilisation:</strong> Wash tissue and surface-disinfect with 70% ethanol followed by sterile water rinses.</li>
+                <li><strong>Maceration:</strong> Macerate tissue in sterile saline solution.</li>
+                <li><strong>Plating:</strong> Streak onto m-CFS medium (selective for <em>Rhodococcus</em>), D2 agar, NBY, or GNA[reference:72].</li>
+                <li><strong>Incubation:</strong> Incubate at 26°C for 4–7 days (slow-growing).</li>
+                <li><strong>Purification:</strong> Select single yellow-to-orange colonies and restreak for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use <em>fasA</em> or <em>fasB</em> gene primers (fasciation-associated genes) for specific detection; expected amplicon ~400–600 bp.</li>
+            <li><strong>Sequencing:</strong> Sequence the 16S rRNA gene for genus/species confirmation.</li>
+            <li><strong>Biochemical tests:</strong> Gram-positive, catalase positive, oxidase negative, aerobic; yellow-orange pigmentation.</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible host plants (e.g., <em>Zantedeschia</em>, <em>Iberis</em>) and observe leafy gall or fasciation symptoms.</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Leafy Gall (Zantedeschia)</strong>Abnormal proliferation of shoots and leaves at the base of the plant, forming a leafy gall or "witches' broom".</div>
+            <div class="sign-item"><strong>Fasciation</strong>Flattened, thickened, and elongated stems with excessive branching; flowers may be deformed.</div>
+            <div class="sign-item"><strong>Stunted Growth</strong>Reduced plant vigour and distortion of growing tips.</div>
+            <div class="sign-item"><strong>Iberis sempervirens</strong>Fasciation and leafy gall formation on stems and crowns[reference:73].</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Zantedeschia</span>
+            <span class="host-tag">Iberis sempervirens</span>
+            <span class="host-tag">Various ornamentals</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 9. PSEUDOMONAS SYRINGAE -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="pseudomonas">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="pathogen-number">9</span>
+        <h2><em>Pseudomonas syringae</em> (Bacterial Blight / Leaf Spot)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label"><span class="icon">🔬</span> Classification</div>
+        <table class="info-table">
+            <tr><th>Domain</th><td>Bacteria</td></tr>
+            <tr><th>Phylum</th><td>Pseudomonadota (Proteobacteria)</td></tr>
+            <tr><th>Class</th><td>Gammaproteobacteria</td></tr>
+            <tr><th>Order</th><td>Pseudomonadales</td></tr>
+            <tr><th>Family</th><td>Pseudomonadaceae</td></tr>
+            <tr><th>Genus</th><td><em>Pseudomonas</em></td></tr>
+            <tr><th>Species</th><td><em>syringae</em></td></tr>
+            <tr><th>Pathovars</th><td>pv. <em>syringae</em>, pv. <em>phaseolicola</em>, pv. <em>theae</em>, pv. <em>persicae</em>, and many others</td></tr>
+        </table>
+
+        <div class="section-label"><span class="icon">🧫</span> Morphological Properties on Plates</div>
+        <div class="colony-morph">
+            <div class="colony-item">
+                <strong>King's B Medium</strong>
+                <span class="medium">Creamy white, flat, circular colonies (4.5–5 mm diameter) producing a pale blue fluorescent pigment under UV light[reference:74]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Selective Medium (Kiwifruit)</strong>
+                <span class="medium">Convex colonies with entire margins; purple centre and opalescent white margin[reference:75]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Tea Blight Medium</strong>
+                <span class="medium">Opalescent colonies; "fried-egg" type colony with granular and fibril structures when viewed under oblique light after 2 days[reference:76]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Milk-Tween Agar</strong>
+                <span class="medium">Creamy white, flat, circular colonies with pale blue fluorescent pigment under UV[reference:77]</span>
+            </div>
+            <div class="colony-item">
+                <strong>Cell Morphology</strong>
+                <span class="medium">Gram-negative, rod-shaped, motile (one to several polar flagella), aerobic</span>
+            </div>
+        </div>
+
+        <div class="section-label"><span class="icon">🧪</span> Isolation Protocol</div>
+        <div class="protocol-box">
+            <ol>
+                <li><strong>Sample collection:</strong> Collect diseased leaves with water-soaked lesions or blighted tissue.</li>
+                <li><strong>Surface sterilisation:</strong> Wash leaves and surface-disinfect with 70% ethanol.</li>
+                <li><strong>Maceration:</strong> Cut small segments from lesion margins and macerate in sterile water.</li>
+                <li><strong>Plating:</strong> Streak onto King's B medium, Milk-Tween agar, or semi-selective media (e.g., DTarTA for pv. <em>maculicola</em>)[reference:78].</li>
+                <li><strong>Incubation:</strong> Incubate at 24–25°C for 2–4 days[reference:79].</li>
+                <li><strong>Purification:</strong> Select single colonies and restreak for purity.</li>
+            </ol>
+        </div>
+
+        <div class="section-label"><span class="icon">🔍</span> Identification Methods</div>
+        <ul class="info-list">
+            <li><strong>Conventional PCR:</strong> Use pathovar-specific primers targeting <em>hrp</em> genes, <em>avr</em> genes, or the 16S–23S ITS region. Expected amplicons vary by pathovar (300–700 bp).</li>
+            <li><strong>Real-time PCR (qPCR):</strong> TaqMan assays for sensitive detection and quantification.</li>
+            <li><strong>Biochemical tests:</strong> Oxidase negative, catalase positive, fluorescent pigment production on King's B, levan production positive.</li>
+            <li><strong>Hypersensitive Response (HR) Test:</strong> Infiltrate tobacco leaves with bacterial suspension; positive HR (necrosis within 24 h) confirms pathogenicity.</li>
+            <li><strong>Pathogenicity test:</strong> Inoculate susceptible host plants and observe lesion development.</li>
+        </ul>
+
+        <div class="section-label"><span class="icon">🌿</span> Signs on Affected Crops</div>
+        <div class="signs-grid">
+            <div class="sign-item"><strong>Bacterial Blight (Kiwifruit)</strong>Water-soaked lesions on leaves and blossoms; cankers on canes with reddish exudate.</div>
+            <div class="sign-item"><strong>Halo Blight (Bean)</strong>Small water-soaked spots that develop into necrotic lesions with yellow halos; caused by pv. <em>phaseolicola</em>.</div>
+            <div class="sign-item"><strong>Bacterial Shoot Blight (Tea)</strong>Water-soaked lesions on young shoots that turn brown and necrotic.</div>
+            <div class="sign-item"><strong>Bacterial Canker (Stone Fruits)</strong>Cankers on stems and branches with gumming; caused by pv. <em>persicae</em> and pv. <em>syringae</em>.</div>
+        </div>
+
+        <div class="host-list">
+            <span class="host-tag">Gossypium (Cotton)</span>
+            <span class="host-tag">Kiwifruit</span>
+            <span class="host-tag">Bean</span>
+            <span class="host-tag">Tea</span>
+            <span class="host-tag">Stone fruits</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- 10. SUMMARY TABLE -->
+<!-- ============================================================ -->
+<div class="summary-section" id="summary">
+    <h2>10. Summary of Bacterial Pathogens — Isolation Media and Key Features</h2>
+    <p>A consolidated reference for the isolation media, colony morphology, and primary identification methods for each bacterial pathogen.</p>
+
+    <table class="summary-table">
+        <thead>
+            <tr>
+                <th>Pathogen</th>
+                <th>Primary Isolation Media</th>
+                <th>Colony Morphology</th>
+                <th>Key Identification Method</th>
+                <th>Crops Affected</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><em>Dickeya</em> spp.</td>
+                <td>NA, NAG, CVP</td>
+                <td>"Fried egg" colonies; pits on CVP</td>
+                <td>PCR (<em>pelADE</em>, <em>gapA</em>) + sequencing</td>
+                <td>Maize, potato, Saintpaulia, Hyacinth</td>
+            </tr>
+            <tr>
+                <td><em>Ralstonia solanacearum</em></td>
+                <td>Modified SMSA, TZC</td>
+                <td>Mucoid, irregular, whitish with pink centre</td>
+                <td>DAS-ELISA, NCM ELISA, PCR (759/760)</td>
+                <td>Potato, tomato, banana, pepper, soil, water</td>
+            </tr>
+            <tr>
+                <td><em>Xanthomonas oryzae</em> pv. <em>oryzae</em></td>
+                <td>NA, PSA, modified Wakimoto</td>
+                <td>Creamy yellow, smooth, buttery, raised</td>
+                <td>PCR (ITS, <em>hrp</em>), Bio-PCR, ELISA</td>
+                <td>Rice (Philippines, Burundi)</td>
+            </tr>
+            <tr>
+                <td><em>Agrobacterium tumefaciens</em></td>
+                <td>YMA, LB, AB medium</td>
+                <td>White-cream, smooth, convex, mucoid</td>
+                <td>PCR (<em>virD2</em>, <em>ipt</em>), carrot disc test</td>
+                <td>Rose, grapevine, dicotyledonous plants</td>
+            </tr>
+            <tr>
+                <td><em>Pectobacterium</em> spp.</td>
+                <td>CVP, LB, NA</td>
+                <td>Pits on CVP; grayish-white on NA</td>
+                <td>PCR (Y1/Y2, ECA, EXPCC), <em>gapA</em> sequencing</td>
+                <td>Potato, Echeveria, banana, vegetables</td>
+            </tr>
+            <tr>
+                <td><em>Curtobacterium flaccumfaciens</em></td>
+                <td>MBA, PAF + sucrose, NA</td>
+                <td>Yellow, circular, flat; blue pigment on MBA</td>
+                <td>PCR (Cff-specific), biochemical tests</td>
+                <td>French beans, soybean, poinsettia</td>
+            </tr>
+            <tr>
+                <td><em>Pantoea stewartii</em></td>
+                <td>NGA, King's B, YDC</td>
+                <td>Yellow, mucoid, round, convex</td>
+                <td>PCR (<em>hrp</em>, ITS), qPCR (<em>cps</em>), motility test</td>
+                <td>Sweet corn, baby corn, maize</td>
+            </tr>
+            <tr>
+                <td><em>Rhodococcus fascians</em></td>
+                <td>m-CFS, D2, NBY, GNA</td>
+                <td>Yellow to orange, circular, convex</td>
+                <td>PCR (<em>fasA</em>/<em>fasB</em>), 16S sequencing</td>
+                <td>Zantedeschia, Iberis, ornamentals</td>
+            </tr>
+            <tr>
+                <td><em>Pseudomonas syringae</em></td>
+                <td>King's B, Milk-Tween agar</td>
+                <td>Creamy white, fluorescent under UV</td>
+                <td>PCR (pathovar-specific), HR test</td>
+                <td>Cotton, kiwifruit, bean, tea, stone fruits</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note-box" style="margin-top:20px;">
+        <strong>General Best Practices:</strong> Always include positive and negative controls in PCR and ELISA assays. For soil and water samples, use semi-selective media to reduce saprophytic competition. Confirm presumptive isolates with at least two independent methods (e.g., PCR + pathogenicity test) before reporting a definitive identification. Maintain pure cultures on appropriate media slants or in glycerol stocks at −80°C for long-term preservation.
+    </div>
+</div>
+
+<footer>
+    <p><strong>Bacterial Pathogen Diagnostic Notes</strong> — Compiled from standard microbiological and molecular diagnostic protocols.</p>
+    <p style="margin-top:8px;">Always refer to validated diagnostic protocols (EPPO, ISTA, IPPC) and regional guidelines for regulatory testing and confirmation.</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

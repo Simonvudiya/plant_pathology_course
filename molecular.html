@@ -1,14 +1,1721 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molecular Techniques</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Pathogen Diagnostic Reference</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <h1>Molecular Techniques</h1>
-  <p>Molecular techniques are methods used to study biological molecules.</p>
-  <script src="script.js"></script>
+<body class="molecular">
+<div class="wrap">
+
+<header>
+    <h1>Plant Pathogen Diagnostic Reference</h1>
+    <p>Classification, Identification, and Testing Protocols for Viruses, Viroids, Phytoplasmas, and Bacteria</p>
+    <div class="stats">
+        <div class="stat-badge"><strong>35+</strong>Pathogens Cataloged</div>
+        <div class="stat-badge"><strong>PCR / RT-PCR / RT-qPCR</strong>Primary Detection Methods</div>
+        <div class="stat-badge"><strong>Ornamental, Vegetable & Field Crops</strong>Host Range</div>
+    </div>
+</header>
+
+<nav class="toc">
+    <h2>Quick Navigation</h2>
+    <ul>
+        <li><a href="#tobrfv">Tomato brown rugose fruit virus</a></li>
+        <li><a href="#tswv">Tomato spotted wilt virus</a></li>
+        <li><a href="#insv">Impatiens necrotic spot virus</a></li>
+        <li><a href="#csnv">Chrysanthemum stem necrosis virus</a></li>
+        <li><a href="#csvd">Chrysanthemum stunt viroid</a></li>
+        <li><a href="#cvb">Chrysanthemum virus B</a></li>
+        <li><a href="#carmv">Carnation mottle virus</a></li>
+        <li><a href="#cerv">Carnation etched ring virus</a></li>
+        <li><a href="#crsv">Carnation ringspot virus</a></li>
+        <li><a href="#cmv">Cucumber mosaic virus</a></li>
+        <li><a href="#mcmv">Maize chlorotic mottle virus</a></li>
+        <li><a href="#scmv">Sugarcane mosaic virus</a></li>
+        <li><a href="#pstvd">Potato spindle tuber viroid</a></li>
+        <li><a href="#ralstonia">Ralstonia solanacearum</a></li>
+        <li><a href="#xylella">Xylella fastidiosa</a></li>
+        <li><a href="#bbtv">Banana bunchy top virus</a></li>
+        <li><a href="#asbvD">Avocado sunblotch viroid</a></li>
+        <li><a href="#acmv">African cassava mosaic virus</a></li>
+        <li><a href="#eacmv">East African cassava mosaic virus</a></li>
+        <li><a href="#ucbsv">Ugandan cassava brown streak virus</a></li>
+        <li><a href="#pnrsv">Prunus necrotic ringspot virus</a></li>
+        <li><a href="#rose-viruses">Rose viruses (complex)</a></li>
+        <li><a href="#amv">Alfalfa mosaic virus</a></li>
+        <li><a href="#clrv">Cherry leaf roll virus</a></li>
+        <li><a href="#tmv-tomv">TMV &amp; ToMV</a></li>
+        <li><a href="#potyvirus">Potyviruses (genus)</a></li>
+        <li><a href="#aster-yellow">Aster yellows phytoplasma</a></li>
+        <li><a href="#other-bacteria">Other bacterial pathogens</a></li>
+    </ul>
+</nav>
+
+<!-- ============================================================ -->
+<!-- TOMATO BROWN RUGOSE FRUIT VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="tobrfv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Tomato brown rugose fruit virus (ToBRFV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Virgaviridae</dd>
+            <dt>Genus</dt><dd>Tobamovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, ~6.4 kb, rod-shaped particles</dd>
+            <dt>Type Member</dt><dd>Tobacco mosaic virus (TMV)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Brown rugose (wrinkled) patches on tomato fruit, mosaic and mottling on leaves, fruit deformation, yellowing</dd>
+            <dt>Natural Hosts</dt><dd>Tomato (<em>Solanum lycopersicum</em>), pepper (<em>Capsicum</em> spp.)</dd>
+            <dt>Transmission</dt><dd>Mechanically (contact, tools, hands), seed-borne, not by insects</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Capsicum</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-qPCR (TaqMan) — primary diagnostic method
+Target: Conserved region of the coat protein (CP) gene / movement protein gene
+
+Sample: Leaf tissue or seed
+RNA Extraction: Total RNA using commercial kits (e.g., Qiagen RNeasy)
+
+RT-qPCR Cycling:
+  50°C for 20 min (Reverse Transcription)
+  95°C for 5 min (RT inactivation)
+  40 cycles: 95°C for 15 sec → 60°C for 30 sec
+
+Primers/Probes: Multiple validated assays available (e.g., Menzel & Winter 2021;
+  Rodríguez et al. 2019). TaqMan probes with FAM/BHQ1 labels.
+
+Alternative: Conventional RT-PCR for endpoint detection; amplicon sequencing
+  for confirmation.</div>
+        <div class="note-box">⚠️ ToBRFV can break Tm-2² resistance in tomato. Seed testing is critical for phytosanitary control. False negatives are possible with low seed titers — use of internal positive control (IPC) is recommended.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>First reported in Jordan (2015) and Israel; now widespread in Europe, Americas, and Asia.</li>
+            <li>Extremely stable in the environment; survives on surfaces for long periods.</li>
+            <li>EPPO A2 quarantine pest status in many regions.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TOMATO SPOTTED WILT VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="tswv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Tomato spotted wilt virus (TSWV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tospoviridae (formerly Bunyaviridae)</dd>
+            <dt>Genus</dt><dd>Orthotospovirus</dd>
+            <dt>Genome</dt><dd>Negative/ambisense single-stranded RNA, tripartite (S, M, L segments), enveloped spherical particles (80–120 nm)</dd>
+            <dt>Type Species</dt><dd>Tomato spotted wilt virus</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Chlorotic/necrotic ringspots, bronzing, wilting, stunting; highly variable depending on host and stage</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — tomato, pepper, chrysanthemum, gypsophila, eustoma, limonium, alstroemeria, aster, many ornamentals and vegetables</dd>
+            <dt>Transmission</dt><dd>Thrips (vector-specific); <em>Frankliniella occidentalis</em> is the main vector</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Chrysanthemum</span>
+            <span class="host-tag">Gypsophila</span>
+            <span class="host-tag">Eustoma</span>
+            <span class="host-tag">Limonium</span>
+            <span class="host-tag">Alstroemeria</span>
+            <span class="host-tag">Aster</span>
+            <span class="host-tag">Phalaenopsis</span>
+            <span class="host-tag">Dracaena</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) — standard diagnostic method
+Target: Nucleocapsid (N) gene on the S RNA segment
+
+Sample: Leaf tissue (symptomatic)
+RNA Extraction: Total RNA (TRIzol or column-based)
+
+One-Step RT-PCR:
+  cDNA synthesis: 50°C for 30 min
+  Initial denaturation: 94°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 45 sec
+  Final extension: 72°C for 5 min
+
+Expected amplicon: ~450 bp (degenerate primers) or ~819 bp
+  (N-gene specific primers)
+
+Confirmation: Restriction enzyme digestion (DraI/HindIII) to
+  differentiate TSWV from INSV, or amplicon sequencing.
+
+Alternative: DAS-ELISA for high-throughput screening; RT-qPCR for
+  increased sensitivity.</div>
+        <div class="note-box">⚠️ TSWV is the type species of the genus and has a very broad host range. Mixed infections with INSV are common in ornamentals; differentiation requires either restriction digestion or specific primers.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most economically important plant viruses worldwide.</li>
+            <li>Thrips acquire the virus as larvae and transmit persistently (propagative).</li>
+            <li>Weed reservoirs are important in epidemiology.</li>
+            <li>Management relies on vector control, resistant varieties, and clean planting material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- IMPATIENS NECROTIC SPOT VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="insv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Impatiens necrotic spot virus (INSV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tospoviridae</dd>
+            <dt>Genus</dt><dd>Orthotospovirus</dd>
+            <dt>Genome</dt><dd>Tripartite ambisense RNA, enveloped spherical particles</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Necrotic spots, ringspots, stem necrosis, wilting; similar to TSWV but often more necrotic</dd>
+            <dt>Natural Hosts</dt><dd>Impatiens, chrysanthemum, eustoma, tomato, basil, many ornamentals</dd>
+            <dt>Transmission</dt><dd>Thrips (<em>Frankliniella occidentalis</em>, <em>F. fusca</em>)</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Impatiens</span>
+            <span class="host-tag">Chrysanthemum</span>
+            <span class="host-tag">Eustoma</span>
+            <span class="host-tag">Tomato</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint)
+Target: Nucleocapsid (N) gene
+
+Sample: Symptomatic leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR Cycling:
+  50°C for 30 min (RT)
+  94°C for 2 min (denaturation)
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 45 sec
+  72°C for 5 min
+
+Expected amplicon: ~450 bp (degenerate tospovirus primers) or
+  specific INSV primers targeting N, NSm, or RdRp genes
+  (fragments of 883 bp, 712 bp, 1201 bp reported)
+
+Alternative: Real-time RT-qPCR with TaqMan probes (detection limit
+  ~100 copies/µl); immunostrips for rapid field screening.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Formerly known as "Impatiens necrotic spot tospovirus" — now classified under <em>Orthotospovirus impatiensnecromaculae</em>.</li>
+            <li>Very problematic in ornamental greenhouses where thrips are difficult to control.</li>
+            <li>Often occurs in mixed infections with TSWV.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHRYSANTHEMUM STEM NECROSIS VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="csnv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Chrysanthemum stem necrosis virus (CSNV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tospoviridae (formerly Bunyaviridae)</dd>
+            <dt>Genus</dt><dd>Orthotospovirus</dd>
+            <dt>Genome</dt><dd>Tripartite ambisense RNA</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Stem necrosis (often black streaks), leaf necrosis, wilting, stunting</dd>
+            <dt>Natural Hosts</dt><dd>Chrysanthemum, sweet pepper, tomato</dd>
+            <dt>Transmission</dt><dd>Thrips (<em>Frankliniella occidentalis</em>)</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Chrysanthemum</span>
+            <span class="host-tag">Pepper</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR
+Target: Nucleocapsid protein (N) gene region
+
+Sample: Symptomatic stem or leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: Standard one-step or two-step protocol with
+  CSNV-specific primers (N gene region).
+  Expected amplicon: typically 300–500 bp (N gene based).
+
+Alternative: Real-time RT-PCR for increased sensitivity and
+  quantification.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>First described in Japan (2006) in chrysanthemum.</li>
+            <li>Closely related to TSWV but distinct by serology and sequence (N protein identity &lt;90%).</li>
+            <li>Can also infect sweet pepper (<em>Capsicum annuum</em>) naturally.</li>
+            <li>Management focuses on thrips control and use of virus-free cuttings.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHRYSANTHEMUM STUNT VIROID -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="csvd">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-viroid">Viroid</span>
+        <h2>Chrysanthemum stunt viroid (CSVd)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Pospiviroidae</dd>
+            <dt>Genus</dt><dd>Pospiviroid</dd>
+            <dt>Genome</dt><dd>Circular, single-stranded RNA (~354–356 nt), non-coding</dd>
+            <dt>Type Species</dt><dd>Potato spindle tuber viroid (PSTVd)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Stunting, delayed flowering, small flowers, chlorotic mottling, leaf distortion; may be symptomless in some cultivars</dd>
+            <dt>Natural Hosts</dt><dd>Chrysanthemum (<em>Dendranthema morifolium</em>), various ornamentals</dd>
+            <dt>Transmission</dt><dd>Mechanically (sap, tools), vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Chrysanthemum</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) or RT-qPCR
+Target: Conserved regions of the CSVd genome
+
+Sample: Leaf or stem tissue (young tissue preferred)
+RNA Extraction: Total RNA (silica-based or TRIzol)
+
+One-Step RT-PCR:
+  50°C for 30 min
+  95°C for 2 min
+  35 cycles: 94°C for 30 sec → 55–60°C for 30 sec → 72°C for 30 sec
+  72°C for 5 min
+
+Expected amplicon: ~300–400 bp depending on primer pair
+(e.g., CSVd-ZF/ZR primers)
+
+Alternative: Tissue blot hybridization; dot-blot; RT-qPCR
+(sensitivity ~100,000× higher than PAGE)</div>
+        <div class="note-box">⚠️ CSVd can be present in symptomless plants. Routine indexing of mother stock is essential. Direct RT-PCR from minimal tissue (microtissue direct RT-PCR) is useful for screening small plantlets.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>EPPO A2 quarantine pest.</li>
+            <li>Very stable RNA — resistant to heat and ribonucleases.</li>
+            <li>Elimination through meristem tip culture combined with thermotherapy.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHRYSANTHEMUM VIRUS B -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="cvb">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Chrysanthemum virus B (CVB)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Betaflexiviridae</dd>
+            <dt>Genus</dt><dd>Carlavirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, filamentous particles (~685 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mild mottling, vein clearing, mild mosaic; often symptomless; can reduce flower quality</dd>
+            <dt>Natural Hosts</dt><dd>Chrysanthemum and related ornamentals</dd>
+            <dt>Transmission</dt><dd>Aphids (non-persistent), vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Chrysanthemum</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR
+Target: Coat protein (CP) gene or replicase region
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: Standard one-step RT-PCR with CVB-specific primers.
+  Expected amplicon: ~500–700 bp (CP region).
+
+Alternative: ELISA for high-throughput screening; RT-qPCR for
+  quantification.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most common viruses in chrysanthemum worldwide.</li>
+            <li>Often occurs in mixed infections with other chrysanthemum viruses.</li>
+            <li>Detection is important for certification programs.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARNATION MOTTLE VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="carmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Carnation mottle virus (CarMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tombusviridae</dd>
+            <dt>Genus</dt><dd>Alphacarmovirus (formerly Carmovirus)</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, icosahedral particles (~30 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mild mottling, faint chlorotic spots; often latent; can cause flower distortion</dd>
+            <dt>Natural Hosts</dt><dd>Carnation (<em>Dianthus caryophyllus</em>) and other <em>Dianthus</em> species</dd>
+            <dt>Transmission</dt><dd>Mechanically (sap), vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Carnation</span>
+            <span class="host-tag">Dianthus</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR
+Target: Coat protein (CP) gene
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: One-step RT-PCR with CarMV-specific primers.
+  Expected amplicon: ~1000 bp (CP gene) or ~600 bp
+  (alternative primer set).
+
+Alternative: DAS-ELISA; RT-qPCR (TaqMan) targeting CP gene
+  (130 bp conserved region).</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Type species of the genus <em>Alphacarmovirus</em>.</li>
+            <li>One of the most prevalent viruses in carnation worldwide.</li>
+            <li>Control through meristem tip culture and virus-free propagation.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARNATION ETCHED RING VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="cerv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Carnation etched ring virus (CERV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Caulimoviridae</dd>
+            <dt>Genus</dt><dd>Caulimovirus</dd>
+            <dt>Genome</dt><dd>Double-stranded DNA (circular, ~8 kbp), spherical particles (~50 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Etched ringspots on leaves, mottling, vein clearing; can be severe in some cultivars</dd>
+            <dt>Natural Hosts</dt><dd>Carnation (<em>Dianthus caryophyllus</em>)</dd>
+            <dt>Transmission</dt><dd>Aphids (semi-persistent), vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Carnation</span>
+            <span class="host-tag">Dianthus</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR (endpoint) — because CERV has a DNA genome
+Target: Coat protein (CP) and movement protein (MP) genes
+
+Sample: Leaf tissue
+DNA Extraction: Total DNA (CTAB method)
+
+PCR Cycling:
+  94°C for 4 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 60 sec
+  72°C for 10 min
+
+Expected amplicon: ~1500 bp (CP/MP gene fragments)
+
+Alternative: DAS-ELISA for serological detection;
+  TaqMan real-time PCR for quantification.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>The only DNA virus reported in carnation.</li>
+            <li>Subject to stringent phytosanitary regulations in many countries.</li>
+            <li>Integrated with CaMV (Cauliflower mosaic virus) in the genus <em>Caulimovirus</em>.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CARNATION RINGSPOT VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="crsv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Carnation ringspot virus (CRSV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tombusviridae</dd>
+            <dt>Genus</dt><dd>Dianthovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, bipartite (RNA1 and RNA2), icosahedral particles (~34 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Ringspots, mottling, stunting, leaf distortion; can be severe</dd>
+            <dt>Natural Hosts</dt><dd>Carnation, <em>Dianthus</em> species, other ornamentals</dd>
+            <dt>Transmission</dt><dd>Mechanically (sap), vegetative propagation, possibly soil-borne</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Carnation</span>
+            <span class="host-tag">Dianthus</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR
+Target: RNA1 and RNA2 segments
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: Two primer sets targeting RNA1 and RNA2.
+  Expected amplicons: ~503–549 bp.
+
+Alternative: RT-LAMP (loop-mediated isothermal amplification)
+  for rapid field detection; DAS-ELISA.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Designated as a Korea plant quarantine virus.</li>
+            <li>Some cultivars may test negative by ELISA but positive by RT-PCR.</li>
+            <li>Control through virus-free propagation and sanitation.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CUCUMBER MOSAIC VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="cmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Cucumber mosaic virus (CMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Bromoviridae</dd>
+            <dt>Genus</dt><dd>Cucumovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, tripartite (RNA1, RNA2, RNA3), icosahedral particles (~29 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, vein clearing, stunting, leaf distortion; variable depending on host</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — cucumber, tomato, pepper, strawberry, raspberry, blueberry, many ornamentals and weeds</dd>
+            <dt>Transmission</dt><dd>Aphids (non-persistent, &gt;80 species), seed-borne in some hosts</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cucumber</span>
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Strawberry</span>
+            <span class="host-tag">Raspberry</span>
+            <span class="host-tag">Blueberry</span>
+            <span class="host-tag">Veronica</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR
+Target: Coat protein (CP) gene or RNA-1 segment
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA (crude extracts also work)
+
+RT-PCR: One-step or two-step RT-PCR with CMV-specific primers.
+  Expected amplicon: ~500–600 bp (CP gene); ~513 bp (RdRp region).
+
+Subgroup Differentiation: Restriction digestion with PvuII and VspI
+  distinguishes CMV subgroups I and II.
+
+Alternative: DAS-ELISA; multiplex RT-PCR for simultaneous detection
+  of multiple viruses.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most widespread plant viruses worldwide.</li>
+            <li>Transmitted very efficiently by aphids in a non-persistent manner.</li>
+            <li>Satellite RNAs (satRNA) can modulate symptom severity.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- MAIZE CHLOROTIC MOTTLE VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="mcmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Maize chlorotic mottle virus (MCMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Tombusviridae</dd>
+            <dt>Genus</dt><dd>Machlomovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, icosahedral particles (~30 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Chlorotic mottling, stunting, leaf yellowing; often asymptomatic in some genotypes</dd>
+            <dt>Natural Hosts</dt><dd>Maize, sweet corn, baby corn</dd>
+            <dt>Transmission</dt><dd>Thrips (maize thrips), seed-borne, mechanically</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Maize</span>
+            <span class="host-tag">Sweet Corn</span>
+            <span class="host-tag">Baby Corn</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-qPCR (TaqMan) and RT-PCR
+Target: Coat protein (CP) gene
+
+Sample: Leaf tissue, seed
+RNA Extraction: Total RNA (TRIzol or column-based)
+
+RT-qPCR Cycling:
+  50°C for 20 min (RT)
+  95°C for 5 min
+  40 cycles: 95°C for 15 sec → 60°C for 30 sec
+
+Alternative: DAS-ELISA for high-throughput seed testing;
+  conventional RT-PCR (expected amplicon ~1.4 kb with degenerate
+  tenuivirus primers; specific MCMV primers yield smaller products).</div>
+        <div class="note-box">⚠️ MCMV is a key component of Maize Lethal Necrosis (MLN) when co-infecting with Sugarcane mosaic virus (SCMV) or other potyviruses. Synergistic interaction causes severe disease and yield loss.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Major threat to maize production in East Africa, South America, and Asia.</li>
+            <li>Seed transmission is an important pathway for long-distance spread.</li>
+            <li>Management includes vector control, resistant varieties, and clean seed.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SUGARCANE MOSAIC VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="scmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Sugarcane mosaic virus (SCMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Potyviridae</dd>
+            <dt>Genus</dt><dd>Potyvirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, monopartite, filamentous particles (~750 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, chlorotic streaks, stunting</dd>
+            <dt>Natural Hosts</dt><dd>Sugarcane, maize, sorghum, and other grasses</dd>
+            <dt>Transmission</dt><dd>Aphids (non-persistent), mechanically</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Sugarcane</span>
+            <span class="host-tag">Maize</span>
+            <span class="host-tag">Sweet Corn</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint)
+Target: Coat protein (CP) gene or NIb gene
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: One-step RT-PCR with SCMV-specific primers.
+  Expected amplicon: ~900 bp (NIb-CP region).
+
+Multiplexing: Can be multiplexed with other sugarcane viruses
+  (SrMV, SCSMV, SCYLV) in a single reaction.
+
+Alternative: D-IC-RT-PCR (duplex immunocapture RT-PCR) for
+  discrimination of SCMV and SrMV.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the causal agents of sugarcane mosaic disease (SMD).</li>
+            <li>Co-infection with MCMV causes Maize Lethal Necrosis (MLN).</li>
+            <li>Strain differentiation (A, B, D, E) is based on molecular and biological properties.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- POTATO SPINDLE TUBER VIROID -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="pstvd">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-viroid">Viroid</span>
+        <h2>Potato spindle tuber viroid (PSTVd)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Pospiviroidae</dd>
+            <dt>Genus</dt><dd>Pospiviroid</dd>
+            <dt>Genome</dt><dd>Circular, single-stranded RNA (341–364 nt), non-coding</dd>
+            <dt>Type Species</dt><dd>Potato spindle tuber viroid</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Spindle-shaped tubers, stunting, leaf rolling, yield reduction; symptomless in many ornamentals</dd>
+            <dt>Natural Hosts</dt><dd>Potato, tomato, pepper, ornamental Solanaceae (<em>Solanum jasminoides</em>, <em>Brugmansia</em>, <em>Dahlia</em>)</dd>
+            <dt>Transmission</dt><dd>Mechanically (sap, tools), vegetative propagation, true seed (rare)</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Potato</span>
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Dahlia</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and real-time RT-PCR
+Target: Conserved central region of the PSTVd genome
+
+Sample: Leaf tissue, tuber tissue
+RNA Extraction: Total RNA (silica-based or TRIzol)
+
+Conventional RT-PCR (Verhoeven et al. 2004):
+  50°C for 30 min (RT)
+  95°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 30 sec
+  72°C for 5 min
+
+Expected amplicon: ~270–360 bp depending on primer pair
+(e.g., 271 bp for PSTVd with multiplex primers)
+
+Real-time RT-PCR: GenPospi assay (Botermans et al. 2013) for
+  broad pospiviroid detection; specific PSTVd probes for confirmation.
+
+Alternative: DIG-labeled cRNA probe hybridization;
+  RT-PCR followed by sequencing for definitive identification.</div>
+        <div class="note-box">⚠️ PSTVd is a quarantine pest in many countries (EPPO A2). It can be symptomless in ornamental hosts, making routine testing of imported plant material essential. Sequencing of amplicons is recommended for confirmation due to cross-reactivity with other pospiviroids.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>The first viroid discovered (1971).</li>
+            <li>Very stable and highly contagious — strict sanitation is critical.</li>
+            <li>Elimination through meristem culture and thermotherapy.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- RALSTONIA SOLANACEARUM -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="ralstonia">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-bacteria">Bacterium</span>
+        <h2>Ralstonia solanacearum (species complex)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Domain</dt><dd>Bacteria</dd>
+            <dt>Phylum</dt><dd>Pseudomonadota (Proteobacteria)</dd>
+            <dt>Class</dt><dd>Betaproteobacteria</dd>
+            <dt>Order</dt><dd>Burkholderiales</dd>
+            <dt>Family</dt><dd>Burkholderiaceae</dd>
+            <dt>Genus</dt><dd>Ralstonia</dd>
+            <dt>Species Complex</dt><dd><em>R. solanacearum</em> sensu lato (includes <em>R. pseudosolanacearum</em>, <em>R. syzygii</em>)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Wilting, vascular browning, bacterial ooze, stunting; "brown rot" in potato, "Moko disease" in banana, "Southern wilt" in various crops</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — potato, tomato, pepper, banana, pelargonium, geranium, and many others</dd>
+            <dt>Transmission</dt><dd>Soil-borne, water-borne, infected planting material, tools</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Potato</span>
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Banana</span>
+            <span class="host-tag">Pelargonium</span>
+            <span class="host-tag">Geranium</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR (endpoint) — because it is a bacterium
+Target: Species-specific primer pairs (e.g., 759/760 for RSSC;
+  phylotype-specific multiplex PCR)
+
+Sample: Vascular tissue, stem sections, soil, water
+DNA Extraction: CTAB method or commercial bacterial DNA kits
+
+PCR Cycling (Opina et al. 1997 primers 759/760):
+  95°C for 1 min
+  30 cycles: 95°C for 15 sec → annealing temp for 15 sec → 72°C for 10 sec
+  72°C for 5 min
+
+Expected amplicon: ~280–282 bp (RSSC-specific)
+
+Multiplex Phylotype PCR: Differentiates phylotypes I, II, III, IV
+  based on specific primer sets.
+
+Alternative: Isolation on selective media (e.g., TTC medium),
+  followed by PCR confirmation; real-time PCR for quantification.</div>
+        <div class="note-box">⚠️ Ralstonia solanacearum is a quarantine pathogen in many countries. The species complex is taxonomically complex — phylotype and sequevar identification is important for epidemiological tracking and regulatory decisions.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most destructive bacterial plant pathogens worldwide.</li>
+            <li>Survives in soil for years; rotation and sanitation are critical.</li>
+            <li>Race 3 biovar 2 is a quarantine pathogen in Europe and North America.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- XYLELLA FASTIDIOSA -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="xylella">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-bacteria">Bacterium</span>
+        <h2>Xylella fastidiosa</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Domain</dt><dd>Bacteria</dd>
+            <dt>Phylum</dt><dd>Pseudomonadota (Proteobacteria)</dd>
+            <dt>Class</dt><dd>Gammaproteobacteria</dd>
+            <dt>Order</dt><dd>Lysobacterales (Xanthomonadales)</dd>
+            <dt>Family</dt><dd>Lysobacteraceae (Xanthomonadaceae)</dd>
+            <dt>Genus</dt><dd>Xylella</dd>
+            <dt>Subspecies</dt><dd><em>fastidiosa</em>, <em>multiplex</em>, <em>pauca</em>, <em>sandyi</em>, <em>tashke</em></dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Leaf scorch, marginal necrosis, stunting, dieback; "Pierce's disease" in grape, "citrus variegated chlorosis", "coffee leaf scorch"</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — grape, citrus, coffee, olive, almond, ornamental plants (<em>Eustoma</em>, <em>Solidago</em>, <em>Nepenthes</em>, <em>Lavandula</em>, etc.)</dd>
+            <dt>Transmission</dt><dd>Xylem-feeding insects (sharpshooters, spittlebugs, cicadellids)</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Grape</span>
+            <span class="host-tag">Citrus</span>
+            <span class="host-tag">Coffee</span>
+            <span class="host-tag">Olive</span>
+            <span class="host-tag">Eustoma</span>
+            <span class="host-tag">Lavandula</span>
+            <span class="host-tag">Nepenthes</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR (endpoint) and real-time PCR (qPCR)
+Target: 16S rRNA gene, <em>mutS</em> gene, or subspecies-specific
+  genomic regions
+
+Sample: Petiole tissue (preferred), stem tissue
+DNA Extraction: CTAB method with additional purification steps
+  (plant inhibitors are common)
+
+Conventional PCR: Universal primers for <em>Xylella</em> spp.;
+  subspecies-specific primers for typing.
+
+Real-time PCR (qPCR): Subspecies-specific TaqMan assays;
+  multiplex tetraplex qPCR for simultaneous detection and
+  subspecies identification.
+
+Multilocus Sequence Typing (MLST): For epidemiological tracking.
+
+Alternative: Isolation on periwinkle wilt (PW) medium — slow
+  and difficult; serological methods (ELISA) less sensitive.</div>
+        <div class="note-box">⚠️ Xylella fastidiosa is a quarantine pathogen of major concern (EU priority pest). Detection can be challenging due to low and uneven bacterial titers in plant tissues — sampling multiple petioles from different parts of the plant is recommended.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Cause of Pierce's disease of grapevine and citrus variegated chlorosis.</li>
+            <li>The <em>pauca</em> subspecies is responsible for the olive quick decline syndrome (OQDS) in Italy.</li>
+            <li>Management focuses on vector control, removal of infected plants, and quarantine measures.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- BANANA BUNCHY TOP VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="bbtv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Banana bunchy top virus (BBTV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Nanoviridae</dd>
+            <dt>Genus</dt><dd>Babuvirus</dd>
+            <dt>Genome</dt><dd>Circular single-stranded DNA, multipartite (6 components), icosahedral particles (~18–20 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>"Bunchy top" — dark green streaks on petioles, leaves become narrow and upright, stunted growth, no fruit or small fruit</dd>
+            <dt>Natural Hosts</dt><dd>Banana, plantain (<em>Musa</em> spp.)</dd>
+            <dt>Transmission</dt><dd>Banana aphid (<em>Pentalonia nigronervosa</em>) — persistent, circulative; vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Banana</span>
+            <span class="host-tag">Plantain</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR and real-time PCR (qPCR) — because BBTV has a DNA genome
+Target: Coat protein (CP) gene or other core component genes
+
+Sample: Leaf tissue (young, symptomatic), pseudostem
+DNA Extraction: CTAB method or commercial plant DNA kits
+
+Conventional PCR: BBTV-specific primers targeting CP gene;
+  expected amplicon ~500 bp.
+
+Real-time PCR (TaqMan): Highly sensitive detection in plants and
+  aphids; detection limit ~1.0 ng–1.0 mg of infected leaf tissue.
+
+Multiplexing: Can be multiplexed with BSV (Banana streak virus)
+  and CMV for simultaneous detection.
+
+Alternative: Rolling circle amplification (RCA) for whole-genome
+  characterization; ELISA less reliable for this virus.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most serious viral diseases of banana worldwide.</li>
+            <li>Threatens production in Africa, Asia, and the Pacific.</li>
+            <li>Management relies on aphid control, eradication of infected plants, and use of virus-free planting material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- AVOCADO SUNBLOTCH VIROID -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="asbvD">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-viroid">Viroid</span>
+        <h2>Avocado sunblotch viroid (ASBVd)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Avsunviroidae</dd>
+            <dt>Genus</dt><dd>Avsunviroid</dd>
+            <dt>Genome</dt><dd>Circular, single-stranded RNA (~247 nt), self-cleaving ribozyme activity</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Sunken, yellow/white streaks on fruit, stem, and leaves; fruit distortion; can be symptomless</dd>
+            <dt>Natural Hosts</dt><dd>Avocado (<em>Persea americana</em>)</dd>
+            <dt>Transmission</dt><dd>Mechanically (grafting, pruning tools), seed, pollen</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Avocado</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and real-time RT-PCR
+Target: Conserved regions of the ASBVd genome
+
+Sample: Leaf tissue, fruit tissue, bark
+RNA Extraction: Total RNA
+
+Two-Step RT-PCR (Schnell et al. 1997):
+  cDNA synthesis: 42°C for 60 min
+  PCR: 94°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 30 sec
+  72°C for 5 min
+
+Expected amplicon: 88–104 bp
+
+Real-time RT-PCR: TaqMan probes for increased sensitivity;
+  detection from foraging bees and pollination hives is possible.
+
+Alternative: Fluorescent SSCP analysis for variant detection.</div>
+        <div class="note-box">⚠️ ASBVd can be present in symptomless trees, making visual inspection unreliable. RT-PCR is the recommended diagnostic method. Seed transmission is an important pathway for spread.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Type species of the family <em>Avsunviroidae</em>.</li>
+            <li>First viroid shown to have ribozyme activity.</li>
+            <li>Major concern for avocado germplasm movement and certification.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- AFRICAN CASSAVA MOSAIC VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="acmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>African cassava mosaic virus (ACMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Geminiviridae</dd>
+            <dt>Genus</dt><dd>Begomovirus</dd>
+            <dt>Genome</dt><dd>Circular single-stranded DNA, bipartite (DNA-A and DNA-B), twinned icosahedral particles (~22 × 38 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, leaf distortion, stunting, reduced tuber yield</dd>
+            <dt>Natural Hosts</dt><dd>Cassava (<em>Manihot esculenta</em>)</dd>
+            <dt>Transmission</dt><dd>Whitefly (<em>Bemisia tabaci</em>) — persistent, circulative; vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cassava</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR (endpoint) and real-time PCR (qPCR)
+Target: DNA-A and DNA-B genomic components; conserved regions
+  of the coat protein (AV1) gene
+
+Sample: Leaf tissue (symptomatic)
+DNA Extraction: CTAB method
+
+Conventional PCR: Begomovirus universal primers (e.g., AV494/CoPR)
+  targeting partial AV1 gene; expected amplicon ~550 bp.
+  Species-specific primers for ACMV confirmation.
+
+Real-time PCR (qPCR): TaqMan assays for quantification of
+  DNA-A and DNA-B; can be multiplexed with EACMV.
+
+Alternative: Rolling circle amplification (RCA) for full genome
+  characterization.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most important constraints to cassava production in Africa.</li>
+            <li>Often occurs in mixed infections with East African cassava mosaic virus (EACMV).</li>
+            <li>Management relies on resistant varieties, whitefly control, and clean planting material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- EAST AFRICAN CASSAVA MOSAIC VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="eacmv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>East African cassava mosaic virus (EACMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Geminiviridae</dd>
+            <dt>Genus</dt><dd>Begomovirus</dd>
+            <dt>Genome</dt><dd>Circular single-stranded DNA, bipartite (DNA-A and DNA-B)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Severe mosaic, leaf distortion, stunting; often more severe than ACMV alone</dd>
+            <dt>Natural Hosts</dt><dd>Cassava</dd>
+            <dt>Transmission</dt><dd>Whitefly, vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cassava</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR and real-time PCR (qPCR)
+Target: DNA-A and DNA-B components; species-specific primers
+
+Sample: Leaf tissue
+DNA Extraction: CTAB method
+
+Conventional PCR: EACMV-specific primers targeting DNA-A;
+  can be multiplexed with ACMV-specific primers for simultaneous
+  detection.
+
+Real-time PCR (qPCR): TaqMan probes for quantification of
+  EACMV-UG (Uganda variant) in single and mixed infections.
+
+Expected amplicon: ~500–600 bp depending on primer pair.
+
+Alternative: RCA for full genome sequencing; degenerate
+  begomovirus primers for broad detection.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>The EACMV-UG variant is associated with the severe cassava mosaic disease pandemic in East Africa.</li>
+            <li>Recombination between ACMV and EACMV has generated new, more virulent strains.</li>
+            <li>Mixed infections are common and often result in synergistic disease enhancement.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- UGANDAN CASSAVA BROWN STREAK VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="ucbsv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Ugandan cassava brown streak virus (UCBSV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Potyviridae</dd>
+            <dt>Genus</dt><dd>Ipomovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, monopartite, filamentous particles</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Brown streaks on stems, yellowing/chlorosis of leaves, root necrosis (brown rot in tubers)</dd>
+            <dt>Natural Hosts</dt><dd>Cassava</dd>
+            <dt>Transmission</dt><dd>Whitefly (<em>Bemisia tabaci</em>), vegetative propagation</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cassava</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and real-time RT-PCR
+Target: Coat protein (CP) gene; species-specific primers
+
+Sample: Leaf tissue, stem tissue
+RNA Extraction: Total RNA
+
+Two-Step RT-PCR (Mbanzibwa et al. 2011):
+  cDNA synthesis: 42°C for 60 min
+  PCR: 94°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 45 sec
+  72°C for 5 min
+
+Expected amplicon: ~440 bp (UCBSV-specific)
+  Generic CBSV primers yield ~785 bp.
+
+Multiplex RT-PCR: Simultaneous detection of CBSV and UCBSV
+  in a single reaction.
+
+Alternative: RT-LAMP for rapid field detection; real-time
+  RT-PCR for quantification.</div>
+        <div class="note-box">⚠️ Cassava brown streak disease (CBSD) is caused by two distinct viruses: <em>Cassava brown streak virus</em> (CBSV) and <em>Ugandan cassava brown streak virus</em> (UCBSV). Species-specific detection is important for epidemiological studies and breeding programs.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Major threat to cassava production in East and Central Africa.</li>
+            <li>Root necrosis renders tubers unfit for consumption, causing severe food security impacts.</li>
+            <li>Management relies on resistant varieties and clean planting material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PRUNUS NECROTIC RINGSPOT VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="pnrsv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Prunus necrotic ringspot virus (PNRSV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Bromoviridae</dd>
+            <dt>Genus</dt><dd>Ilarvirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, tripartite (RNA1, RNA2, RNA3), icosahedral particles</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Necrotic ringspots, shock symptoms, mosaic, stunting; often symptomless in some hosts</dd>
+            <dt>Natural Hosts</dt><dd><em>Prunus</em> species (cherry, peach, plum, apricot, almond), rose</dd>
+            <dt>Transmission</dt><dd>Pollen, seed, vegetative propagation, mechanically</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cherry</span>
+            <span class="host-tag">Peach</span>
+            <span class="host-tag">Plum</span>
+            <span class="host-tag">Rose</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and real-time RT-PCR
+Target: Coat protein (CP) gene; RNA3 segment
+
+Sample: Leaf tissue, dormant buds
+RNA Extraction: Total RNA
+
+Two-Step RT-PCR:
+  cDNA synthesis: 42°C for 60 min
+  PCR: 94°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 45 sec
+  72°C for 5 min
+
+Multiplex RT-PCR: Differentiation of PNRSV phylogroups
+  (PV32, PE5, and others) based on CP gene sequences.
+
+Expected amplicon: ~400–600 bp depending on primer pair.
+
+Alternative: DAS-ELISA for high-throughput screening;
+  RT-LAMP for rapid detection.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>One of the most economically important viruses of stone fruits worldwide.</li>
+            <li>Three serotypes (CH3, PV32, PE5) are recognized.</li>
+            <li>Management relies on virus-free propagation material and removal of infected trees.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ROSE VIRUSES (COMPLEX) -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="rose-viruses">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Viruses</span>
+        <h2>Rose Viruses (Complex)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Rose leaf curl virus (RoLCuV)</dt><dd>Family: Geminiviridae; Genus: Begomovirus (monopartite, DNA)</dd>
+            <dt>Rose mosaic virus (complex)</dt><dd>Associated with PNRSV (Bromoviridae: Ilarvirus) and ApMV (Bromoviridae: Alfamovirus)</dd>
+            <dt>Rose rosette virus (RRV)</dt><dd>Family: Fimoviridae; Genus: Emaravirus (negative-strand RNA, multipartite)</dd>
+            <dt>Rose yellow vein virus (RYVV)</dt><dd>Family: Caulimoviridae; Genus: Caulimovirus (dsDNA)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic (rose mosaic), leaf curl (RoLCuV), rosette (RRV — witches' broom, excessive thorniness, red pigmentation), yellowing (RYVV)</dd>
+            <dt>Natural Hosts</dt><dd>Rose (<em>Rosa</em> spp.)</dd>
+            <dt>Transmission</dt><dd>Grafting, vegetative propagation; RRV by eriophyid mites (<em>Phyllocoptes fructiphilus</em>)</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Rose</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR / RT-PCR depending on virus type
+
+RoLCuV (DNA virus):
+  PCR with begomovirus universal primers (AV494/CoPR);
+  expected amplicon ~550 bp. RCA for full genome.
+
+Rose mosaic complex (RNA viruses):
+  RT-PCR for PNRSV (CP gene, ~400 bp) and ApMV (CP gene, ~900 bp).
+  Multiplex RT-PCR can detect both simultaneously.
+
+RRV (RNA virus):
+  RT-PCR targeting RNA1, RNA2, or RNA3 segments;
+  TaqMan RT-qPCR with multiple gene targets for high sensitivity.
+  Expected amplicon: ~300–500 bp.
+
+RYVV (DNA virus):
+  PCR with Caulimovirus-specific primers;
+  expected amplicon ~600–800 bp.
+
+Alternative: DAS-ELISA for PNRSV and ApMV;
+  high-throughput sequencing for mixed infections.</div>
+        <div class="note-box">⚠️ Rose viruses often occur in mixed infections, complicating diagnosis. Molecular methods (PCR/RT-PCR) are essential for accurate identification. RRV is particularly devastating and requires early detection and eradication.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Rose mosaic disease is one of the most common rose diseases worldwide.</li>
+            <li>Rose rosette disease (RRV) is a major concern in North America.</li>
+            <li>Certification programs rely on indexing and virus-free propagation.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ALFALFA MOSAIC VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="amv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Alfalfa mosaic virus (AMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Bromoviridae</dd>
+            <dt>Genus</dt><dd>Alfamovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, tripartite (RNA1, RNA2, RNA3) plus subgenomic RNA4, bacilliform particles</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, yellowing, stunting; variable depending on host</dd>
+            <dt>Natural Hosts</dt><dd>Alfalfa, potato, pepper, aster, astilbe, verbena, many ornamentals and legumes</dd>
+            <dt>Transmission</dt><dd>Aphids (non-persistent), seed-borne, mechanically</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Alfalfa</span>
+            <span class="host-tag">Potato</span>
+            <span class="host-tag">Aster</span>
+            <span class="host-tag">Astilbe</span>
+            <span class="host-tag">Verbena</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint)
+Target: Coat protein (CP) gene or P2 gene
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR: One-step RT-PCR with AMV-specific primers.
+  Expected amplicon: ~900 bp (CP region).
+
+Subgroup Differentiation: RT-PCR followed by restriction
+  digestion (RFLP) to classify AMV isolates into subgroups I and II.
+
+Alternative: DAS-ELISA for high-throughput screening;
+  multiplex RT-PCR for simultaneous detection with CMV, BYMV,
+  and P5bMV in legumes.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Type species of the genus <em>Alfamovirus</em>.</li>
+            <li>Very broad host range — infects over 150 plant species.</li>
+            <li>Seed transmission is important in alfalfa and some vegetables.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHERRY LEAF ROLL VIRUS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="clrv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus</span>
+        <h2>Cherry leaf roll virus (CLRV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Secoviridae</dd>
+            <dt>Genus</dt><dd>Nepovirus (subgroup C)</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, bipartite (RNA1 and RNA2), isometric particles (~28 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Leaf roll, mosaic, ringspots, decline; variable depending on host</dd>
+            <dt>Natural Hosts</dt><dd>Cherry, walnut, birch, elderberry, hydrangea, many woody and herbaceous plants</dd>
+            <dt>Transmission</dt><dd>Nematodes (<em>Xiphinema</em> spp.), seed, pollen, grafting</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Cherry</span>
+            <span class="host-tag">Walnut</span>
+            <span class="host-tag">Hydrangea</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and nested RT-PCR
+Target: Coat protein (CP) coding region on RNA2;
+  3' non-coding region
+
+Sample: Leaf tissue (woody and herbaceous hosts)
+RNA Extraction: Total RNA (woody tissue may require
+  additional purification steps)
+
+One-Step RT-PCR:
+  50°C for 30 min
+  94°C for 2 min
+  35 cycles: 94°C for 30 sec → 55°C for 30 sec → 72°C for 45 sec
+  72°C for 5 min
+
+Expected amplicon: ~248 bp (polyvalent comovirus test) or
+  ~400–600 bp (CLRV-specific primers).
+
+Nested RT-PCR: For increased sensitivity in woody tissue.
+
+Alternative: DAS-ELISA; high-throughput sequencing for
+  strain differentiation.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Six phylogenetic groups (A–F) are recognized based on sequence analysis.</li>
+            <li>Multiple serotypes exist; RT-PCR is preferred for broad detection.</li>
+            <li>Quarantine pest in some countries due to its wide host range and seed transmission.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TMV & ToMV -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="tmv-tomv">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Viruses</span>
+        <h2>Tobacco mosaic virus (TMV) &amp; Tomato mosaic virus (ToMV)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Virgaviridae</dd>
+            <dt>Genus</dt><dd>Tobamovirus</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA (~6.4 kb), rod-shaped particles</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, leaf distortion, stunting; TMV and ToMV are difficult to distinguish by symptoms alone</dd>
+            <dt>Natural Hosts</dt><dd>TMV: tobacco, tomato, pepper, many ornamentals; ToMV: tomato, pepper, tobacco</dd>
+            <dt>Transmission</dt><dd>Mechanically (very stable), seed-borne (ToMV especially), not by insects</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Tobacco</span>
+            <span class="host-tag">Tomato</span>
+            <span class="host-tag">Pepper</span>
+            <span class="host-tag">Veronica</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR (endpoint) and multiplex IC-RT-PCR
+Target: Coat protein (CP) gene; movement protein gene
+
+Sample: Leaf tissue, seed
+RNA Extraction: Total RNA
+
+Multiplex IC-RT-PCR: Simultaneous detection and differentiation
+  of TMV and ToMV in a single reaction.
+  Expected amplicons: distinct sizes for TMV and ToMV
+  (e.g., TMV ~800 bp; ToMV ~600 bp depending on primers).
+
+Conventional RT-PCR: Species-specific primers for TMV or
+  ToMV; amplicon sequencing for confirmation.
+
+Alternative: DAS-ELISA (serological cross-reactivity between
+  TMV and ToMV is common — molecular confirmation recommended);
+  RT-qPCR for quantification.</div>
+        <div class="note-box">⚠️ TMV and ToMV are serologically related and can cross-react in ELISA. Molecular methods (RT-PCR) are recommended for definitive species identification. ToMV is seed-transmitted in tomato and pepper, making seed testing critical.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>TMV was the first virus ever discovered (1892 by Ivanovsky).</li>
+            <li>Extremely stable — can survive in plant debris and on surfaces for years.</li>
+            <li>ToMV resistance genes (Tm-1, Tm-2, Tm-2²) are widely used in tomato breeding.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- POTYVIRUSES (GENUS) -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="potyvirus">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-virus">Virus Genus</span>
+        <h2>Potyviruses (Genus Potyvirus)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Potyviridae</dd>
+            <dt>Genus</dt><dd>Potyvirus (largest genus of plant viruses, &gt;200 species)</dd>
+            <dt>Genome</dt><dd>Positive-sense single-stranded RNA, monopartite, filamentous particles (~680–900 nm)</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Mosaic, mottling, vein clearing, necrosis, stunting; variable</dd>
+            <dt>Notable Members</dt><dd>Potato virus Y (PVY), Sugarcane mosaic virus (SCMV), Bean yellow mosaic virus (BYMV), Plum pox virus (PPV)</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — affects many crops including potato, tomato, pepper, sugarcane, strawberry, raspberry, pawpaw</dd>
+            <dt>Transmission</dt><dd>Aphids (non-persistent), mechanically, seed-borne in some species</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Potato</span>
+            <span class="host-tag">Strawberry</span>
+            <span class="host-tag">Raspberry</span>
+            <span class="host-tag">Pawpaw</span>
+            <span class="host-tag">Blueberry</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: RT-PCR with degenerate primers
+Target: NIb gene (RNA-dependent RNA polymerase) or
+  coat protein (CP) gene; poly-A tail
+
+Sample: Leaf tissue
+RNA Extraction: Total RNA
+
+RT-PCR (degenerate potyvirus primers):
+  cDNA synthesis: 42°C for 60 min
+  PCR: 94°C for 2 min
+  35 cycles: 94°C for 30 sec → 50–55°C for 30 sec → 72°C for 60 sec
+  72°C for 5 min
+
+Expected amplicon: ~1.2 kb (NIb-CP region with oligo-dT primer)
+  or ~300–700 bp with CP-specific degenerate primers.
+
+Species Identification: Amplicon sequencing and BLAST
+  comparison; species-specific primers for confirmation.
+
+Alternative: DAS-ELISA with genus-specific antibodies for
+  broad detection; RT-qPCR for quantification.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Potyviruses are the largest and most economically important group of plant viruses.</li>
+            <li>They cause significant losses in vegetables, ornamentals, and field crops worldwide.</li>
+            <li>Management includes vector control, resistant varieties, and clean planting material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ASTER YELLOWS PHYTOPLASMA -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="aster-yellow">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-phytoplasma">Phytoplasma</span>
+        <h2>Aster yellows phytoplasma</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Classification</div>
+        <dl class="info-grid">
+            <dt>Class</dt><dd>Mollicutes</dd>
+            <dt>Order</dt><dd>Acholeplasmatales</dd>
+            <dt>Family</dt><dd>Acholeplasmataceae</dd>
+            <dt>Candidatus Species</dt><dd>'<em>Candidatus</em> Phytoplasma asteris' (16SrI group)</dd>
+            <dt>Genome</dt><dd>Small circular chromosome (~700–900 kb), no cell wall</dd>
+        </dl>
+
+        <div class="section-label">Identification</div>
+        <dl class="info-grid">
+            <dt>Symptoms</dt><dd>Yellowing, stunting, witches' broom, phyllody (floral parts become leafy), virescence (greening of flowers)</dd>
+            <dt>Natural Hosts</dt><dd>Very broad — aster, chrysanthemum, gypsophila, eustoma, limonium, coconut, and many other ornamentals and crops</dd>
+            <dt>Transmission</dt><dd>Leafhoppers (e.g., <em>Macrosteles</em> spp.), grafting, dodder</dd>
+        </dl>
+        <div class="host-list">
+            <span class="host-tag">Aster</span>
+            <span class="host-tag">Chrysanthemum</span>
+            <span class="host-tag">Gypsophila</span>
+            <span class="host-tag">Eustoma</span>
+            <span class="host-tag">Limonium</span>
+            <span class="host-tag">Coconut</span>
+        </div>
+
+        <div class="section-label">Procedure / Protocol for Identification</div>
+        <div class="protocol-box">Method: PCR (endpoint) and nested PCR
+Target: 16S rRNA gene; 16S–23S intergenic spacer region
+
+Sample: Leaf tissue (midribs preferred), stem tissue
+DNA Extraction: CTAB method with phytoplasma-specific
+  enrichment (phytoplasmas are low-titer and unevenly distributed)
+
+Direct PCR:
+  Universal primers P1/P7 (amplify ~1.8 kb of 16S rRNA
+  and ITS region)
+  Cycling: 94°C for 2 min; 35 cycles: 94°C for 30 sec →
+  55°C for 30 sec → 72°C for 90 sec; 72°C for 10 min
+
+Nested PCR:
+  Primer pair R16F2n/R16R2 (amplifies ~1.2 kb internal
+  fragment of 16S rRNA gene)
+  Cycling: 94°C for 2 min; 35 cycles: 94°C for 30 sec →
+  55°C for 30 sec → 72°C for 60 sec; 72°C for 10 min
+
+Group Identification: RFLP analysis of nested PCR products
+  or sequencing; qPCR for quantification.
+
+Alternative: DAPI staining for preliminary detection;
+  electron microscopy for confirmation.</div>
+        <div class="note-box">⚠️ Phytoplasmas are obligate parasites and cannot be cultured on artificial media. Molecular methods (PCR) are the gold standard for detection and identification. Nested PCR is often necessary due to low pathogen titers.</div>
+
+        <div class="section-label">Useful Information</div>
+        <ul style="margin-left:18px; font-size:0.93em;">
+            <li>Aster yellows is one of the most widespread phytoplasma diseases.</li>
+            <li>The 16SrI group contains many economically important strains.</li>
+            <li>Management focuses on vector control, removal of infected plants, and use of clean propagation material.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- OTHER BACTERIAL PATHOGENS -->
+<!-- ============================================================ -->
+<div class="pathogen-card" id="other-bacteria">
+    <div class="pathogen-header" onclick="toggle(this)">
+        <span class="type-tag tag-bacteria">Bacteria</span>
+        <h2>Other Bacterial Pathogens (Dickeya, Pectobacterium, Clavibacter, Xanthomonas, Liberibacter)</h2>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="pathogen-body">
+        <div class="section-label">Dickeya spp.</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Pectobacteriaceae</dd>
+            <dt>Genus</dt><dd>Dickeya</dd>
+            <dt>Key Species</dt><dd><em>D. solani</em>, <em>D. dadantii</em>, <em>D. dianthicola</em></dd>
+            <dt>Symptoms</dt><dd>Soft rot, blackleg, stem rot in potato, maize, and ornamentals</dd>
+            <dt>Detection</dt><dd>PCR with <em>gapA</em> or <em>pel</em> gene primers; sequencing for species identification. Expected amplicon: ~500–800 bp.</dd>
+        </dl>
+
+        <div class="section-label">Pectobacterium spp.</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Pectobacteriaceae</dd>
+            <dt>Genus</dt><dd>Pectobacterium</dd>
+            <dt>Key Species</dt><dd><em>P. carotovorum</em>, <em>P. atrosepticum</em>, <em>P. parmentieri</em></dd>
+            <dt>Symptoms</dt><dd>Soft rot, blackleg in potato and vegetables</dd>
+            <dt>Detection</dt><dd>PCR with Y1/Y2 primers (genus-specific, ~430 bp); EXPCCF/R primers for <em>P. carotovorum</em>; <em>gapA</em> sequencing for species identification.</dd>
+        </dl>
+
+        <div class="section-label">Clavibacter michiganensis subsp. sepedonicus</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Microbacteriaceae</dd>
+            <dt>Genus</dt><dd>Clavibacter</dd>
+            <dt>Symptoms</dt><dd>Bacterial ring rot of potato — vascular browning, wilting, tuber rot</dd>
+            <dt>Detection</dt><dd>Nested PCR targeting 16S rRNA gene and IS1121 insertion element; expected amplicon ~500 bp. Differentiate from other subspecies by RFLP analysis.</dd>
+        </dl>
+
+        <div class="section-label">Xanthomonas spp. (Bacterial spot of tomato/pepper)</div>
+        <dl class="info-grid">
+            <dt>Species</dt><dd><em>X. vesicatoria</em>, <em>X. euvesicatoria</em>, <em>X. perforans</em>, <em>X. gardneri</em></dd>
+            <dt>Symptoms</dt><dd>Leaf spots, fruit spots, defoliation in tomato and pepper</dd>
+            <dt>Detection</dt><dd>Multiplex real-time PCR targeting <em>hrpB7</em> gene; species-specific primers for differentiation. Conventional PCR with <em>hrp</em> gene primers.</dd>
+        </dl>
+
+        <div class="section-label">Candidatus Liberibacter solanacearum</div>
+        <dl class="info-grid">
+            <dt>Family</dt><dd>Rhizobiaceae</dd>
+            <dt>Genus</dt><dd>Liberibacter</dd>
+            <dt>Symptoms</dt><dd>Zebra chip disease in potato; vegetative disorders in apiaceous plants</dd>
+            <dt>Transmission</dt><dd>Psyllids (<em>Bactericera cockerelli</em>)</dd>
+            <dt>Detection</dt><dd>PCR with 16S rRNA primers OA2/OI2c (~1.1 kb); species-specific LsoF primer for qPCR and conventional PCR.</dd>
+        </dl>
+
+        <div class="section-label">General PCR Protocol for Bacterial Pathogens</div>
+        <div class="protocol-box">Sample: Vascular tissue, stem sections, soil, water
+DNA Extraction: CTAB method or commercial bacterial DNA kits
+
+PCR Cycling (general):
+  95°C for 1–4 min (initial denaturation)
+  30–35 cycles:
+    94–95°C for 15–30 sec
+    55–60°C for 15–60 sec (annealing)
+    72°C for 10–60 sec (extension)
+  72°C for 5–10 min (final extension)
+
+Primers: Use species-specific or genus-specific primers as
+  listed above. Multiplex PCR can be used for simultaneous
+  detection of multiple pathogens.
+
+Confirmation: Amplicon sequencing and BLAST comparison;
+  real-time PCR for quantification.</div>
+    </div>
+</div>
+
+<footer>
+    <p>Plant Pathogen Diagnostic Reference — Compiled from published diagnostic protocols and peer-reviewed literature.</p>
+    <p>Methods are indicative; always refer to validated protocols (EPPO, ISTA, IPPC) for regulatory testing.</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
-</html>
+</html>
+
+
+
+
