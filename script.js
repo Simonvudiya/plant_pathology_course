@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create aside navigation
   const aside = document.createElement("aside");
+  aside.id = "sidebar";
   const title = document.createElement("h2");
   title.textContent = "Plant Pathology";
   aside.appendChild(title);
@@ -47,4 +48,74 @@ document.addEventListener("DOMContentLoaded", () => {
 
   aside.appendChild(ul);
   document.body.insertBefore(aside, document.body.firstChild);
+
+  // Create hamburger button for mobile
+  const hamburger = document.createElement("button");
+  hamburger.className = "hamburger";
+  hamburger.innerHTML = "☰";
+  hamburger.setAttribute("aria-label", "Toggle menu");
+  document.body.appendChild(hamburger);
+
+  // Create overlay for mobile
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  document.body.appendChild(overlay);
+
+  // Create bottom navigation for mobile
+  const bottomNav = document.createElement("nav");
+  bottomNav.className = "bottom-nav";
+  const bottomUl = document.createElement("ul");
+
+  // Add index to bottom nav
+  const bottomIndexLi = document.createElement("li");
+  const bottomIndexA = document.createElement("a");
+  bottomIndexA.href = "index.html";
+  bottomIndexA.textContent = "Index";
+  if (currentFile === "index.html") {
+    bottomIndexA.classList.add("active");
+  }
+  bottomIndexLi.appendChild(bottomIndexA);
+  bottomUl.appendChild(bottomIndexLi);
+
+  // Add topics to bottom nav
+  topics.forEach(topic => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = topic.file;
+    a.textContent = topic.title;
+    if (topic.file === currentFile) {
+      a.classList.add("active");
+    }
+    li.appendChild(a);
+    bottomUl.appendChild(li);
+  });
+
+  bottomNav.appendChild(bottomUl);
+  document.body.appendChild(bottomNav);
+
+  // Toggle sidebar on hamburger click
+  hamburger.addEventListener("click", () => {
+    aside.classList.toggle("open");
+    overlay.classList.toggle("show");
+    bottomNav.classList.toggle("hidden");
+  });
+
+  // Close sidebar when overlay is clicked
+  overlay.addEventListener("click", () => {
+    aside.classList.remove("open");
+    overlay.classList.remove("show");
+    bottomNav.classList.remove("hidden");
+  });
+
+  // Close sidebar when a link is clicked (mobile)
+  const sidebarLinks = aside.querySelectorAll("a");
+  sidebarLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 767) {
+        aside.classList.remove("open");
+        overlay.classList.remove("show");
+        bottomNav.classList.remove("hidden");
+      }
+    });
+  });
 });

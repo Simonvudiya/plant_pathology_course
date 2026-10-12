@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: Georgia, serif;
   max-width: 700px;
@@ -33,7 +34,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Aside navigation */
+/* Aside navigation - desktop */
 aside {
   position: fixed;
   top: 0;
@@ -46,6 +47,15 @@ aside {
   overflow-y: auto;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+/* Hide aside by default on mobile */
+@media (max-width: 767px) {
+  aside {
+    transform: translateX(-100%);
+  }
 }
 
 aside h2 {
@@ -86,7 +96,125 @@ aside a.active {
   font-weight: bold;
 }
 
-/* Adjust main content to make room for aside */
-body {
-  margin-left: 260px;
+/* Hamburger button for mobile */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 44px;
+  height: 44px;
+  background: #1b5e20;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay for mobile */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Mobile bottom nav */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1b5e20;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+.bottom-nav li {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.bottom-nav a {
+  color: #e8f5e9;
+  font-size: 0.85rem;
+  display: block;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.bottom-nav a:hover {
+  background: #2e7d32;
+  text-decoration: none;
+}
+
+.bottom-nav a.active {
+  background: #a5d6a7;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+/* Adjust main content to make room for aside on desktop */
+@media (min-width: 768px) {
+  body {
+    margin-left: 260px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  body {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  /* Hide hamburger on desktop already handled above */
+
+  .hamburger {
+    display: block;
+  }
+
+  /* When menu is open on mobile */
+  aside.open {
+    transform: translateX(0);
+  }
+
+  aside.closed {
+    transform: translateX(-100%);
+  }
+
+  /* Show bottom nav on mobile */
+  .bottom-nav {
+    display: block;
+  }
+
+  /* Add padding to body for bottom nav */
+  body {
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
 }
